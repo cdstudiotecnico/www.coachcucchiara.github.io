@@ -4470,26 +4470,18 @@ td:last-child {
  * TASTI SOCIAL ANCHE SU SMARTPHONE
  * ------------------------------------------------------------------- */
 
-    .s-intro__social {
-    display: flex !important;
-    gap: 18px;
-}
-
-.s-intro__social svg {
-    width: 26px;
-    height: 26px;
-}
-
-@media screen and (max-width: 768px) {
+/* FORZA VISIBILITÀ SOCIAL SU MOBILE */
+@media screen and (max-width: 1024px) {
     .s-intro__social {
         display: flex !important;
-        justify-content: center;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
 
-    .s-intro__social svg {
-        width: 30px;
-        height: 30px;
+    .s-intro__social li {
+        display: inline-block !important;
     }
 }
+
 
 
