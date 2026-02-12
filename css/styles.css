@@ -4445,7 +4445,7 @@ td:last-child {
 
 /* ------------------------------------------------------------------- 
  * MODIFICHE AGGIUNTE
- * COACH CUCCHIARA DARIO
+ * SCRITTA IN ALTO A SINISTRA COACH CUCCHIARA
  * ------------------------------------------------------------------- */
 
     .logo {
@@ -4464,4 +4464,32 @@ td:last-child {
 .logo:hover {
     opacity: 0.8;
 }
+
+    /* ------------------------------------------------------------------- 
+ * MODIFICHE AGGIUNTE
+ * TASTI SOCIAL ANCHE SU SMARTPHONE
+ * ------------------------------------------------------------------- */
+
+    .s-intro__social {
+    display: flex !important;
+    gap: 18px;
+}
+
+.s-intro__social svg {
+    width: 26px;
+    height: 26px;
+}
+
+@media screen and (max-width: 768px) {
+    .s-intro__social {
+        display: flex !important;
+        justify-content: center;
+    }
+
+    .s-intro__social svg {
+        width: 30px;
+        height: 30px;
+    }
+}
+
 
