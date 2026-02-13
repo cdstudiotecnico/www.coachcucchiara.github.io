@@ -383,7 +383,6 @@ GALLERY GARE (placeholder foto + descrizioni glightbox)
     </div>
 
     <div class="row folio-entries">
-
         <!-- FOTO 1: LISBONA -->
         <div class="column entry">
             <a href="images/gare/foto1.jpg" class="entry__link glightbox"
@@ -494,6 +493,9 @@ GALLERY GARE (placeholder foto + descrizioni glightbox)
 
     </div>
 
+    <!-- Frecce per scorrere manualmente -->
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
 </section>
 
         <!-- # footer 
@@ -681,10 +683,10 @@ GALLERY GARE (placeholder foto + descrizioni glightbox)
     </div> <!-- end page-wrap -->
 
 
-    <!-- Java Script
-    ================================================== -->
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+<!-- Java Script
+================================================== -->
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
 
 <script>
     if ('scrollRestoration' in history) {
@@ -694,10 +696,42 @@ GALLERY GARE (placeholder foto + descrizioni glightbox)
     window.onload = function () {
         window.scrollTo(0, 0);
     };
+
+    // Codice per lo scorrimento automatico e manuale delle immagini
+    let currentIndex = 0;
+    const images = document.querySelectorAll('.entry');
+    const totalImages = images.length;
+
+    // Funzione per mostrare l'immagine corrente
+    function showImage(index) {
+        const gallery = document.querySelector('.folio-entries');
+        gallery.style.transform = `translateX(-${index * 100}%)`;  // Spostiamo la galleria a sinistra
+    }
+
+    // Funzione per scorrere avanti
+    function nextImage() {
+        currentIndex = (currentIndex + 1) % totalImages;
+        showImage(currentIndex);
+    }
+
+    // Funzione per scorrere indietro
+    function prevImage() {
+        currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+        showImage(currentIndex);
+    }
+
+    // Event listeners per le frecce
+    document.querySelector('.next').addEventListener('click', nextImage);
+    document.querySelector('.prev').addEventListener('click', prevImage);
+
+    // Impostazione per lo scorrimento automatico ogni 3 secondi
+    setInterval(nextImage, 3000);
+
+    // Inizializza la visualizzazione
+    showImage(currentIndex);
 </script>
+
 
 </body>
 
 </html>
-
-
