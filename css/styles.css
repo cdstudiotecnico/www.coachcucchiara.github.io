@@ -4604,3 +4604,12 @@ html {
   align-items: center;
   justify-content: center;
 }
+
+
+
+    .s-intro__content-media img {
+  width: 100%;         /* Assicura che l'immagine occupi tutta la larghezza disponibile */
+  height: auto;        /* Mantiene le proporzioni corrette dell'immagine */
+  object-fit: contain; /* Adatta l'immagine al contenitore senza deformarla */
+  display: block;      /* Rimuove gli spazi sotto l'immagine */
+}
