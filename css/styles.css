@@ -4538,81 +4538,63 @@ html {
 }
 
 /* ==================================================
-   GALLERIA COMPATTA (FUNZIONA SU TUTTI I DISPOSITIVI)
+   GALLERIA SCORREVOLE: Compatibile desktop e mobile
 ================================================== */
 
 /* Contenitore galleria */
 .s-works .folio-entries {
     display: flex;
-    flex-wrap: wrap;
+    overflow-x: hidden;
     gap: 15px;
-    justify-content: center;
-    padding: 20px;
-    overflow: hidden;
-}
-
-/* Galleria per dispositivi mobile */
-@media screen and (max-width: 768px) {
-    .s-works .folio-entries {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-    }
-
-    .s-works .entry {
-        flex: 0 0 auto;
-        width: 80%; /* Immagini più piccole su mobile */
-        margin-right: 10px;
-    }
-
-    .entry__thumb img {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-    }
-
-    /* Barra di scorrimento nascosta per mobile */
-    .s-works .folio-entries::-webkit-scrollbar {
-        height: 8px;
-    }
-
-    .s-works .folio-entries::-webkit-scrollbar-thumb {
-        background: rgba(0, 0, 0, 0.3);
-        border-radius: 5px;
-    }
-}
-
-/* Galleria per dispositivi desktop */
-@media screen and (min-width: 769px) {
-    .s-works .folio-entries {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* 3-4 immagini per riga su desktop */
-        gap: 15px;
-    }
-
-    .entry__thumb img {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-    }
-}
-
-    /* ==================================================
-   GALLERIA: Uniformare le immagini
-================================================== */
-
-/* Garantiamo una dimensione uniforme per le immagini della galleria */
-.entry__thumb {
+    scroll-behavior: smooth;  /* Smooth scrolling */
     position: relative;
-    width: 100%;
-    height: 200px; /* Altezza fissa per tutte le immagini */
+}
+
+/* Impostazioni immagine per layout compatto e uniforme */
+.entry {
+    flex: 0 0 auto;
+    width: 300px; /* Imposta una larghezza fissa per le immagini */
+    height: 200px; /* Altezza uniforme per tutte le immagini */
     overflow: hidden;
     border-radius: 8px;
+    position: relative;
 }
 
+/* Assicurati che le immagini siano sempre visibili e mantenere il giusto rapporto */
 .entry__thumb img {
-    object-fit: cover; /* Impedisce la distorsione dell'immagine */
     width: 100%;
     height: 100%;
+    object-fit: cover;  /* Ritaglio senza deformazione */
     border-radius: 8px;
+}
+
+/* Aggiungi frecce per navigazione */
+.s-works .prev, .s-works .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.s-works .prev {
+    left: 0;
+}
+
+.s-works .next {
+    right: 0;
+}
+
+/* Rende le frecce visibili solo se sono necessarie */
+.s-works .prev, .s-works .next {
+    display: none;
+}
+
+.s-works:hover .prev, .s-works:hover .next {
+    display: block;  /* Appare solo quando il mouse passa sopra */
 }
