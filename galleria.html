@@ -6,21 +6,18 @@
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-TDC4FVDX');</script>
   <!-- End Google Tag Manager -->
 
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <!-- Titolo e Descrizione -->
   <title>Galleria – Gare e Viaggio | Dario Cucchiara</title>
   <meta name="description" content="Galleria delle gare, eventi e momenti di viaggio vissuti da Dario Cucchiara con la sua famiglia e la passione per la corsa.">
   <meta name="author" content="Dario Cucchiara">
   <meta name="robots" content="index, follow">
   <meta name="keywords" content="gare, running, viaggio, famiglia, eventi, foto, running coach">
-
   <link rel="canonical" href="https://www.cdstudiotecnico.it/galleria.html">
 
   <!-- Favicon -->
@@ -29,7 +26,6 @@
   <!-- Fonts e CSS -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
 
   <style>
@@ -69,23 +65,44 @@
       color: #555;
     }
 
-    /* Swiper - Galleria */
-    .swiper {
-      margin-top: 20px;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* Contenitore scorrevole */
+    .gallery-wrapper {
+      display: flex;
+      overflow-x: scroll;
+      scroll-behavior: smooth;
+      gap: 15px;
+      padding-bottom: 20px;
     }
 
-    .swiper-slide img {
+    .gallery-wrapper::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .gallery-wrapper::-webkit-scrollbar-thumb {
+      background-color: rgba(53, 108, 108, 0.6);
+      border-radius: 10px;
+    }
+
+    .gallery-wrapper::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    /* Immagini della galleria */
+    .gallery-item {
+      min-width: 300px;
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-item img {
       width: 100%;
       height: auto;
-      object-fit: cover;
       border-radius: 8px;
-      transition: transform 0.5s ease-in-out;
     }
 
-    .swiper-slide img:hover {
+    .gallery-item:hover {
       transform: scale(1.05);
     }
 
@@ -99,42 +116,7 @@
       border-top: 1px solid #eee;
     }
 
-    /* Paginazione e frecce */
-    .swiper-pagination {
-      bottom: 10px;
-      margin-top: 5px;
-    }
-
-    .swiper-pagination-bullet {
-      width: 12px;
-      height: 12px;
-      background: #356c6c;
-      opacity: 0.6;
-      transition: all 0.3s ease;
-    }
-
-    .swiper-pagination-bullet-active {
-      background: #2a5656;
-      opacity: 1;
-    }
-
-    .swiper-button-prev, .swiper-button-next {
-      color: #fff;
-      background: rgba(53, 108, 108, 0.8);
-      width: 45px;
-      height: 45px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background 0.3s ease;
-    }
-
-    .swiper-button-prev:hover, .swiper-button-next:hover {
-      background: #2a5656;
-    }
-
-    /* Bottone per tornare alla home */
+    /* Pulsante per tornare alla home */
     .back-btn {
       display: inline-block;
       margin-top: 30px;
@@ -154,13 +136,12 @@
 
     /* Mobile */
     @media (max-width: 768px) {
-      .swiper-slide img {
-        height: 250px;
+      .gallery-wrapper {
+        gap: 10px;
       }
 
-      .page-wrapper {
-        padding: 20px;
-        margin: 40px 10px;
+      .gallery-item {
+        min-width: 200px;
       }
     }
   </style>
@@ -180,31 +161,24 @@
 
     <div class="section-title">
       <img src="assets/img/logo.png" alt="Logo">
-      <h2>Galleria Gare & Viaggio</h2>
+      <h2>Gare & Viaggi</h2>
       <p>Segui il mio viaggio e le gare che ho corso in Europa e Italia, unendo passione, famiglia e sport.</p>
     </div>
 
-    <!-- Galleria (Swiper) -->
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="assets/img/portfolio/gara1.jpg" alt="Gara 1">
-          <div class="caption">Maratona di Roma, un'esperienza unica di sport e storia.</div>
-        </div>
-        <div class="swiper-slide">
-          <img src="assets/img/portfolio/gara2.jpg" alt="Gara 2">
-          <div class="caption">UltraTrail di Cortina, dove la fatica incontra la bellezza.</div>
-        </div>
-        <div class="swiper-slide">
-          <img src="assets/img/portfolio/gara3.jpg" alt="Gara 3">
-          <div class="caption">La marcia verso la cima, un sogno che diventa realtà.</div>
-        </div>
+    <!-- Galleria -->
+    <div class="gallery-wrapper">
+      <div class="gallery-item">
+        <img src="images/Valencia.jpg" alt="Gara 1">
+        <div class="caption">Maratona di Valencia, un'esperienza unica di sport e storia.</div>
       </div>
-
-      <!-- Navigazione e Paginazione -->
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+      <div class="gallery-item">
+        <img src="images/Europei1.JPG" alt="Gara 2">
+        <div class="caption">La maratona di Barcellona, attraversando la città simbolo della passione sportiva.</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/Europei2.JPG" alt="Gara 3">
+        <div class="caption">Madrid, un'ultramaratona immersa nella cultura e nell'energia della capitale.</div>
+      </div>
     </div>
 
     <!-- Pulsante per tornare alla home -->
@@ -213,19 +187,6 @@
     </div>
 
   </div>
-
-  <!-- JS -->
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script>
-    const swiper = new Swiper('.mySwiper', {
-      loop: true,
-      effect: 'fade',
-      autoplay: { delay: 3500, disableOnInteraction: false },
-      pagination: { el: '.swiper-pagination', clickable: true },
-      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-      speed: 700,
-    });
-  </script>
 
 </body>
 
