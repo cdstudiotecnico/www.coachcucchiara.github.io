@@ -4778,3 +4778,65 @@ button {
     }
 }
 
+/* Contenitore della galleria */
+.folio-entries {
+    display: flex;                    /* Impostiamo un layout orizzontale */
+    overflow: hidden;                 /* Nascondiamo il contenuto che esce dai confini */
+    width: 100%;                      /* La galleria occupa tutta la larghezza disponibile */
+    position: relative;               /* Per posizionare le frecce relative alla galleria */
+    justify-content: flex-start;      /* Allineamento orizzontale delle immagini */
+}
+
+/* Ogni immagine deve occupare il 100% della larghezza */
+.column.entry {
+    flex: 0 0 100%;                   /* Ogni immagine occupa il 100% della larghezza */
+    max-width: 100%;                  /* Limitiamo la larghezza massima a 100% */
+    box-sizing: border-box;           /* Assicura che padding e margini non influiscano sulla larghezza */
+}
+
+/* Le immagini nella galleria */
+.entry__thumb img {
+    width: 100%;                      /* Le immagini occupano tutta la larghezza del contenitore */
+    height: auto;                     /* Manteniamo il corretto rapporto di aspetto */
+    display: block;                   /* Rimuoviamo eventuali spazi sotto le immagini */
+}
+
+/* Frecce per la navigazione */
+button {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5); /* Colore di sfondo semitrasparente */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    transform: translateY(-50%);         /* Centrato verticalmente */
+    z-index: 100;                        /* Assicurati che le frecce siano sopra la galleria */
+    border-radius: 50%;                  /* Le frecce sono rotonde */
+    opacity: 0;                          /* Le frecce sono invisibili di default */
+    transition: opacity 0.3s ease-in-out; /* Transizione per l'opacità */
+}
+
+/* Frecce visibili al passaggio del mouse */
+.folio-entries:hover button {
+    opacity: 1; /* Le frecce diventano visibili quando si passa sopra la galleria */
+}
+
+/* Freccia precedente */
+.prev {
+    left: 10px;
+}
+
+/* Freccia successiva */
+.next {
+    right: 10px;
+}
+
+/* Modifiche per schermi piccoli (ad esempio, sotto i 768px) */
+@media screen and (max-width: 768px) {
+    .entry__thumb img {
+        height: 200px;           /* Ridurre l'altezza delle immagini sui dispositivi mobili */
+        object-fit: cover;       /* Mantieni l'immagine centrata senza distorsioni */
+    }
+}
