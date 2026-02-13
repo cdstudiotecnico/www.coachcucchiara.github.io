@@ -4613,3 +4613,10 @@ html {
   object-fit: cover; /* Metti " contain " per adattare l'immagine al contenitore senza deformarla */
   display: block;      /* Rimuove gli spazi sotto l'immagine */
 }
+
+    /* Mobile - Sposta il bottone "La Maglia del Team" più in alto */
+@media (max-width: 768px) {
+  .s-intro__btn-download {
+    margin-top: -20px; /* Sposta il bottone più in alto */
+  }
+}
