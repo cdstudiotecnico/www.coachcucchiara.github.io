@@ -4537,64 +4537,65 @@ html {
     opacity: 0.8;
 }
 
-/* Container della galleria */
-.folio-entries {
+/* ==================================================
+   GALLERIA MOBILE-FRIENDLY + SCORRIMENTO
+================================================== */
+
+/* Galleria desktop */
+.s-works .folio-entries {
     display: flex;
-    overflow: hidden;
-    width: 100%;
-    transition: transform 0.5s ease-in-out; /* Transizione fluida */
-    position: relative; /* Per posizionare le frecce */
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
-/* Ogni immagine occupa la larghezza del contenitore */
-.column.entry {
-    flex: 0 0 100%; /* Ogni immagine occupa il 100% della larghezza */
-    max-width: 100%;
-    box-sizing: border-box;
+/* Galleria mobile: scorrimento orizzontale */
+@media screen and (max-width: 768px) {
+    .s-works .folio-entries {
+        display: flex;
+        overflow-x: scroll; /* Permette di scorrere le immagini */
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .s-works .entry {
+        flex: 0 0 auto;
+        width: 80%; /* Immagini piccole per mobile */
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .entry__thumb img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    /* Nascondo barra di scorrimento per migliorare l'aspetto */
+    .s-works .folio-entries::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    .s-works .folio-entries::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+    }
 }
 
-/* Le immagini */
-.entry__thumb img {
-    width: 100%; /* L'immagine occupa tutta la larghezza del contenitore */
-    height: auto; /* Mantiene il corretto rapporto di aspetto */
-    display: block; /* Rimuove eventuali spazi vuoti sotto l'immagine */
-}
+/* Galleria desktop (larghezza normale per immagini maggiori) */
+@media screen and (min-width: 769px) {
+    .s-works .folio-entries {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+        justify-items: center;
+    }
 
-/* Frecce per scorrere le immagini */
-button {
-    position: absolute;
-    top: 50%;
-    background-color: rgba(0, 0, 0, 0.3); /* Fondo semitrasparente */
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 24px;
-    transform: translateY(-50%);
-    z-index: 100;
-    border-radius: 50%; /* Frecce rotonde */
-    opacity: 0; /* Le frecce sono invisibili di default */
-    transition: opacity 0.3s ease-in-out;
-}
-
-/* Aggiungi effetto di hover sulle frecce */
-button:hover {
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 1; /* Le frecce diventano visibili al passaggio del mouse */
-}
-
-/* Freccia precedente */
-.prev {
-    left: 10px;
-}
-
-/* Freccia successiva */
-.next {
-    right: 10px;
-}
-
-/* Frecce visibili durante il passaggio del mouse sulla galleria */
-.folio-entries:hover button {
-    opacity: 1; /* Mostra le frecce quando si passa sopra la galleria */
+    .entry__thumb img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
 }
 
