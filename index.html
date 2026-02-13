@@ -637,82 +637,41 @@ GALLERY GARE (placeholder foto + descrizioni glightbox)
 
     </div> <!-- end page-wrap -->
 
-
-<!-- Java Script
-================================================== -->
-<script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
-
 <script>
-    if ('scrollRestoration' in history) {
-        history.scrollRestoration = 'manual';
+    // Variabili per navigare nella galleria
+    const gallery = document.querySelector('.folio-entries');
+    const images = document.querySelectorAll('.entry');
+    const totalImages = images.length;
+    let currentIndex = 0;
+
+    // Funzione per aggiornare lo scorrimento della galleria
+    function updateGallery() {
+        gallery.style.transform = `translateX(-${currentIndex * 100}%)`;
     }
 
-    window.onload = function () {
-        window.scrollTo(0, 0);
-    };
-
-    // Codice per lo scorrimento automatico e manuale delle immagini
- let currentIndex = 0;
-const gallery = document.querySelector('.folio-entries');  // Seleziona il contenitore della galleria
-const totalImages = document.querySelectorAll('.entry').length;  // Numero totale delle immagini
-
-// Funzione per mostrare l'immagine corrente
-function showImage(index) {
-    gallery.style.transform = `translateX(-${index * 100}%)`;  // Spostiamo la galleria orizzontalmente
-}
-
-// Funzione per scorrere avanti
-function nextImage() {
-    currentIndex = (currentIndex + 1) % totalImages;
-    showImage(currentIndex);
-}
-
-// Funzione per scorrere indietro
-function prevImage() {
-    currentIndex = (currentIndex - 1 + totalImages) % totalImages;
-    showImage(currentIndex);
-}
-
-// Event listeners per le frecce
-document.querySelector('.next').addEventListener('click', nextImage);
-document.querySelector('.prev').addEventListener('click', prevImage);
-
-// Impostazione per lo scorrimento automatico ogni 3 secondi
-setInterval(nextImage, 3000);
-
-// Aggiungere il supporto per lo scorrimento touch
-let startX;
-gallery.addEventListener('touchstart', (e) => {
-    startX = e.touches[0].clientX;  // Salviamo la posizione iniziale del tocco
-});
-
-gallery.addEventListener('touchend', (e) => {
-    const endX = e.changedTouches[0].clientX;  // Posizione finale del tocco
-    if (startX - endX > 50) {
-        // Se il movimento del tocco è abbastanza lungo a sinistra, scorrere avanti
-        nextImage();
-    } else if (endX - startX > 50) {
-        // Se il movimento del tocco è abbastanza lungo a destra, scorrere indietro
-        prevImage();
+    // Funzione per scorrere avanti
+    function nextImage() {
+        currentIndex = (currentIndex + 1) % totalImages;  // Ciclo attraverso le immagini
+        updateGallery();
     }
-});
 
-// Inizializza la visualizzazione
-showImage(currentIndex);
+    // Funzione per scorrere indietro
+    function prevImage() {
+        currentIndex = (currentIndex - 1 + totalImages) % totalImages;  // Ciclo inverso
+        updateGallery();
+    }
 
+    // Aggiungi gli eventi alle frecce
+    document.querySelector('.next').addEventListener('click', nextImage);
+    document.querySelector('.prev').addEventListener('click', prevImage);
+
+    // Imposta lo scorrimento automatico
+    setInterval(nextImage, 3000);  // Cambia immagine ogni 3 secondi
+
+    // Inizializza la galleria
+    updateGallery();
 </script>
-
 
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
