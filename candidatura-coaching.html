@@ -5,69 +5,85 @@
 <title>Candidatura Running Coaching — Team Cucchiara</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 
 body {
     margin: 0;
-    background: #f6f6f6;
+    background: #ffffff;
     font-family: 'Inter', sans-serif;
     color: #111;
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 900px;
     margin: auto;
-    padding: 70px 20px 100px;
+    padding: 80px 20px 120px;
 }
 
 h1 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 36px;
-    margin-bottom: 15px;
+    font-size: 42px;
+    margin-bottom: 10px;
 }
 
-.description {
-    margin-bottom: 40px;
-    line-height: 1.8;
-    color: #333;
-}
-
-section {
-    margin-bottom: 40px;
-}
-
-h2 {
-    font-size: 18px;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 5px;
+.subtitle {
+    color: #555;
+    margin-bottom: 50px;
+    line-height: 1.7;
 }
 
 form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.section {
+    padding: 30px;
+    border: 1px solid #eee;
+}
+
+.section h2 {
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.field-group {
     display: grid;
-    gap: 14px;
+    gap: 15px;
+}
+
+.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
 }
 
 input, select, textarea {
-    padding: 10px;
+    padding: 12px;
     font-size: 14px;
     border: 1px solid #ccc;
     width: 100%;
+    font-family: 'Inter', sans-serif;
 }
 
 textarea {
     resize: vertical;
+    min-height: 90px;
 }
 
 button {
-    margin-top: 20px;
-    padding: 14px;
+    padding: 16px;
     background: #111;
     color: #fff;
     border: none;
     font-size: 15px;
+    letter-spacing: 1px;
     cursor: pointer;
 }
 
@@ -80,10 +96,20 @@ button:hover {
 }
 
 .success-message {
-    margin-top: 20px;
+    margin-top: 30px;
     color: #2e7d32;
     font-size: 15px;
     display: none;
+}
+
+@media (max-width: 768px) {
+    .two-columns {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
 }
 
 </style>
@@ -95,68 +121,74 @@ button:hover {
 
 <h1>Candidatura Running Coaching</h1>
 
-<div class="description">
+<div class="subtitle">
 Compila il modulo in modo completo e veritiero.  
-Le informazioni sono necessarie per valutare l’avvio di un programma personalizzato.
+Le informazioni raccolte sono indispensabili per costruire un programma personalizzato serio e strutturato.
 </div>
 
 <form id="coachingForm">
 
-<section>
+<div class="section">
 <h2>Dati Anagrafici</h2>
+<div class="field-group">
 <input type="text" name="nome" placeholder="Nome e Cognome" required>
 <input type="date" name="data_nascita" required>
 <input type="text" name="codice_fiscale" placeholder="Codice Fiscale" required>
-<input type="text" name="residenza" placeholder="Indirizzo di Residenza (Via, Numero, CAP, Città)" required>
+<input type="text" name="residenza" placeholder="Indirizzo di Residenza completo" required>
 <input type="tel" name="telefono" placeholder="Cellulare" required>
 <input type="email" name="email" placeholder="E-mail" required>
-</section>
+</div>
+</div>
 
-<section>
+<div class="section">
 <h2>Dati Fisici</h2>
+<div class="two-columns">
 <input type="number" name="altezza" placeholder="Altezza (cm)" required>
 <input type="number" name="peso" placeholder="Peso (kg)" required>
-</section>
+</div>
+</div>
 
-<section>
+<div class="section">
 <h2>Disponibilità Allenamento</h2>
+<div class="field-group">
 <input type="number" name="giorni_settimana" placeholder="Giorni disponibili a settimana" required>
 <input type="text" name="tempo_giorno" placeholder="Tempo disponibile per ogni giornata (es. 60 min)" required>
 <input type="text" name="orari_preferiti" placeholder="Orari preferiti durante la settimana" required>
-</section>
+</div>
+</div>
 
-<section>
+<div class="section">
 <h2>Condizioni Fisiche</h2>
+<div class="field-group">
 
-<label>Hai problemi fisici?</label>
 <select id="problemiFisici" name="problemi_fisici" required>
-<option value="">Seleziona</option>
+<option value="">Hai problemi fisici?</option>
 <option value="No">No</option>
 <option value="Si">Si</option>
 </select>
 
-<textarea id="dettagliFisici" name="dettagli_fisici" placeholder="Indica dettagli problemi fisici" class="hidden"></textarea>
+<textarea id="dettagliFisici" name="dettagli_fisici" placeholder="Descrivi eventuali problematiche fisiche" class="hidden"></textarea>
 
-<label>Hai problematiche alimentari?</label>
 <select id="problemiAlimentari" name="problemi_alimentari" required>
-<option value="">Seleziona</option>
+<option value="">Hai problematiche alimentari?</option>
 <option value="No">No</option>
 <option value="Si">Si</option>
 </select>
 
-<textarea id="dettagliAlimentari" name="dettagli_alimentari" placeholder="Indica dettagli problematiche alimentari" class="hidden"></textarea>
+<textarea id="dettagliAlimentari" name="dettagli_alimentari" placeholder="Descrivi eventuali problematiche alimentari" class="hidden"></textarea>
 
-<label>Disponibile a consegnare certificato medico per attività agonistica?</label>
 <select name="certificato_medico" required>
-<option value="">Seleziona</option>
-<option value="Si">Si (Obbligatorio)</option>
+<option value="">Disponibile a consegnare certificato medico agonistico?</option>
+<option value="Si">Si</option>
 <option value="No">No</option>
 </select>
 
-</section>
+</div>
+</div>
 
-<section>
+<div class="section">
 <h2>Profilo Sportivo</h2>
+<div class="field-group">
 
 <select name="livello" required>
 <option value="">Livello di Allenamento</option>
@@ -170,9 +202,10 @@ Le informazioni sono necessarie per valutare l’avvio di un programma personali
 <textarea name="obiettivi_lungo" placeholder="Obiettivi a lungo termine" required></textarea>
 <textarea name="gare_programma" placeholder="Gare in programma"></textarea>
 
-</section>
+</div>
+</div>
 
-<button type="submit">Invia al Coach</button>
+<button type="submit">Invia Candidatura</button>
 
 </form>
 
@@ -201,13 +234,12 @@ problemiAlimentari.addEventListener("change", function() {
 document.getElementById("coachingForm").addEventListener("submit", function(e) {
     e.preventDefault();
 
-    let form = this;
-    if (!form.checkValidity()) {
-        form.reportValidity();
+    if (!this.checkValidity()) {
+        this.reportValidity();
         return;
     }
 
-    let data = new FormData(form);
+    let data = new FormData(this);
     let body = "";
     data.forEach((value, key) => {
         body += key + ": " + value + "%0D%0A";
@@ -216,7 +248,7 @@ document.getElementById("coachingForm").addEventListener("submit", function(e) {
     window.location.href = "mailto:coach.cucchiara@hotmail.com?subject=Candidatura Running Coaching&body=" + body;
 
     document.getElementById("successMessage").style.display = "block";
-    form.reset();
+    this.reset();
 });
 
 </script>
