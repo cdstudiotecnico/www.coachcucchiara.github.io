@@ -3164,8 +3164,8 @@ td:last-child {
  * ## mobile menu toggle
  * -------------------------------------------------------------------- */
 .s-header__menu-toggle {
-    --toggle-block-width: 44px;
-    --toggle-line-width : 28px;
+    --toggle-block-width: 38px;
+    --toggle-line-width : 24px;
     --toggle-line-height: 1px;
     display             : none;
     width               : var(--toggle-block-width);
@@ -3204,11 +3204,11 @@ td:last-child {
 }
 
 .s-header__menu-toggle span::before {
-    top: -10px;
+    top: -8px;
 }
 
 .s-header__menu-toggle span::after {
-    bottom: -10px;
+    bottom: -8px;
 }
 
 /* is clicked 
