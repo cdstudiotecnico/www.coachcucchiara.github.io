@@ -630,7 +630,8 @@ const totalImages = document.querySelectorAll('.entry').length;  // Numero total
 
 // Funzione per mostrare l'immagine corrente
 function showImage(index) {
-    gallery.style.transform = `translateX(-${index * 100}%)`;  // Spostiamo la galleria orizzontalmente
+    // Muove la galleria a sinistra, mostrando solo l'immagine corrispondente
+    gallery.style.transform = `translateX(-${index * 100}%)`;
 }
 
 // Funzione per scorrere avanti
@@ -654,6 +655,7 @@ setInterval(nextImage, 3000);
 
 // Inizializza la visualizzazione
 showImage(currentIndex);
+
 
 
 </script>
@@ -694,4 +696,5 @@ showImage(currentIndex);
 </body>
 
 </html>
+
 
