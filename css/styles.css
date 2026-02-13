@@ -3847,7 +3847,7 @@ td:last-child {
  * MODIFICHE COACH CUCCHIARA
  * RESPONSABILE BARRA SOCIAL HOME SU SMARTPHONE
  * ------------------------------------------------------------------- */
-    
+
 @media screen and (max-width: 600px) {
     .s-intro__content-text {
         max-width: 80vw;
@@ -4461,76 +4461,38 @@ td:last-child {
  * SCRITTA IN ALTO A SINISTRA COACH CUCCHIARA
  * ------------------------------------------------------------------- */
 
-/* Logo Base */
-.logo {
+    .logo {
     font-family: "Cormorant Garamond", serif;
-    font-size: clamp(24px, 5vw, 36px); /* Font responsivo con limite superiore di 36px */
+    font-size: 34px;
     font-weight: 500;
     letter-spacing: 0.5px;
     text-decoration: none;
-    color: #ffffff; /* Cambia a #000000 se il background è chiaro */
+    color: #ffffff; /* metti nero se header chiaro */
+}
+
+    .logo {
     transition: all 0.3s ease;
 }
 
-/* Hover Effect */
 .logo:hover {
     opacity: 0.8;
-    color: #f2f2f2; /* Modifica colore se preferisci un altro effetto al passaggio del mouse */
 }
 
-/* Responsività per mobile */
-@media (max-width: 768px) {
-    .logo {
-        font-size: clamp(20px, 8vw, 28px); /* Logo più piccolo per schermi più piccoli */
-    }
-}
-
-/* ------------------------------------------------------------------- 
+    /* ------------------------------------------------------------------- 
  * MODIFICHE AGGIUNTE
  * TASTI SOCIAL ANCHE SU SMARTPHONE
  * ------------------------------------------------------------------- */
 
-/* Forza visibilità dei social su tutti i dispositivi e spostamento in basso */
-.s-intro__social {
-    display: flex !important; /* Rende il layout più ordinato */
-    justify-content: center; /* Centra i tasti social */
-    gap: 16px; /* Distanza tra i tasti */
-    visibility: visible !important; /* Forza la visibilità */
-    opacity: 1 !important; /* Garantisce che siano visibili */
-    position: fixed; /* Rende il blocco fisso */
-    bottom: 20px; /* Distanza dal fondo dello schermo */
-    left: 50%; /* Centra orizzontalmente */
-    transform: translateX(-50%); /* Aggiunge il centraggio perfetto */
-    z-index: 1000; /* Assicura che le icone siano sopra altri elementi */
-    transition: opacity 0.3s ease; /* Transizione per effetto scomparsa */
-}
+/* FORZA VISIBILITÀ SOCIAL SU MOBILE */
+@media screen and (max-width: 1024px) {
+    .s-intro__social {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
 
-/* Rende invisibile le icone social quando non devono essere visibili */
-.s-intro__social.hidden {
-    opacity: 0;
-    visibility: hidden;
-}
-
-/* Styling delle icone social */
-.s-intro__social li {
-    display: inline-block !important;
-    list-style: none; /* Rimuove i punti dalla lista */
-}
-
-.s-intro__social li a {
-    font-size: 20px; /* Dimensione tasti social */
-    color: #ffffff; /* Colore bianco (cambia se il background è chiaro) */
-    transition: color 0.3s ease; /* Transizione colore */
-}
-
-.s-intro__social li a:hover {
-    color: #f2f2f2; /* Cambia colore al passaggio del mouse */
-}
-
-/* Ottimizzazione per schermi più piccoli */
-@media screen and (max-width: 768px) {
-    .s-intro__social li a {
-        font-size: 18px; /* Font più piccolo su mobile */
+    .s-intro__social li {
+        display: inline-block !important;
     }
 }
 
@@ -4538,184 +4500,57 @@ td:last-child {
  * MODIFICHE AGGIUNTE
  * RITORNO IN ALTO HOME SE AGGIORNO PAGINA
  * ------------------------------------------------------------------- */
-    
+
 html {
     scroll-behavior: smooth;
 }
 
-    
-/* ------------------------------------------------------------------- 
+   /* ------------------------------------------------------------------- 
  * MODIFICHE AGGIUNTE
  * STILE PAGINA MAGLIA.HTMLA
  * ------------------------------------------------------------------- */
-    
-/* Stile per il back-home */
+
 .back-home {
     margin-top: 80px;
     text-align: center;
-    font-size: clamp(12px, 4vw, 16px); /* Font dinamico con limite superiore di 16px */
+    font-size: 14px;
     letter-spacing: 2px;
-    color: #333; /* Colore più morbido rispetto al #111 */
 }
 
-/* Stile per il link */
 .back-home a {
     text-decoration: none;
     color: #111;
     border-bottom: 1px solid #111;
     padding-bottom: 4px;
-    transition: opacity 0.3s ease, color 0.3s ease; /* Transizione per l'hover e cambio colore */
+    transition: opacity 0.3s ease;
 }
 
-/* Hover effetto */
 .back-home a:hover {
-    opacity: 0.7; /* Leggermente meno opaco per un effetto più elegante */
-    color: #555; /* Colore più chiaro al passaggio del mouse */
-}
-
-/* Responsività: Stile per mobile */
-@media (max-width: 768px) {
-    .back-home {
-        font-size: clamp(14px, 6vw, 18px); /* Aumenta un po' la dimensione del testo per mobile */
-        margin-top: 60px; /* Riduci il margine superiore sui dispositivi mobili */
-    }
-
-    .back-home a {
-        font-size: 18px; /* Aumenta la dimensione del link sui dispositivi mobili */
-    }
-}
+    opacity: 0.5;
+}    
 
  /* ------------------------------------------------------------------- 
  * MODIFICHE AGGIUNTE
  * STILE PAGINA MAPS LOCALIZZAZIONE
  * ------------------------------------------------------------------- */
 
+
 .coach-location {
     margin-top: 25px;
-    font-size: 12px;
-    letter-spacing: 0.6px;
-    color: rgba(255,255,255,0.5);
-    text-align: left;
+    text-align: center;
+    font-size: 14px;
+    color: #ddd; /* testo più chiaro */
 }
 
 .coach-location a {
-    color: #ffffff;
+    margin-left: 5px;
     text-decoration: none;
-    border-bottom: 1px solid rgba(255,255,255,0.5);
+    border-bottom: 1px solid #00c3ff; /* colore visibile */
+    color: #00c3ff; /* azzurro brillante */
     padding-bottom: 2px;
     transition: all 0.3s ease;
 }
 
 .coach-location a:hover {
-    border-bottom: 1px solid #ffffff;
-}
-
-   
-
-    
-/* Adattamento responsivo e miglioramento estetico */
-.glides {
-    width: 100%;
-    height: auto;
-}
-
-.glide__slide {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.glides__arrow {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-}
-
-.img-responsive {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.video-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-@media (max-width: 768px) {
-    .glide__slides {
-        display: block;
-    }
-}
-
-
-    /* ===============================
-   AUTO SCROLL GALLERY
-================================= */
-
-.auto-gallery {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    padding: 40px 0;
-}
-
-.auto-track {
-    display: flex;
-    gap: 20px;
-    animation: scrollGallery 40s linear infinite;
-    width: max-content;
-}
-
-.auto-gallery:hover .auto-track {
-    animation-play-state: paused;
-}
-
-.gallery-item {
-    flex: 0 0 320px;
-    height: 420px;
-    border-radius: 18px;
-    overflow: hidden;
-    position: relative;
-    background: #000;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.25);
-}
-
-.gallery-item img,
-.gallery-item video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-/* Overlay elegante */
-.gallery-item::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
-}
-
-/* Animazione */
-@keyframes scrollGallery {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .gallery-item {
-        flex: 0 0 240px;
-        height: 320px;
-    }
-
-    .auto-track {
-        animation-duration: 25s;
-    }
+    opacity: 0.8;
 }
