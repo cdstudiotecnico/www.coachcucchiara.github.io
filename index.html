@@ -674,11 +674,39 @@ showImage(currentIndex);
 
 </script>
 
+    <script>
+    let currentIndex = 0;  // Indice corrente dell'immagine
+    const gallery = document.querySelector('.folio-entries');  // Seleziona il contenitore della galleria
+    const totalImages = document.querySelectorAll('.entry').length;  // Numero totale delle immagini
+
+    // Funzione per aggiornare lo scorrimento della galleria
+    function updateGallery() {
+        gallery.style.transform = `translateX(-${currentIndex * 100}%)`;  // Spostiamo la galleria orizzontalmente
+    }
+
+    // Funzione per scorrere avanti
+    function nextImage() {
+        currentIndex = (currentIndex + 1) % totalImages;  // Ciclo attraverso le immagini
+        updateGallery();
+    }
+
+    // Funzione per scorrere indietro
+    function prevImage() {
+        currentIndex = (currentIndex - 1 + totalImages) % totalImages;  // Ciclo inverso tra le immagini
+        updateGallery();
+    }
+
+    // Aggiungi eventi per le frecce
+    document.querySelector('.next').addEventListener('click', nextImage);
+    document.querySelector('.prev').addEventListener('click', prevImage);
+
+    // Impostazione dello scorrimento automatico ogni 3 secondi
+    setInterval(nextImage, 3000);
+
+    // Inizializza la visualizzazione
+    updateGallery();  // Assicura che la galleria parta dalla prima immagine
+</script>
 
 </body>
 
 </html>
-
-
-
-
