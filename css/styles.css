@@ -4537,31 +4537,42 @@ html {
     opacity: 0.8;
 }
 
+
  /* ------------------------------------------------------------------- 
  * MODIFICHE AGGIUNTE
- * CENTRATURA TASTO VAI ALLA GALLERIA
+ * Contenitore del bottone per centrarlo
  * ------------------------------------------------------------------- */
 
-    /* Centra la riga (contenitore del tasto) */
-.center-btn {
-    display: flex;                /* Usa flexbox per il layout */
-    justify-content: center;      /* Centra il contenuto orizzontalmente */
-    align-items: center;          /* Centra verticalmente, se necessario */
-    margin-top: 20px;             /* Distanza dal contenuto superiore */
+    
+/* Contenitore del bottone per centrarlo */
+.button-container {
+    display: flex;
+    justify-content: center; /* Centra orizzontalmente */
+    margin-top: 50px; /* Distanza dal contenuto superiore */
 }
 
-/* Stile per il tasto "Vai alla Galleria" */
-.center-btn .btn {
-    padding: 12px 30px;
-    background-color: #333;
-    color: white;
-    text-decoration: none;
+/* Stile elegante del tasto */
+.btn-elegant {
+    background-color: #356c6c; /* Colore di sfondo verde scuro */
+    color: #fff; /* Testo bianco */
     font-size: 16px;
-    border-radius: 4px;
-    transition: background-color 0.3s;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 50px; /* Bordo arrotondato */
+    text-align: center;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.3s; /* Transizione morbida */
+    box-shadow: 0 8px 12px rgba(53, 108, 108, 0.3); /* Ombra del tasto */
 }
 
-/* Cambio colore del tasto al passaggio del mouse */
-.center-btn .btn:hover {
-    background-color: #555;
+/* Effetto hover per il tasto */
+.btn-elegant:hover {
+    background-color: #2a5656; /* Colore più scuro al passaggio del mouse */
+    transform: scale(1.05); /* Leggero ingrandimento al passaggio */
+}
+
+/* Effetto al click (attivazione del tasto) */
+.btn-elegant:active {
+    transform: scale(1.02); /* Un po' più piccolo quando cliccato */
 }
