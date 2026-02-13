@@ -59,12 +59,13 @@
       box-shadow: 0 20px 60px rgba(0,0,0,0.5);
     }
 
-    .swiper-slide img {
-      width: 100%;
-      height: 520px;
-      object-fit: cover; /* Modifica l'immagine per coprire il contenitore */
-      display: block;
-    }
+.swiper-slide img {
+  width: 100%;
+  height: 100%;  /* Occupa tutta l'altezza */
+  object-fit: contain;  /* Adatta l'immagine al contenitore mantenendo le proporzioni */
+  display: block;
+  border-radius: 8px;
+}
 
     /* DIDASCALIA */
     .caption {
