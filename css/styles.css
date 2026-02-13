@@ -4537,88 +4537,64 @@ html {
     opacity: 0.8;
 }
 
-    /* Sezione Galleria Gare */
-.s-works {
-    position: relative;
-    overflow: hidden;
-}
-
-/* Contenitore della galleria per immagini */
+/* Container della galleria */
 .folio-entries {
     display: flex;
-    flex-wrap: nowrap;
     overflow: hidden;
-    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    transition: transform 0.5s ease-in-out; /* Transizione fluida */
+    position: relative; /* Per posizionare le frecce */
 }
 
-/* Ogni immagine avrà la stessa altezza e larghezza, senza distorsioni */
-.entry {
-    flex: 0 0 100%; /* Ogni immagine occupa tutta la larghezza */
+/* Ogni immagine occupa la larghezza del contenitore */
+.column.entry {
+    flex: 0 0 100%; /* Ogni immagine occupa il 100% della larghezza */
     max-width: 100%;
-    position: relative;
+    box-sizing: border-box;
 }
 
 /* Le immagini */
 .entry__thumb img {
-    width: 100%;
-    height: auto;
-    max-height: 300px;  /* Imposta un limite massimo per le immagini */
-    object-fit: cover; /* Mantiene l'immagine centrata senza distorsioni */
-}
-
-/* Ridurre le dimensioni delle immagini su schermi piccoli */
-@media screen and (max-width: 768px) {
-    .entry__thumb img {
-        max-height: 200px;  /* Ridurre la dimensione per dispositivi mobili */
-    }
+    width: 100%; /* L'immagine occupa tutta la larghezza del contenitore */
+    height: auto; /* Mantiene il corretto rapporto di aspetto */
+    display: block; /* Rimuove eventuali spazi vuoti sotto l'immagine */
 }
 
 /* Frecce per scorrere le immagini */
 button {
     position: absolute;
     top: 50%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3); /* Fondo semitrasparente */
     color: white;
     border: none;
     padding: 10px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 24px;
     transform: translateY(-50%);
     z-index: 100;
+    border-radius: 50%; /* Frecce rotonde */
+    opacity: 0; /* Le frecce sono invisibili di default */
+    transition: opacity 0.3s ease-in-out;
 }
 
+/* Aggiungi effetto di hover sulle frecce */
 button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 1; /* Le frecce diventano visibili al passaggio del mouse */
 }
 
+/* Freccia precedente */
 .prev {
     left: 10px;
 }
 
+/* Freccia successiva */
 .next {
     right: 10px;
 }
 
-/* Aggiungere uno spazio tra le immagini per evitare sovrapposizioni */
-.folio-entries {
-    gap: 10px;
+/* Frecce visibili durante il passaggio del mouse sulla galleria */
+.folio-entries:hover button {
+    opacity: 1; /* Mostra le frecce quando si passa sopra la galleria */
 }
 
-.folio-entries {
-    display: flex;                 /* Disposizione orizzontale delle immagini */
-    overflow: hidden;              /* Nasconde le immagini che vanno fuori dallo schermo */
-    width: 100%;                   /* La galleria occupa tutta la larghezza disponibile */
-    transition: transform 0.5s ease-in-out; /* Aggiunge una transizione fluida */
-}
-
-.column.entry {
-    flex: 0 0 100%;                /* Ogni immagine occupa il 100% della larghezza del contenitore */
-    max-width: 100%;
-    box-sizing: border-box;        /* Assicura che non ci siano problemi con il padding o il margine */
-}
-
-.entry__thumb img {
-    width: 100%;                   /* Le immagini occupano tutta la larghezza del contenitore */
-    height: auto;                  /* Mantiene il corretto rapporto di aspetto */
-    display: block;                /* Rimuove eventuali spazi vuoti sotto l'immagine */
-}
