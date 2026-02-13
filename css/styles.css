@@ -3851,6 +3851,8 @@ td:last-child {
 @media screen and (max-width: 600px) {
     .s-intro__content-text {
         max-width: 80vw;
+        font-size: 14px;  /* Riduci la dimensione del testo */
+        margin-left: 10px;  /* Sposta la scritta più a sinistra */
     }
 
     .s-intro__social {
