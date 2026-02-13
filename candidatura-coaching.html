@@ -17,51 +17,58 @@ body {
 }
 
 .container {
-    max-width: 900px;
+    max-width: 920px;
     margin: auto;
-    padding: 80px 20px 120px;
+    padding: 90px 20px 120px;
 }
 
 h1 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 42px;
+    font-size: 44px;
     margin-bottom: 10px;
 }
 
 .subtitle {
     color: #555;
-    margin-bottom: 50px;
-    line-height: 1.7;
+    margin-bottom: 60px;
+    line-height: 1.8;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 45px;
 }
 
 .section {
-    padding: 30px;
+    padding: 35px;
     border: 1px solid #eee;
 }
 
 .section h2 {
-    font-size: 16px;
+    font-size: 14px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    margin-bottom: 20px;
-    color: #555;
+    margin-bottom: 25px;
+    color: #777;
 }
 
 .field-group {
     display: grid;
-    gap: 15px;
+    gap: 18px;
 }
 
 .two-columns {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 15px;
+    gap: 18px;
+}
+
+label {
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #777;
 }
 
 input, select, textarea {
@@ -74,11 +81,11 @@ input, select, textarea {
 
 textarea {
     resize: vertical;
-    min-height: 90px;
+    min-height: 100px;
 }
 
 button {
-    padding: 16px;
+    padding: 18px;
     background: #111;
     color: #fff;
     border: none;
@@ -123,7 +130,7 @@ button:hover {
 
 <div class="subtitle">
 Compila il modulo in modo completo e veritiero.  
-Le informazioni raccolte sono indispensabili per costruire un programma personalizzato serio e strutturato.
+Le informazioni raccolte sono indispensabili per costruire un programma personalizzato serio, strutturato e coerente con i tuoi obiettivi.
 </div>
 
 <form id="coachingForm">
@@ -131,29 +138,55 @@ Le informazioni raccolte sono indispensabili per costruire un programma personal
 <div class="section">
 <h2>Dati Anagrafici</h2>
 <div class="field-group">
-<input type="text" name="nome" placeholder="Nome e Cognome" required>
+
+<label>Nome e Cognome</label>
+<input type="text" name="nome" required>
+
+<label>Data di nascita</label>
 <input type="date" name="data_nascita" required>
-<input type="text" name="codice_fiscale" placeholder="Codice Fiscale" required>
-<input type="text" name="residenza" placeholder="Indirizzo di Residenza completo" required>
-<input type="tel" name="telefono" placeholder="Cellulare" required>
-<input type="email" name="email" placeholder="E-mail" required>
+
+<label>Codice Fiscale</label>
+<input type="text" name="codice_fiscale" required>
+
+<label>Indirizzo di Residenza completo</label>
+<input type="text" name="residenza" required>
+
+<label>Cellulare</label>
+<input type="tel" name="telefono" required>
+
+<label>E-mail</label>
+<input type="email" name="email" required>
+
 </div>
 </div>
 
 <div class="section">
 <h2>Dati Fisici</h2>
 <div class="two-columns">
-<input type="number" name="altezza" placeholder="Altezza (cm)" required>
-<input type="number" name="peso" placeholder="Peso (kg)" required>
+<div>
+<label>Altezza (cm)</label>
+<input type="number" name="altezza" required>
+</div>
+<div>
+<label>Peso (kg)</label>
+<input type="number" name="peso" required>
+</div>
 </div>
 </div>
 
 <div class="section">
 <h2>Disponibilità Allenamento</h2>
 <div class="field-group">
-<input type="number" name="giorni_settimana" placeholder="Giorni disponibili a settimana" required>
-<input type="text" name="tempo_giorno" placeholder="Tempo disponibile per ogni giornata (es. 60 min)" required>
-<input type="text" name="orari_preferiti" placeholder="Orari preferiti durante la settimana" required>
+
+<label>Giorni disponibili a settimana</label>
+<input type="number" name="giorni_settimana" required>
+
+<label>Tempo disponibile per ogni giornata (es. 60 min)</label>
+<input type="text" name="tempo_giorno" required>
+
+<label>Giorni preferiti durante la settimana</label>
+<input type="text" name="giorni_preferiti" placeholder="Es. Lunedì, Mercoledì, Venerdì" required>
+
 </div>
 </div>
 
@@ -161,24 +194,27 @@ Le informazioni raccolte sono indispensabili per costruire un programma personal
 <h2>Condizioni Fisiche</h2>
 <div class="field-group">
 
+<label>Hai problemi fisici?</label>
 <select id="problemiFisici" name="problemi_fisici" required>
-<option value="">Hai problemi fisici?</option>
+<option value="">Seleziona</option>
 <option value="No">No</option>
 <option value="Si">Si</option>
 </select>
 
 <textarea id="dettagliFisici" name="dettagli_fisici" placeholder="Descrivi eventuali problematiche fisiche" class="hidden"></textarea>
 
+<label>Hai problematiche alimentari?</label>
 <select id="problemiAlimentari" name="problemi_alimentari" required>
-<option value="">Hai problematiche alimentari?</option>
+<option value="">Seleziona</option>
 <option value="No">No</option>
 <option value="Si">Si</option>
 </select>
 
 <textarea id="dettagliAlimentari" name="dettagli_alimentari" placeholder="Descrivi eventuali problematiche alimentari" class="hidden"></textarea>
 
+<label>Disponibile a consegnare certificato medico agonistico?</label>
 <select name="certificato_medico" required>
-<option value="">Disponibile a consegnare certificato medico agonistico?</option>
+<option value="">Seleziona</option>
 <option value="Si">Si</option>
 <option value="No">No</option>
 </select>
@@ -190,17 +226,39 @@ Le informazioni raccolte sono indispensabili per costruire un programma personal
 <h2>Profilo Sportivo</h2>
 <div class="field-group">
 
+<label>Livello di Allenamento</label>
 <select name="livello" required>
-<option value="">Livello di Allenamento</option>
+<option value="">Seleziona</option>
 <option>Principiante</option>
 <option>Intermedio</option>
 <option>Avanzato</option>
 </select>
 
-<textarea name="aspettative" placeholder="Aspettative dal percorso" required></textarea>
-<textarea name="obiettivi_breve" placeholder="Obiettivi a breve termine" required></textarea>
-<textarea name="obiettivi_lungo" placeholder="Obiettivi a lungo termine" required></textarea>
-<textarea name="gare_programma" placeholder="Gare in programma"></textarea>
+<label>Distanza preferita di gara</label>
+<select name="distanza_preferita" required>
+<option value="">Seleziona</option>
+<option>5 km</option>
+<option>10 km</option>
+<option>Mezza Maratona</option>
+<option>Maratona</option>
+<option>Trail</option>
+<option>Ultra</option>
+</select>
+
+<label>Miglior tempo sulla distanza preferita (se disponibile)</label>
+<input type="text" name="tempo_personale">
+
+<label>Aspettative dal percorso</label>
+<textarea name="aspettative" required></textarea>
+
+<label>Obiettivi a breve termine</label>
+<textarea name="obiettivi_breve" required></textarea>
+
+<label>Obiettivi a lungo termine</label>
+<textarea name="obiettivi_lungo" required></textarea>
+
+<label>Gare in programma</label>
+<textarea name="gare_programma"></textarea>
 
 </div>
 </div>
