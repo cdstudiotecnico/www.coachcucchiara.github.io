@@ -4618,8 +4618,8 @@ html {
 .fade-in-delayed {
     opacity: 0;
     transform: translateY(10px);
-    animation: fadeUp 2s ease forwards;
-    animation-delay: 3s;
+    animation: fadeUp 3s ease forwards;
+    animation-delay: 4s;
 }
 
 @keyframes fadeUp {
