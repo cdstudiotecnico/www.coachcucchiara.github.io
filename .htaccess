@@ -1,0 +1,54 @@
+########################################
+# COACH CUCCHIARA - FILE .HTACCESS
+# Sicurezza, redirect e ottimizzazione
+########################################
+
+# ✅ 1. Forza HTTPS e dominio WWW
+RewriteEngine On
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} !^www\.coachcucchiara\.it$ [NC]
+RewriteRule ^(.*)$ https://www.coachcucchiara.it/$1 [L,R=301]
+
+# ✅ 2. Protezione directory (impedisce di elencare i file)
+Options -Indexes
+
+# ✅ 3. Protezione file sensibili
+<FilesMatch "\.(env|ini|log|sh|bak|gitignore|htaccess)$">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+# ✅ 4. Imposta corretti MIME types
+AddType image/svg+xml svg svgz
+AddEncoding gzip svgz
+
+# ✅ 5. Sicurezza base lato server
+Header set X-Content-Type-Options "nosniff"
+Header set X-Frame-Options "DENY"
+Header set X-XSS-Protection "1; mode=block"
+Header set Referrer-Policy "strict-origin-when-cross-origin"
+Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+
+# ✅ 6. Cache dei contenuti statici (migliora le prestazioni)
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+  ExpiresDefault "access plus 7 days"
+</IfModule>
+
+# ✅ 7. Compressione GZIP
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript
+</IfModule>
+
+########################################
+# Fine configurazione
+########################################
