@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /admin/
 Disallow: /login/
 Allow: /
-Sitemap: https://www.tuosito.com/sitemap.xml
+Sitemap: https://www.cdstudiotecnico.it/sitemap.xml
