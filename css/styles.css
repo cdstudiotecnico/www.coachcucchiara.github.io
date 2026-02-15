@@ -4643,3 +4643,15 @@ html {
 .footer-privacy a:hover {
     opacity: 1;
 }
+
+.maglia-link {
+    color: #ffffff;
+    text-decoration: none;
+    border-bottom: 1px solid #c0392b;
+    padding-bottom: 3px;
+    transition: opacity 0.3s ease;
+}
+
+.maglia-link:hover {
+    opacity: 0.7;
+}
