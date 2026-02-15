@@ -4655,3 +4655,10 @@ html {
 .maglia-link:hover {
     opacity: 0.7;
 }
+
+.s-intro__btn-download a.maglia-link{
+  text-decoration: underline !important;
+  text-decoration-color: #e10600 !important; /* rosso fisso */
+  text-decoration-thickness: 3px !important;
+  text-underline-offset: 6px !important;
+}
