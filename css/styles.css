@@ -4654,3 +4654,9 @@ html {
     clip: rect(0 0 0 0);
     border: 0;
 }
+
+.seo-text {
+    margin-top: 40px;
+    font-size: 15px;
+    color: #444;
+}
