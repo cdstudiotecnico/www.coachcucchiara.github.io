@@ -4667,23 +4667,6 @@ html {
     color: #444;
 }
     
-.s-footer__legal {
-    margin-top: 1.5rem;
-    padding-top: 1rem;
-    border-top: 1px solid rgba(255,255,255,0.12);
-    font-size: 0.9rem;
-    line-height: 1.7;
-    color: #ffffff;   /* bianco pieno */
-}
-
-.s-footer__legal p {
-    margin: 0.3rem 0;
-}
-
-.s-footer__legal strong {
-    font-weight: 600;
-    color: #ffffff;
-}
 
 /* Default (mobile - fondo scuro) */
 .s-intro__subtitle {
@@ -4781,20 +4764,18 @@ html {
 /* Blocco legale elegante */
 .s-footer__legal {
     text-align: center;
-    font-size: 0.85rem;
+    font-size: 0.95rem;   /* grandezza corretta */
     line-height: 1.8;
     margin-top: 30px;
-    color: rgba(255,255,255,0.75);
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    color: #ffffff;
+}
+
+.s-footer__legal p {
+    margin: 0.4rem 0;
 }
 
 .s-footer__legal span {
     font-weight: 600;
-    color: #ffffff;
-}
-
-    .ss-copyright {
-    text-align: center;
-    font-size: 0.85rem;
-    margin-top: 20px;
-    opacity: 0.8;
 }
