@@ -4668,20 +4668,20 @@ html {
 }
     
 .s-footer__legal {
-    margin-bottom: 1.5rem;
-    padding-top: 1.2rem;
-    border-top: 1px solid rgba(255,255,255,0.08);
-    font-size: 0.95rem;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    font-size: 0.9rem;
     line-height: 1.7;
-    color: rgba(255,255,255,0.85);
-}
-
-.s-footer__legal span {
-    font-weight: 600;
-    color: rgba(255,255,255,0.95);
+    color: #ffffff;   /* bianco pieno */
 }
 
 .s-footer__legal p {
-    margin: 0.25rem 0;
+    margin: 0.3rem 0;
+}
+
+.s-footer__legal strong {
+    font-weight: 600;
+    color: #ffffff;
 }
 
