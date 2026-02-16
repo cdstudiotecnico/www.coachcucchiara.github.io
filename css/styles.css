@@ -4676,28 +4676,12 @@ html {
 /* Mantiene la struttura verticale anche su desktop */
 @media screen and (min-width: 1024px) {
 
-    .s-footer__site-links .row {
-        display: flex;
-        flex-direction: column;
+    .s-footer__about {
+        max-width: 800px;
+        margin: 0 auto 60px auto;
+        text-align: center;
     }
 
-    .s-footer__site-links .column {
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-}
-
-    /* Footer sempre in colonna anche su desktop */
-.s-footer__content,
-.s-footer__bottom {
-    display: flex;
-    flex-direction: column;
-}
-
-.s-footer__content .column,
-.s-footer__bottom .column {
-    width: 100% !important;
-    max-width: 100% !important;
 }
 
     /* Il blocco motivazionale prende tutta la larghezza su desktop */
@@ -4716,22 +4700,22 @@ html {
 /* Testo manifesto full width */
 @media screen and (min-width: 1024px) {
     .s-footer__about {
-        width: 100% !important;
-        max-width: 900px;
-        margin: 0 auto 60px auto;
-        text-align: center;
-    }
+.s-footer__about {
+    max-width: 900px;
+    margin: 0 auto 60px auto;
+    text-align: center;
+}
 }
 
 /* Follow + Contact eleganti e centrati */
 @media screen and (min-width: 1024px) {
 
-    .s-footer__site-links .row {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 120px;
-    }
+.s-footer__site-links .row {
+    justify-content: center;
+    align-items: flex-start;
+    gap: 120px;
+}
+
 
     .s-footer__site-links .footer-stack {
         width: auto !important;
