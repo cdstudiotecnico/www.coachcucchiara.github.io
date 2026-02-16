@@ -4809,6 +4809,17 @@ html {
     order: 1;
 }
 
+    .footer-privacy a,
+.back-home a {
+    color: #111;
+    text-decoration: none;
+}
+
+.footer-privacy a:hover,
+.back-home a:hover {
+    opacity: 0.7;
+}
+
 .ss-copyright {
     order: 2;
 }
