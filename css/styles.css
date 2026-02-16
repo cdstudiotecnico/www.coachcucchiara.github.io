@@ -4710,3 +4710,16 @@ html {
         max-width: 100% !important;
     }
 }
+
+    /* Footer sempre in colonna anche su desktop */
+.s-footer__content,
+.s-footer__bottom {
+    display: flex;
+    flex-direction: column;
+}
+
+.s-footer__content .column,
+.s-footer__bottom .column {
+    width: 100% !important;
+    max-width: 100% !important;
+}
