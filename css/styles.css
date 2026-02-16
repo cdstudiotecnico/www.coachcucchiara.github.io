@@ -4673,108 +4673,78 @@ html {
     }
 }
 
-/* Mantiene la struttura verticale anche su desktop */
-@media screen and (min-width: 1024px) {
+/* ============================= */
+/*        FOOTER DEFINITIVO      */
+/* ============================= */
 
+/* ===== BLOCCO MOTIVAZIONALE ===== */
+@media screen and (min-width: 1024px) {
     .s-footer__about {
-        max-width: 800px;
+        max-width: 850px;
         margin: 0 auto 60px auto;
         text-align: center;
     }
-
 }
 
-    /* Il blocco motivazionale prende tutta la larghezza su desktop */
+/* ===== FOLLOW + CONTACT ===== */
 @media screen and (min-width: 1024px) {
 
-    .s-footer__about {
-        width: 100% !important;
-        max-width: 100% !important;
-        flex: 0 0 100% !important;
-    }
-
-}
-
-    /* ===== FOOTER PREMIUM LAYOUT ===== */
-
-/* Testo manifesto full width */
-@media screen and (min-width: 1024px) {
-    .s-footer__about {
-.s-footer__about {
-    max-width: 900px;
-    margin: 0 auto 60px auto;
-    text-align: center;
-}
-}
-
-/* Follow + Contact eleganti e centrati */
-@media screen and (min-width: 1024px) {
-
-.s-footer__site-links .row {
-    justify-content: center;
-    align-items: flex-start;
-    gap: 120px;
-}
-
-
-    .s-footer__site-links .footer-stack {
-        width: auto !important;
+    .s-footer__site-links {
         text-align: center;
     }
 
+    .s-footer__site-links .row {
+        justify-content: center;
+        gap: 100px;
+    }
+
     .s-footer__site-links h5 {
-        font-size: 1rem;
+        font-size: 0.95rem;
         letter-spacing: 2px;
         text-transform: uppercase;
-        margin-bottom: 20px;
+        margin-bottom: 18px;
     }
 }
 
-/* Social icons centrati */
+/* ===== SOCIAL ICONS ===== */
 .s-footer__social {
-    display: flex;
     justify-content: center;
     gap: 25px;
     margin: 40px 0;
 }
 
-/* Blocco legale elegante */
+/* ===== BLOCCO LEGALE ===== */
 .s-footer__legal {
     text-align: center;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     line-height: 1.8;
     margin-top: 30px;
     padding-top: 20px;
     border-top: 1px solid rgba(255,255,255,0.12);
-    color: #ffffff !important;
+    color: #ffffff;
 }
 
 .s-footer__legal p {
     margin: 0.4rem 0;
-    color: #ffffff !important;
 }
 
 .s-footer__legal span,
 .s-footer__legal strong {
-    color: #ffffff !important;
+    color: #ffffff;
     font-weight: 600;
 }
 
-
-    .ss-copyright {
+/* ===== COPYRIGHT ===== */
+.ss-copyright {
     text-align: center;
-    font-size: 0.7rem;          /* più piccolo */
-    margin-top: 20px;
-    color: #ffffff !important;   /* tutto bianco */
-    opacity: 1;                  /* niente effetto grigio */
+    font-size: 0.75rem;
+    margin-top: 18px;
+    color: #ffffff;
 }
 
-.ss-copyright span {
-    color: #ffffff !important;
-}
-
+.ss-copyright span,
 .ss-copyright a {
-    color: #ffffff !important;
+    color: #ffffff;
     text-decoration: none;
 }
 
