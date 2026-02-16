@@ -4791,3 +4791,10 @@ html {
     font-weight: 600;
     color: #ffffff;
 }
+
+    .ss-copyright {
+    text-align: center;
+    font-size: 0.85rem;
+    margin-top: 20px;
+    opacity: 0.8;
+}
