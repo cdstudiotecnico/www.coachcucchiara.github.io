@@ -4723,3 +4723,14 @@ html {
     width: 100% !important;
     max-width: 100% !important;
 }
+
+    /* Il blocco motivazionale prende tutta la larghezza su desktop */
+@media screen and (min-width: 1024px) {
+
+    .s-footer__about {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+    }
+
+}
