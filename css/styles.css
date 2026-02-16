@@ -4775,3 +4775,25 @@ html {
     color: #ffffff !important;
     font-weight: 600;
 }
+
+
+    .ss-copyright {
+    text-align: center;
+    font-size: 0.7rem;          /* più piccolo */
+    margin-top: 20px;
+    color: #ffffff !important;   /* tutto bianco */
+    opacity: 1;                  /* niente effetto grigio */
+}
+
+.ss-copyright span {
+    color: #ffffff !important;
+}
+
+.ss-copyright a {
+    color: #ffffff !important;
+    text-decoration: none;
+}
+
+.ss-copyright a:hover {
+    text-decoration: underline;
+}
