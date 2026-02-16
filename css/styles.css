@@ -4828,16 +4828,3 @@ html {
     order: 3;
     margin-top: 30px;
 }
-
-    .back-home a {
-    text-decoration: none;
-    color: #000000 !important;
-    border-bottom: 1px solid #000000;
-    padding-bottom: 4px;
-    transition: opacity 0.3s ease;
-}
-
-.back-home a:visited,
-.back-home a:active {
-    color: #000000 !important;
-}
