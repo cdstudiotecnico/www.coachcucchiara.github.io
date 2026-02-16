@@ -4757,18 +4757,21 @@ html {
 /* Blocco legale elegante */
 .s-footer__legal {
     text-align: center;
-    font-size: 0.95rem;   /* grandezza corretta */
+    font-size: 0.95rem;
     line-height: 1.8;
     margin-top: 30px;
     padding-top: 20px;
     border-top: 1px solid rgba(255,255,255,0.12);
-    color: #ffffff;
+    color: #ffffff !important;
 }
 
 .s-footer__legal p {
     margin: 0.4rem 0;
+    color: #ffffff !important;
 }
 
-.s-footer__legal span {
+.s-footer__legal span,
+.s-footer__legal strong {
+    color: #ffffff !important;
     font-weight: 600;
 }
