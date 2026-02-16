@@ -4667,3 +4667,17 @@ html {
     color: #444;
 }
     
+.s-footer__legal {
+    margin-bottom: 1.2rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    opacity: 0.75;
+}
+
+.s-footer__legal span {
+    font-weight: 600;
+}
+
+.s-footer__legal p {
+    margin-bottom: 0.2rem;
+}
