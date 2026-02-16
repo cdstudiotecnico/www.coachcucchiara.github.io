@@ -4580,24 +4580,17 @@ html {
 
 .ss-go-top {
     position: fixed;
-    bottom: 20px; /* Distanza dal fondo */
-    right: 20px;  /* Distanza dalla destra */
-    display: none; /* Nascondi il tasto all'inizio */
-    z-index: 1000; /* Assicurati che il tasto sia sopra altri contenuti */
-    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
-    background-color: rgba(0, 0, 0, 0.5); /* Sfondo semitrasparente */
+    bottom: 25px;
+    right: 15px;      /* più vicino al bordo */
+    left: auto !important;
+    transform: none !important;
+    display: none;
+    z-index: 9999;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.6);
     border-radius: 50%;
-    padding: 10px;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.ss-go-top a {
-    color: white; /* Colore icona */
-    text-decoration: none;
-}
-
-.ss-go-top:hover {
-    background-color: rgba(0, 0, 0, 0.8); /* Cambio colore quando si passa sopra */
+    padding: 12px;
+    transition: all 0.3s ease;
 }
 
 .smoothscroll {
