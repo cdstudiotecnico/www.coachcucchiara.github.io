@@ -4697,3 +4697,17 @@ html {
     }
 }
 
+/* Mantiene la struttura verticale anche su desktop */
+@media screen and (min-width: 1024px) {
+
+    .s-footer__site-links .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .s-footer__site-links .column {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+}
