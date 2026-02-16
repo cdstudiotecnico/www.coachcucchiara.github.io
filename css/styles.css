@@ -4751,3 +4751,50 @@ html {
 .ss-copyright a:hover {
     text-decoration: underline;
 }
+
+    /* ============================= */
+/*   FOOTER DESKTOP PERFETTO     */
+/* ============================= */
+
+@media screen and (min-width: 1200px) {
+
+    /* Centra tutto il contenuto footer */
+    .s-footer__content,
+    .s-footer__bottom {
+        max-width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Manifesto centrato e limitato */
+    .s-footer__about {
+        max-width: 750px;
+        margin: 0 auto 70px auto;
+        text-align: center;
+    }
+
+    /* Follow + Contact centrati */
+    .s-footer__site-links {
+        text-align: center;
+    }
+
+    .s-footer__site-links .row {
+        justify-content: center;
+        gap: 140px;
+    }
+
+    /* Social centrati */
+    .s-footer__social {
+        justify-content: center;
+    }
+
+    /* Blocco legale centrato */
+    .s-footer__legal {
+        text-align: center;
+    }
+
+    /* Copyright centrato */
+    .ss-copyright {
+        text-align: center;
+    }
+}
