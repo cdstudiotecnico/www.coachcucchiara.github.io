@@ -1,63 +1,11 @@
 # ============================================================
-# Cucchiara Dario - Running Coach
-# robots.txt ottimizzato per SEO, social network e indicizzazione globale
+# Coach Cucchiara - Running Coach Online
+# robots.txt ufficiale
 # ============================================================
 
-# Regole generali per tutti i crawler
 User-agent: *
 Allow: /
-Crawl-delay: 5
 
-# ============================================================
-# Social Media Crawlers
-# ============================================================
-
-# Facebook / Instagram
-User-agent: facebookexternalhit
-Allow: /
-
-User-agent: facebot
-Allow: /
-
-# Twitter (ora X)
-User-agent: Twitterbot
-Allow: /
-
-# LinkedIn
-User-agent: LinkedInBot
-Allow: /
-
-# Pinterest
-User-agent: Pinterestbot
-Allow: /
-
-# WhatsApp link preview
-User-agent: WhatsApp
-Allow: /
-
-# ============================================================
-# Google Specific Crawlers
-# ============================================================
-
-# Googlebot principale
-User-agent: Googlebot
-Allow: /
-
-# Google Immagini
-User-agent: Googlebot-Image
-Allow: /
-
-# Google Mobile (per indicizzazione da smartphone)
-User-agent: Googlebot-Mobile
-Allow: /
-
-# Google AdsBot (per campagne pubblicitarie)
-User-agent: AdsBot-Google
-Allow: /
-
-# ============================================================
-# Sitemap principale
-# ============================================================
 Sitemap: https://www.coachcucchiara.it/sitemap.xml
 
 # ============================================================
