@@ -4796,3 +4796,24 @@ html {
         margin-top: 20px;
     }
 }
+
+/* Inverte ordine nel footer bottom */
+.s-footer__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Ordine elementi */
+.s-footer__legal {
+    order: 1;
+}
+
+.ss-copyright {
+    order: 2;
+}
+
+.s-footer__social {
+    order: 3;
+    margin-top: 30px;
+}
