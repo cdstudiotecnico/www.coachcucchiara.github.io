@@ -393,8 +393,10 @@ document.getElementById("coachingForm").addEventListener("submit", function(e) {
 
     window.location.href = "mailto:coach.cucchiara@hotmail.com?subject=Candidatura Running Coaching&body=" + body;
 
-    document.getElementById("successMessage").style.display = "block";
-    this.reset();
+setTimeout(function(){
+    window.location.href = "grazie-candidatura.html";
+}, 800);
+    
 });
 
 </script>
