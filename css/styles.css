@@ -4734,3 +4734,60 @@ html {
     }
 
 }
+
+    /* ===== FOOTER PREMIUM LAYOUT ===== */
+
+/* Testo manifesto full width */
+@media screen and (min-width: 1024px) {
+    .s-footer__about {
+        width: 100% !important;
+        max-width: 900px;
+        margin: 0 auto 60px auto;
+        text-align: center;
+    }
+}
+
+/* Follow + Contact eleganti e centrati */
+@media screen and (min-width: 1024px) {
+
+    .s-footer__site-links .row {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 120px;
+    }
+
+    .s-footer__site-links .footer-stack {
+        width: auto !important;
+        text-align: center;
+    }
+
+    .s-footer__site-links h5 {
+        font-size: 1rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+}
+
+/* Social icons centrati */
+.s-footer__social {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 40px 0;
+}
+
+/* Blocco legale elegante */
+.s-footer__legal {
+    text-align: center;
+    font-size: 0.85rem;
+    line-height: 1.8;
+    margin-top: 30px;
+    color: rgba(255,255,255,0.75);
+}
+
+.s-footer__legal span {
+    font-weight: 600;
+    color: #ffffff;
+}
