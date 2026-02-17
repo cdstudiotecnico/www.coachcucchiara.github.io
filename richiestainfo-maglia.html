@@ -14,6 +14,10 @@
 
 <script>
 function gtag_report_conversion_maglia() {
+  // evita doppio invio evento (onclick + submit)
+  if (window.__magliaConversionSent) return true;
+  window.__magliaConversionSent = true;
+
   gtag('event', 'conversion', {
       'send_to': 'AW-17959546156/3z4BCMeVtvobEKza4_NC',
       'value': 3.0,
@@ -216,7 +220,6 @@ parte del Team? Puoi averla senza la scritta "Team Cucchiara". Ad invio verrai r
 Invia Richiesta
 </button>
 
-
 </form>
 
 <div class="success-message" id="successMessage">
@@ -248,17 +251,13 @@ document.getElementById("orderForm").addEventListener("submit", function(e) {
         return;
     }
 
-    // Tracciamento conversione Google Ads
-    gtag('event', 'conversion', {
-        'send_to': 'AW-17959546156/5WK-COPfmPobEKza4_NC',
-        'value': 1.0,
-        'currency': 'EUR'
-    });
+    // Tracciamento conversione Google Ads (MAGLIA) - uguale a quello del bottone
+    gtag_report_conversion_maglia();
 
 });
 </script>
 
-    <script>
+<script>
     window.onload = function() {
         window.scrollTo(0, 0);
     };
