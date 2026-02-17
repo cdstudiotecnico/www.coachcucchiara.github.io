@@ -11,6 +11,17 @@
 
   gtag('config', 'AW-17959546156');
 </script>
+
+  <script>
+function gtag_report_conversion() {
+  gtag('event', 'conversion', {
+    'send_to': 'AW-17959546156/5WK-COPfmPobEKza4_NC',
+    'value': 1.0,
+    'currency': 'EUR'
+  });
+  return true;
+}
+</script>
   
 <meta charset="UTF-8">
 <title>Maglia Silence. Run. | T-Shirt Running Minimal – Coach Cucchiara</title>
@@ -198,7 +209,9 @@ parte del Team? Puoi averla senza la scritta "Team Cucchiara".</div>
     <input type="email" name="email" placeholder="E-mail" required>
 
   <input type="hidden" name="_subject" value="Richiesta Maglia Silence Run">
-  <button type="submit">Invia Richiesta</button>
+  <button type="submit" onclick="return gtag_report_conversion();">
+Invia Richiesta
+</button>
 
 </form>
 
