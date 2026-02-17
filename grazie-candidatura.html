@@ -59,7 +59,8 @@ Verrai ricontattato per valutazione e avvio del percorso.
 
 <!-- PROTEZIONE PAGINA -->
 <script>
-if (!window.location.search.includes("ok=1")) {
+const params = new URLSearchParams(window.location.search);
+if (params.get("ok") !== "1") {
     window.location.replace("https://www.coachcucchiara.it/");
 }
 </script>
