@@ -47,6 +47,17 @@ a:hover {
 
 <body>
 
+<script>
+(function() {
+    const params = new URLSearchParams(window.location.search);
+    const ok = params.get("ok");
+
+    if (ok !== "1") {
+        window.location.href = "https://www.coachcucchiara.it/";
+    }
+})();
+</script>
+
 <div class="container">
 <h1>Richiesta Inviata.</h1>
 <p>
@@ -56,14 +67,6 @@ Verrai ricontattato per valutazione e avvio del percorso.
 
 <a href="index.html">Torna alla Home</a>
 </div>
-
-<!-- PROTEZIONE PAGINA -->
-<script>
-const params = new URLSearchParams(window.location.search);
-if (params.get("ok") !== "1") {
-    window.location.replace("https://www.coachcucchiara.it/");
-}
-</script>
 
 </body>
 </html>
