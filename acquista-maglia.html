@@ -180,7 +180,7 @@ parte del Team? Puoi averla senza la scritta "Team Cucchiara".</div>
     <img src="images/shirt-team.PNG" alt="Maglia running Silence Run versione neutra minimal per runner">
 </div>
 
-<form id="orderForm">
+<form id="orderForm" action="https://formspree.io/f/mojnwygb" method="POST">
 
     <input type="text" name="nome" placeholder="Nome e Cognome" required>
     <input type="text" name="cf" placeholder="Codice Fiscale" required>
@@ -197,7 +197,8 @@ parte del Team? Puoi averla senza la scritta "Team Cucchiara".</div>
     <input type="tel" name="telefono" placeholder="Contatto Telefonico" required>
     <input type="email" name="email" placeholder="E-mail" required>
 
-    <button type="submit">Invia Richiesta</button>
+  <input type="hidden" name="_subject" value="Richiesta Maglia Silence Run">
+  <button type="submit">Invia Richiesta</button>
 
 </form>
 
@@ -223,24 +224,20 @@ Non rappresenta solo abbigliamento running, ma un simbolo di disciplina, costanz
 
 <script>
 document.getElementById("orderForm").addEventListener("submit", function(e) {
-    e.preventDefault();
 
-    let form = this;
-    if (!form.checkValidity()) {
-        form.reportValidity();
+    if (!this.checkValidity()) {
+        e.preventDefault();
+        this.reportValidity();
         return;
     }
 
-    let data = new FormData(form);
-    let body = "";
-    data.forEach((value, key) => {
-        body += key + ": " + value + "%0D%0A";
+    // Tracciamento conversione Google Ads
+    gtag('event', 'conversion', {
+        'send_to': 'AW-17959546156/5WK-COPfmPobEKza4_NC',
+        'value': 1.0,
+        'currency': 'EUR'
     });
 
-    window.location.href = "mailto:coach.cucchiara@hotmail.com?subject=Richiesta Maglia Neutra&body=" + body;
-
-    document.getElementById("successMessage").style.display = "block";
-    form.reset();
 });
 </script>
 
