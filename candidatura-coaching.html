@@ -179,7 +179,7 @@ Compila il modulo in modo completo e veritiero.
 Le informazioni raccolte sono indispensabili per costruire un programma personalizzato serio, strutturato e coerente con i tuoi obiettivi.
 </div>
 
-<form id="coachingForm">
+<form id="coachingForm" action="https://formspree.io/f/mojnwygb" method="POST">
 
 <div class="section">
 <h2>Dati Anagrafici</h2>
@@ -292,6 +292,8 @@ Le informazioni raccolte sono indispensabili per costruire un programma personal
 <option>Maratona</option>
 <option>Trail</option>
 <option>Ultra</option>
+<option>Pista</option>
+<option>Altro</option>
 </select>
 
 <label>Miglior tempo sulla distanza preferita (se disponibile)</label>
@@ -311,6 +313,9 @@ Le informazioni raccolte sono indispensabili per costruire un programma personal
 
 </div>
 </div>
+
+<input type="hidden" name="_next" value="https://www.coachcucchiara.it/grazie-candidatura.html?ok=1">
+<input type="hidden" name="_subject" value="Nuova candidatura Running Coaching">
 
 <button type="submit">Invia al Coach</button>
 
@@ -380,33 +385,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // Invio modulo
-    form.addEventListener("submit", function(e) {
-        e.preventDefault();
-
-        if (certificatoMedico.value !== "Si") return;
-
-        if (!form.checkValidity()) {
-            form.reportValidity();
-            return;
-        }
-
-        let data = new FormData(form);
-        let body = "";
-
-        data.forEach((value, key) => {
-            body += key + ": " + value + "%0D%0A";
-        });
-
-        // Apertura mail
-        window.location.href = "mailto:coach.cucchiara@hotmail.com?subject=Candidatura Running Coaching&body=" + body;
-
-        // Redirect sicuro alla pagina grazie con parametro
-        setTimeout(function(){
-            window.location.href = "grazie-candidatura.html?ok=1";
-        }, 800);
-
-    });
 
 });
 
