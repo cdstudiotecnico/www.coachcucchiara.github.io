@@ -12,6 +12,18 @@
   gtag('config', 'AW-17959546156');
 </script>
 
+<script>
+function gtag_report_conversion() {
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17959546156/5WK-COPfmPobEKza4_NC',
+      'value': 1.0,
+      'currency': 'EUR'
+  });
+  return true;
+}
+</script>
+
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -324,11 +336,9 @@ Le informazioni raccolte sono indispensabili per costruire un programma personal
 </div>
 </div>
 
-<input type="hidden" name="_next" value="https://www.coachcucchiara.it/grazie-candidatura.html?ok=1">
 <input type="hidden" name="_subject" value="Nuova candidatura Running Coaching">
 
-<button type="submit"
-onclick="gtag('event', 'conversion', {'send_to': 'AW-17959546156/5WK-COPfmPobEKza4_NC'});">
+<button type="submit" onclick="return gtag_report_conversion();">
 Invia al Coach
 </button>
 
