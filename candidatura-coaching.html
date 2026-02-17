@@ -342,68 +342,75 @@ Mezza Maratona, Maratona e Trail attraverso disciplina, monitoraggio continuo e 
 </div>
 
 <script>
+document.addEventListener("DOMContentLoaded", function() {
 
-const problemiFisici = document.getElementById("problemiFisici");
-const dettagliFisici = document.getElementById("dettagliFisici");
+    const problemiFisici = document.getElementById("problemiFisici");
+    const dettagliFisici = document.getElementById("dettagliFisici");
 
-problemiFisici.addEventListener("change", function() {
-    dettagliFisici.classList.toggle("hidden", this.value !== "Si");
-});
+    const problemiAlimentari = document.getElementById("problemiAlimentari");
+    const dettagliAlimentari = document.getElementById("dettagliAlimentari");
 
-const problemiAlimentari = document.getElementById("problemiAlimentari");
-const dettagliAlimentari = document.getElementById("dettagliAlimentari");
+    const certificatoMedico = document.getElementById("certificatoMedico");
+    const avvisoCertificato = document.getElementById("avvisoCertificato");
+    const submitButton = document.querySelector("button");
+    const form = document.getElementById("coachingForm");
 
-problemiAlimentari.addEventListener("change", function() {
-    dettagliAlimentari.classList.toggle("hidden", this.value !== "Si");
-});
-
-const certificatoMedico = document.getElementById("certificatoMedico");
-const avvisoCertificato = document.getElementById("avvisoCertificato");
-const submitButton = document.querySelector("button");
-
-certificatoMedico.addEventListener("change", function() {
-    if (this.value === "No") {
-        avvisoCertificato.classList.remove("hidden");
-        submitButton.disabled = true;
-        submitButton.style.opacity = "0.5";
-        submitButton.style.cursor = "not-allowed";
-    } else {
-        avvisoCertificato.classList.add("hidden");
-        submitButton.disabled = false;
-        submitButton.style.opacity = "1";
-        submitButton.style.cursor = "pointer";
-    }
-});
-
-document.getElementById("coachingForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    if (certificatoMedico.value !== "Si") {
-        return;
-    }
-
-    if (!this.checkValidity()) {
-        this.reportValidity();
-        return;
-    }
-
-    let data = new FormData(this);
-    let body = "";
-    data.forEach((value, key) => {
-        body += key + ": " + value + "%0D%0A";
+    // Mostra/Nasconde dettagli problemi fisici
+    problemiFisici.addEventListener("change", function() {
+        dettagliFisici.classList.toggle("hidden", this.value !== "Si");
     });
 
-    window.location.href = "mailto:coach.cucchiara@hotmail.com?subject=Candidatura Running Coaching&body=" + body;
+    // Mostra/Nasconde dettagli problemi alimentari
+    problemiAlimentari.addEventListener("change", function() {
+        dettagliAlimentari.classList.toggle("hidden", this.value !== "Si");
+    });
 
-setTimeout(function(){
-    window.location.href = "grazie-candidatura.html";
-}, 800);
-    
+    // Controllo certificato medico
+    certificatoMedico.addEventListener("change", function() {
+        if (this.value === "No") {
+            avvisoCertificato.classList.remove("hidden");
+            submitButton.disabled = true;
+            submitButton.style.opacity = "0.5";
+            submitButton.style.cursor = "not-allowed";
+        } else {
+            avvisoCertificato.classList.add("hidden");
+            submitButton.disabled = false;
+            submitButton.style.opacity = "1";
+            submitButton.style.cursor = "pointer";
+        }
+    });
+
+    // Invio modulo
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        if (certificatoMedico.value !== "Si") return;
+
+        if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+        }
+
+        let data = new FormData(form);
+        let body = "";
+
+        data.forEach((value, key) => {
+            body += key + ": " + value + "%0D%0A";
+        });
+
+        // Apertura mail
+        window.location.href = "mailto:coach.cucchiara@hotmail.com?subject=Candidatura Running Coaching&body=" + body;
+
+        // Redirect sicuro alla pagina grazie con parametro
+        setTimeout(function(){
+            window.location.href = "grazie-candidatura.html?ok=1";
+        }, 800);
+
+    });
+
 });
 
-</script>
-
-<script>
+// Reset scroll
 if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
 }
@@ -413,11 +420,5 @@ window.addEventListener('load', function() {
 });
 </script>
 
-<script>
-  if (document.referrer.indexOf("coachcucchiara.it") === -1) {
-    window.location.href = "https://www.coachcucchiara.it/";
-  }
-</script>
-    
 </body>
 </html>
