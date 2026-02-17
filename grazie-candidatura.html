@@ -43,20 +43,10 @@ a:hover {
 }
 </style>
 
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    const urlParams = new URLSearchParams(window.location.search);
-
-    // Se NON arriva con parametro ?ok=1 viene reindirizzato alla home
-    if (urlParams.get('ok') !== '1') {
-        window.location.href = "https://www.coachcucchiara.it/";
-    }
-});
-</script>
-
 </head>
 
 <body>
+
 <div class="container">
 <h1>Richiesta Inviata.</h1>
 <p>
@@ -66,5 +56,14 @@ Verrai ricontattato per valutazione e avvio del percorso.
 
 <a href="index.html">Torna alla Home</a>
 </div>
+
+<!-- PROTEZIONE PAGINA -->
+<script>
+const urlParams = new URLSearchParams(window.location.search);
+if (urlParams.get('ok') !== '1') {
+    window.location.replace("https://www.coachcucchiara.it/");
+}
+</script>
+
 </body>
 </html>
