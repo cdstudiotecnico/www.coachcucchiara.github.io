@@ -70,54 +70,6 @@
 }
 </script>
 
-<!-- LOCAL BUSINESS SCHEMA -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SportsActivityLocation",
-  "@id": "https://www.coachcucchiara.it/#local",
-  "name": "Coach Cucchiara",
-  "url": "https://www.coachcucchiara.it/",
-  "telephone": "+393751136597",
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday"
-    ],
-    "opens": "08:00",
-    "closes": "20:00"
-  },
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Via J.F. Kennedy 42",
-    "addressLocality": "Partinico",
-    "addressRegion": "PA",
-    "postalCode": "90047",
-    "addressCountry": "IT"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 38.0456,
-    "longitude": 13.1164
-  },
-  "areaServed": [
-    {
-      "@type": "AdministrativeArea",
-      "name": "Sicilia"
-    },
-    {
-      "@type": "Country",
-      "name": "Italia"
-    }
-  ]
-}
-</script>
-
 <!-- WEBSITE SCHEMA -->
 <script type="application/ld+json">
 {
@@ -149,6 +101,7 @@
     ================================================== -->
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
 
 </head>
@@ -232,7 +185,9 @@
             </div> <!-- s-intro__content -->
 
             <div class="s-intro__content-media">                               
-                <img src="images/intro-bg.jpg" srcset="images/intro-bg.jpg 1x, images/intro-bg.jpg 2x" alt="Running coach online in Italia durante preparazione mezza maratona">
+                <img src="images/intro-bg.jpg" 
+alt="Running coach online in Italia durante preparazione mezza maratona"
+loading="eager">
             </div> <!-- s-intro__content-media -->                
 
             <div class="s-intro__scroll-down">
@@ -714,6 +669,7 @@ showImage(currentIndex);
 </body>
 
 </html>
+
 
 
 
