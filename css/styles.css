@@ -4924,3 +4924,7 @@ html {
     max-width: 420px;
     width: 100%;
 }
+
+    .hidden {
+    display: none;
+}
