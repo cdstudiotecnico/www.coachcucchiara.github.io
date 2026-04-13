@@ -291,6 +291,20 @@ Le informazioni raccolte sono indispensabili per costruire un programma personal
 
 <textarea id="dettagliAlimentari" name="dettagli_alimentari" placeholder="Descrivi eventuali problematiche alimentari" class="hidden"></textarea>
 
+     <label>Soggetto a vincoli, prescrizioni o procedimenti in materia di antidoping?</label>
+
+<select id="antidoping" name="antidoping" required>
+    <option value="">Seleziona</option>
+    <option value="No">No</option>
+    <option value="Si">Si</option>
+</select>
+
+<div id="avvisoAntidoping" class="hidden" style="color:#c62828; font-size:14px; margin-top:10px; line-height:1.6;">
+   <div id="avvisoAntidoping" class="hidden" style="color:#c62828; font-size:14px; margin-top:10px; line-height:1.6;">
+    Per etica professionale e nel rispetto dei valori che guidano la nostra attività, non è possibile avviare programmi di allenamento con soggetti sottoposti a vincoli, prescrizioni o procedimenti in materia di antidoping.
+</div>
+</div>
+
 <label>Certificato medico <u>AGONISTICO</u> in corso di validità?</label>
 <select id="certificatoMedico" name="certificato_medico" required>
     <option value="">Seleziona</option>
@@ -466,6 +480,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const avvisoCertificato = document.getElementById("avvisoCertificato");
     const dichiarazioneCertificato = document.getElementById("dichiarazioneCertificato");
     const firmaCertificato = document.getElementById("firmaCertificato");
+
+    const antidopingSelect = document.getElementById("antidoping");
+    const avvisoAntidoping = document.getElementById("avvisoAntidoping");
+
     const form = document.querySelector("form");
     const submitButton = form.querySelector('button[type="submit"]');
 
@@ -510,10 +528,27 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
+    if (antidopingSelect) {
+        antidopingSelect.addEventListener("change", function() {
+            if (this.value === "Si") {
+                avvisoAntidoping.classList.remove("hidden");
+                submitButton.disabled = true;
+                submitButton.style.opacity = "0.5";
+                submitButton.style.cursor = "not-allowed";
+            } else {
+                avvisoAntidoping.classList.add("hidden");
+                submitButton.disabled = false;
+                submitButton.style.opacity = "1";
+                submitButton.style.cursor = "pointer";
+            }
+        });
+    }
+
     if (form) {
         form.addEventListener("submit", function(e) {
             const certificato = certificatoMedico.value;
             const firma = firmaCertificato.value.trim();
+            const antidoping = antidopingSelect ? antidopingSelect.value : "";
 
             if (certificato === "Si" && firma === "") {
                 e.preventDefault();
@@ -525,6 +560,12 @@ document.addEventListener("DOMContentLoaded", function() {
             if (certificato === "No") {
                 e.preventDefault();
                 alert("Non è possibile inviare la candidatura senza certificato medico agonistico in corso di validità.");
+                return;
+            }
+
+            if (antidoping === "Si") {
+                e.preventDefault();
+                alert("Per etica professionale e nel rispetto dei valori che guidano la nostra attività, non è possibile avviare programmi di allenamento con soggetti sottoposti a vincoli, prescrizioni o procedimenti in materia di antidoping.");
                 return;
             }
         });
@@ -539,6 +580,6 @@ window.addEventListener('load', function() {
     window.scrollTo(0, 0);
 });
 </script>
-
+     
 </body>
 </html>
