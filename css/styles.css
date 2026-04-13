@@ -4882,3 +4882,45 @@ html {
     color: #444;
     font-style: italic;
 }
+
+    .testimonial {
+    text-align: center;
+    margin: 55px 0 50px;
+}
+
+.testimonial img {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.testimonial-text {
+    margin-top: 18px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #111;
+}
+
+.testimonial-text span {
+    display: block;
+    font-size: 13px;
+    color: #777;
+    letter-spacing: 2px;
+    margin-top: 4px;
+}
+
+.testimonial-quote {
+    margin-top: 14px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #444;
+    font-style: italic;
+}
+
+            .image-wrap img {
+    max-width: 420px;
+    width: 100%;
+}
