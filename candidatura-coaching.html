@@ -297,6 +297,11 @@ Le informazioni raccolte sono indispensabili per costruire un programma personal
     <option value="Si">Si</option>
     <option value="No">No</option>
 </select>
+     
+     <div id="dichiarazioneCertificato" class="hidden" style="color:#333; font-size:14px; margin-top:10px; line-height:1.6;">
+<strong>Attenzione:</strong> selezionando “Sì” dichiari sotto la tua responsabilità, ai sensi del D.P.R. 445/2000, di essere in possesso di certificato medico agonistico valido. 
+Eventuali dichiarazioni mendaci comportano responsabilità civili e penali.
+</div>
 
 <div id="avvisoCertificato" class="hidden" style="color:#c62828; font-size:14px; margin-top:10px;">
     Mi dispiace, ma senza certificato medico non posso avviare un programma di allenamento.
@@ -434,7 +439,30 @@ window.addEventListener('load', function() {
  <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PX8LLZXB"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->    
+<!-- End Google Tag Manager (noscript) -->  
+
+     <script>
+const certificatoSelect = document.getElementById("certificatoMedico");
+const avvisoNo = document.getElementById("avvisoCertificato");
+const dichiarazioneSi = document.getElementById("dichiarazioneCertificato");
+
+certificatoSelect.addEventListener("change", function () {
+
+    if (this.value === "No") {
+        avvisoNo.classList.remove("hidden");
+        dichiarazioneSi.classList.add("hidden");
+    } 
+    else if (this.value === "Si") {
+        dichiarazioneSi.classList.remove("hidden");
+        avvisoNo.classList.add("hidden");
+    } 
+    else {
+        avvisoNo.classList.add("hidden");
+        dichiarazioneSi.classList.add("hidden");
+    }
+
+});
+</script>
 
 </body>
 </html>
