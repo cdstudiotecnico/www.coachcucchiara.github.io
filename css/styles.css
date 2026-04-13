@@ -4844,19 +4844,23 @@ html {
     top: -6px;
 }
 
-    .testimonial {
+
+.testimonial {
     text-align: center;
-    margin: 60px 0 50px;
+    margin: 80px auto 60px;
+    max-width: 420px; /* blocco contenuto */
 }
 
 .testimonial img {
     width: 100%;
-    max-width: 420px;
+    height: auto;
+    max-height: 520px; /* evita gigantismo */
+    object-fit: cover;
     border-radius: 2px;
 }
 
 .testimonial-text {
-    margin-top: 18px;
+    margin-top: 16px;
     font-family: 'Cormorant Garamond', serif;
     font-size: 18px;
     letter-spacing: 1px;
