@@ -298,9 +298,24 @@ Le informazioni raccolte sono indispensabili per costruire un programma personal
     <option value="No">No</option>
 </select>
      
-     <div id="dichiarazioneCertificato" class="hidden" style="color:#333; font-size:14px; margin-top:10px; line-height:1.6;">
-<strong>Attenzione:</strong> selezionando “Sì” dichiari sotto la tua responsabilità, ai sensi del D.P.R. 445/2000, di essere in possesso di certificato medico agonistico valido. 
-Eventuali dichiarazioni mendaci comportano responsabilità civili e penali.
+<div id="dichiarazioneCertificato" class="hidden" style="color:#333; font-size:14px; margin-top:10px; line-height:1.6;">
+
+    <p>
+        <strong>Attenzione:</strong> selezionando “Sì” dichiari sotto la tua responsabilità, ai sensi del D.P.R. 445/2000, di essere in possesso di certificato medico agonistico valido.
+        Eventuali dichiarazioni mendaci comportano responsabilità civili e penali.
+    </p>
+
+    <label for="firmaCertificato" style="margin-top:10px; display:block;">
+        Nome e Cognome (firma per autodichiarazione)
+    </label>
+
+    <input 
+        type="text" 
+        id="firmaCertificato" 
+        name="firma_certificato"
+        placeholder="Inserisci nome e cognome"
+    >
+
 </div>
 
 <div id="avvisoCertificato" class="hidden" style="color:#c62828; font-size:14px; margin-top:10px;">
@@ -441,25 +456,37 @@ window.addEventListener('load', function() {
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->  
 
-     <script>
+<script>
 const certificatoSelect = document.getElementById("certificatoMedico");
 const avvisoNo = document.getElementById("avvisoCertificato");
 const dichiarazioneSi = document.getElementById("dichiarazioneCertificato");
+const firmaInput = document.getElementById("firmaCertificato");
 
 certificatoSelect.addEventListener("change", function () {
 
     if (this.value === "No") {
         avvisoNo.classList.remove("hidden");
         dichiarazioneSi.classList.add("hidden");
+        firmaInput.removeAttribute("required");
     } 
     else if (this.value === "Si") {
         dichiarazioneSi.classList.remove("hidden");
         avvisoNo.classList.add("hidden");
+        firmaInput.setAttribute("required", "required");
     } 
     else {
         avvisoNo.classList.add("hidden");
         dichiarazioneSi.classList.add("hidden");
+        firmaInput.removeAttribute("required");
     }
+     const certificato = document.getElementById("certificatoMedico").value;
+const firma = document.getElementById("firmaCertificato").value;
+
+if (certificato === "Si" && firma.trim() === "") {
+    e.preventDefault();
+    alert("Per proseguire è necessario inserire nome e cognome come autodichiarazione.");
+    return;
+}
 
 });
 </script>
