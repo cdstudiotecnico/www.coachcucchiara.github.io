@@ -298,8 +298,14 @@ Le informazioni raccolte sono indispensabili per costruire un programma personal
     <option value="No">No</option>
 </select>
      
-<div id="dichiarazioneCertificato" class="hidden" style="color:#333; font-size:14px; margin-top:10px; line-height:1.6;">
+<label>Certificato medico agonistico in corso di validità?</label>
+<select id="certificatoMedico" name="certificato_medico" required>
+    <option value="">Seleziona</option>
+    <option value="Si">Si</option>
+    <option value="No">No</option>
+</select>
 
+<div id="dichiarazioneCertificato" class="hidden" style="color:#333; font-size:14px; margin-top:10px; line-height:1.6;">
     <p>
         <strong>Attenzione:</strong> selezionando “Sì” dichiari sotto la tua responsabilità, ai sensi del D.P.R. 445/2000, di essere in possesso di certificato medico agonistico valido.
         Eventuali dichiarazioni mendaci comportano responsabilità civili e penali.
@@ -313,9 +319,11 @@ Le informazioni raccolte sono indispensabili per costruire un programma personal
         type="text" 
         id="firmaCertificato" 
         name="firma_certificato"
-        placeholder="Inserisci nome e cognome"
-    >
+        placeholder="Inserisci nome e cognome">
+</div>
 
+<div id="avvisoCertificato" class="hidden" style="color:#c62828; font-size:14px; margin-top:10px;">
+    Mi dispiace, ma senza certificato medico non posso avviare un programma di allenamento.
 </div>
 
 <div id="avvisoCertificato" class="hidden" style="color:#c62828; font-size:14px; margin-top:10px;">
@@ -457,37 +465,88 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->  
 
 <script>
-const certificatoSelect = document.getElementById("certificatoMedico");
-const avvisoNo = document.getElementById("avvisoCertificato");
-const dichiarazioneSi = document.getElementById("dichiarazioneCertificato");
-const firmaInput = document.getElementById("firmaCertificato");
+document.addEventListener("DOMContentLoaded", function() {
+    const problemiFisici = document.getElementById("problemiFisici");
+    const dettagliFisici = document.getElementById("dettagliFisici");
 
-certificatoSelect.addEventListener("change", function () {
+    const problemiAlimentari = document.getElementById("problemiAlimentari");
+    const dettagliAlimentari = document.getElementById("dettagliAlimentari");
 
-    if (this.value === "No") {
-        avvisoNo.classList.remove("hidden");
-        dichiarazioneSi.classList.add("hidden");
-        firmaInput.removeAttribute("required");
-    } 
-    else if (this.value === "Si") {
-        dichiarazioneSi.classList.remove("hidden");
-        avvisoNo.classList.add("hidden");
-        firmaInput.setAttribute("required", "required");
-    } 
-    else {
-        avvisoNo.classList.add("hidden");
-        dichiarazioneSi.classList.add("hidden");
-        firmaInput.removeAttribute("required");
+    const certificatoMedico = document.getElementById("certificatoMedico");
+    const avvisoCertificato = document.getElementById("avvisoCertificato");
+    const dichiarazioneCertificato = document.getElementById("dichiarazioneCertificato");
+    const firmaCertificato = document.getElementById("firmaCertificato");
+    const form = document.querySelector("form");
+    const submitButton = form.querySelector('button[type="submit"]');
+
+    if (problemiFisici && dettagliFisici) {
+        problemiFisici.addEventListener("change", function() {
+            dettagliFisici.classList.toggle("hidden", this.value !== "Si");
+        });
     }
-     const certificato = document.getElementById("certificatoMedico").value;
-const firma = document.getElementById("firmaCertificato").value;
 
-if (certificato === "Si" && firma.trim() === "") {
-    e.preventDefault();
-    alert("Per proseguire è necessario inserire nome e cognome come autodichiarazione.");
-    return;
+    if (problemiAlimentari && dettagliAlimentari) {
+        problemiAlimentari.addEventListener("change", function() {
+            dettagliAlimentari.classList.toggle("hidden", this.value !== "Si");
+        });
+    }
+
+    if (certificatoMedico) {
+        certificatoMedico.addEventListener("change", function() {
+            if (this.value === "No") {
+                avvisoCertificato.classList.remove("hidden");
+                dichiarazioneCertificato.classList.add("hidden");
+                firmaCertificato.removeAttribute("required");
+                firmaCertificato.value = "";
+                submitButton.disabled = true;
+                submitButton.style.opacity = "0.5";
+                submitButton.style.cursor = "not-allowed";
+            } else if (this.value === "Si") {
+                dichiarazioneCertificato.classList.remove("hidden");
+                avvisoCertificato.classList.add("hidden");
+                firmaCertificato.setAttribute("required", "required");
+                submitButton.disabled = false;
+                submitButton.style.opacity = "1";
+                submitButton.style.cursor = "pointer";
+            } else {
+                avvisoCertificato.classList.add("hidden");
+                dichiarazioneCertificato.classList.add("hidden");
+                firmaCertificato.removeAttribute("required");
+                firmaCertificato.value = "";
+                submitButton.disabled = false;
+                submitButton.style.opacity = "1";
+                submitButton.style.cursor = "pointer";
+            }
+        });
+    }
+
+    if (form) {
+        form.addEventListener("submit", function(e) {
+            const certificato = certificatoMedico.value;
+            const firma = firmaCertificato.value.trim();
+
+            if (certificato === "Si" && firma === "") {
+                e.preventDefault();
+                alert("Per proseguire è necessario inserire nome e cognome come autodichiarazione.");
+                firmaCertificato.focus();
+                return;
+            }
+
+            if (certificato === "No") {
+                e.preventDefault();
+                alert("Non è possibile inviare la candidatura senza certificato medico agonistico in corso di validità.");
+                return;
+            }
+        });
+    }
+});
+
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
 }
 
+window.addEventListener('load', function() {
+    window.scrollTo(0, 0);
 });
 </script>
 
