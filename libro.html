@@ -178,41 +178,155 @@ body {
     margin-bottom: 16px;
 }
 
+<section class="cta">
+    <h2>Silence<span class="red">.</span> Run<span class="red">.</span></h2>
+    <p class="cta-text">
+        Il libro è già <strong>disponibile</strong> per l’acquisto su Amazon.<br>
+        Se hai Amazon Prime, la spedizione è inclusa senza costi aggiuntivi.
+    </p>
+    <div class="language-boxes">
+        <!-- ITALIANO -->
+        <div class="language-card">
+            <div class="language-title">
+                🇮🇹 EDIZIONE ITALIANA
+            </div>
+            <a class="amazon-button"
+               href="https://amzn.eu/d/02pIwWH4"
+               target="_blank"
+               rel="noopener">
+               ACQUISTA SU AMAZON →
+            </a>
+        </div>
+        <!-- INGLESE -->
+        <div class="language-card">
+            <div class="language-title">
+                🇬🇧 ENGLISH EDITION
+            </div>
+            <div class="coming-soon">
+                Disponibile prossimamente
+            </div>
+        </div>
+        <!-- SPAGNOLO -->
+        <div class="language-card">
+            <div class="language-title">
+                🇪🇸 EDICIÓN ESPAÑOLA
+            </div>
+            <div class="coming-soon">
+                Disponible próximamente
+            </div>
+        </div>
+    </div>
+    <div class="final-claim">
+        CORRI. ASCOLTA. SCEGLI. <span class="red">DIVENTA.</span>
+    </div>
+</section>
+
+E sostituisci il CSS vecchio della CTA con questo:
+
 .cta {
     margin-top: 75px;
-    padding: 50px 30px;
-    background: #111;
+    padding: 70px 28px;
+    background: #050505;
     color: #fff;
     text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.06);
 }
-
 .cta h2 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 42px;
-    margin: 0 0 18px;
+    font-size: 58px;
+    margin: 0;
+    font-weight: 700;
+    line-height: 1;
 }
-
-.cta p {
-    color: #ddd;
-    font-size: 16px;
-    line-height: 1.7;
+.cta-text {
+    margin-top: 28px;
+    color: #d7d7d7;
+    font-size: 20px;
+    line-height: 1.9;
 }
-
+.language-boxes {
+    display: grid;
+    gap: 22px;
+    margin-top: 55px;
+}
+.language-card {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 28px 24px;
+    transition: 0.3s ease;
+}
+.language-card:hover {
+    border-color: rgba(198,40,40,0.45);
+    transform: translateY(-2px);
+}
+.language-title {
+    font-size: 15px;
+    letter-spacing: 5px;
+    font-weight: 600;
+    margin-bottom: 18px;
+    color: #ffffff;
+}
 .amazon-button {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 15px 34px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 18px 24px;
     border: 1px solid #c62828;
     color: #fff;
     text-decoration: none;
-    letter-spacing: 2px;
-    font-size: 13px;
+    letter-spacing: 4px;
+    font-size: 14px;
     text-transform: uppercase;
     transition: 0.3s ease;
 }
-
 .amazon-button:hover {
     background: #c62828;
+}
+.coming-soon {
+    padding: 18px 24px;
+    border: 1px solid rgba(255,255,255,0.10);
+    color: rgba(255,255,255,0.72);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+.final-claim {
+    margin-top: 55px;
+    font-size: 14px;
+    letter-spacing: 6px;
+    color: rgba(255,255,255,0.72);
+}
+.red {
+    color: #c62828;
+}
+@media (max-width: 850px) {
+    .cta {
+        padding: 60px 22px;
+    }
+    .cta h2 {
+        font-size: 52px;
+    }
+    .cta-text {
+        font-size: 18px;
+        line-height: 1.8;
+    }
+    .language-title {
+        font-size: 14px;
+        letter-spacing: 4px;
+    }
+    .amazon-button {
+        padding: 17px 18px;
+        letter-spacing: 3px;
+        font-size: 13px;
+    }
+    .coming-soon {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+    .final-claim {
+        letter-spacing: 4px;
+        line-height: 1.8;
+    }
 }
 
 .back-home {
