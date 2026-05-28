@@ -78,6 +78,28 @@ body {
     margin-bottom: 60px;
 }
 
+.language-switch {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    margin-bottom: 55px;
+}
+
+.lang-link {
+    text-decoration: none;
+    color: #111;
+    font-size: 14px;
+    letter-spacing: 2px;
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+    padding-bottom: 4px;
+    transition: 0.25s ease;
+}
+
+.lang-link:hover {
+    color: #c62828;
+    border-color: #c62828;
+}
+
 .hero {
     display: grid;
     grid-template-columns: 1fr 0.85fr;
@@ -365,6 +387,17 @@ body {
 
     <div class="brand">Dario Cucchiara</div>
     <div class="motto">Silence. Run.<span class="tm">™</span></div>
+    <div class="language-switch">
+
+    <a href="book-en.html" class="lang-link" aria-label="English Version">
+        🇬🇧 English
+    </a>
+
+    <a href="libro-es.html" class="lang-link" aria-label="Versión Española">
+        🇪🇸 Español
+    </a>
+
+</div>
 
     <section class="hero">
         <div>
