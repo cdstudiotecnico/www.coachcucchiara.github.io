@@ -57,41 +57,53 @@ gtag('config', 'AW-17959546156');
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-
 body {
     margin: 0;
     background: #f6f6f6;
     color: #111;
     font-family: 'Inter', sans-serif;
 }
-
 .container {
     max-width: 980px;
     margin: auto;
     padding: 70px 22px 90px;
 }
-
 .brand {
     font-family: 'Cormorant Garamond', serif;
     font-size: 34px;
     margin-bottom: 4px;
 }
-
 .motto {
     font-family: 'Cormorant Garamond', serif;
     font-size: 13px;
     letter-spacing: 4px;
     color: #777;
-    margin-bottom: 18px;
+    margin-bottom: 60px;
 }
-
 .language-switch {
-    display: flex;
-    gap: 18px;
-    align-items: center;
     margin-bottom: 55px;
 }
 
+.language-select {
+    width: 100%;
+    max-width: 320px;
+    padding: 14px 18px;
+    background: #fff;
+    color: #111;
+    border: 1px solid rgba(0,0,0,0.18);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+    transition: 0.25s ease;
+}
+
+.language-select:hover,
+.language-select:focus {
+    border-color: #c62828;
+}
 .lang-link {
     text-decoration: none;
     color: #111;
@@ -101,12 +113,11 @@ body {
     padding-bottom: 4px;
     transition: 0.25s ease;
 }
-
-.lang-link:hover {
+.lang-link:hover,
+.lang-link.active {
     color: #c62828;
     border-color: #c62828;
 }
-
 .hero {
     display: grid;
     grid-template-columns: 1fr 0.85fr;
@@ -114,7 +125,6 @@ body {
     align-items: center;
     margin-bottom: 70px;
 }
-
 .hero h1 {
     font-family: 'Cormorant Garamond', serif;
     font-size: 74px;
@@ -122,60 +132,49 @@ body {
     margin: 0 0 25px;
     font-weight: 700;
 }
-
 .red {
     color: #c62828;
 }
-
 .subtitle {
     font-size: 18px;
     line-height: 1.8;
     color: #333;
     max-width: 520px;
 }
-
 .claim {
     margin-top: 28px;
     font-size: 14px;
     letter-spacing: 7px;
     font-weight: 600;
 }
-
 .hero-image {
     text-align: center;
 }
-
 .hero-image img {
     width: 100%;
     max-width: 390px;
     height: auto;
 }
-
 .banner {
     margin: 20px 0 70px;
     text-align: center;
 }
-
 .banner img {
     width: 100%;
     max-width: 980px;
     height: auto;
 }
-
 .content {
     font-size: 17px;
     line-height: 1.9;
     color: #333;
 }
-
 .content p {
     margin-bottom: 24px;
 }
-
 .content strong {
     color: #111;
 }
-
 .quote {
     margin: 65px 0;
     padding: 45px 30px;
@@ -186,35 +185,31 @@ body {
     line-height: 1.35;
     color: #111;
 }
-
 .sections {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 35px;
     margin: 60px 0;
 }
-
 .card {
     background: #fff;
     padding: 30px;
     border: 1px solid #e3e3e3;
 }
-
 .card h2 {
     font-family: 'Cormorant Garamond', serif;
     font-size: 28px;
     margin-top: 0;
     margin-bottom: 16px;
 }
-
 .cta {
     margin-top: 75px;
     padding: 70px 28px;
     background: #050505;
     color: #fff;
     text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.06);
 }
-
 .cta h2 {
     font-family: 'Cormorant Garamond', serif;
     font-size: 58px;
@@ -222,32 +217,27 @@ body {
     font-weight: 700;
     line-height: 1;
 }
-
 .cta-text {
     margin-top: 28px;
     color: #d7d7d7;
     font-size: 20px;
     line-height: 1.9;
 }
-
 .language-boxes {
     display: grid;
     gap: 22px;
     margin-top: 55px;
 }
-
 .language-card {
     background: rgba(255,255,255,0.02);
     border: 1px solid rgba(255,255,255,0.08);
     padding: 28px 24px;
     transition: 0.3s ease;
 }
-
 .language-card:hover {
     border-color: rgba(198,40,40,0.45);
     transform: translateY(-2px);
 }
-
 .language-title {
     font-size: 15px;
     letter-spacing: 5px;
@@ -255,7 +245,6 @@ body {
     margin-bottom: 18px;
     color: #ffffff;
 }
-
 .amazon-button {
     display: block;
     width: 100%;
@@ -264,92 +253,88 @@ body {
     border: 1px solid #c62828;
     color: #fff;
     text-decoration: none;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
     font-size: 14px;
     text-transform: uppercase;
     transition: 0.3s ease;
 }
-
 .amazon-button:hover {
     background: #c62828;
 }
-
-.coming-soon {
-    padding: 18px 24px;
-    border: 1px solid rgba(255,255,255,0.10);
-    color: rgba(255,255,255,0.72);
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    font-size: 13px;
-}
-
 .final-claim {
     margin-top: 55px;
     font-size: 14px;
     letter-spacing: 6px;
     color: rgba(255,255,255,0.72);
 }
-
 .back-home {
     margin-top: 60px;
     text-align: center;
     font-size: 13px;
     letter-spacing: 2px;
 }
-
 .back-home a {
     text-decoration: none;
     color: #111;
     border-bottom: 1px solid #111;
     padding-bottom: 4px;
 }
-
 .tm {
     font-size: 12px;
 }
-
 @media (max-width: 850px) {
-
+    .cta {
+        padding: 60px 22px;
+    }
+    .cta h2 {
+        font-size: 52px;
+    }
+    .cta-text {
+        font-size: 18px;
+        line-height: 1.8;
+    }
+    .language-title {
+        font-size: 14px;
+        letter-spacing: 4px;
+    }
+    .amazon-button {
+        padding: 17px 18px;
+        letter-spacing: 3px;
+        font-size: 13px;
+    }
+    .final-claim {
+        letter-spacing: 4px;
+        line-height: 1.8;
+    }
     .hero {
         grid-template-columns: 1fr;
         text-align: left;
     }
-
     .hero h1 {
         font-size: 56px;
     }
-
     .sections {
         grid-template-columns: 1fr;
     }
-
     .claim {
         letter-spacing: 5px;
     }
-
 }
-
 @media (max-width: 520px) {
-
     .container {
         padding: 55px 20px 75px;
     }
-
     .hero h1 {
         font-size: 46px;
     }
-
     .quote {
         font-size: 25px;
         padding: 35px 24px;
     }
-
     .cta h2 {
         font-size: 34px;
     }
-
 }
-
 </style>
 
 <script type="application/ld+json">
