@@ -77,32 +77,82 @@ document.documentElement.classList.add('js');
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-.site-language-switch {
-    display: flex;
-    gap: 14px;
+.site-language-dropdown {
+    position: relative;
+    display: inline-block;
     margin-top: 28px;
     margin-bottom: 34px;
-    flex-wrap: wrap;
 }
 
-.site-language-btn {
+.site-language-current {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
+    gap: 12px;
     padding: 12px 22px;
-    border: 1px solid rgba(255,255,255,0.18);
+    background: rgba(0,0,0,0.35);
+    border: 1px solid rgba(255,255,255,0.22);
     color: #ffffff;
-    text-decoration: none;
     font-size: 13px;
     letter-spacing: 2px;
     text-transform: uppercase;
+    cursor: pointer;
     transition: 0.3s ease;
 }
 
-.site-language-btn:hover {
+.site-language-current:hover {
     border-color: #c62828;
-    background: rgba(198,40,40,0.12);
-    transform: translateY(-2px);
+    background: rgba(198,40,40,0.14);
+}
+
+.site-language-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    min-width: 230px;
+    background: rgba(12,12,12,0.96);
+    border: 1px solid rgba(255,255,255,0.16);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: 0.25s ease;
+    z-index: 20;
+}
+
+.site-language-dropdown:hover .site-language-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.site-language-menu a {
+    display: block;
+    padding: 13px 18px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.site-language-menu a:hover {
+    color: #ffffff;
+    background: rgba(198,40,40,0.18);
+}
+
+@media (max-width: 600px) {
+    .site-language-dropdown {
+        width: 100%;
+    }
+
+    .site-language-current {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .site-language-menu {
+        width: 100%;
+    }
 }
 
 .tm {
@@ -121,7 +171,6 @@ document.documentElement.classList.add('js');
     }
 }
 </style>
-
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
