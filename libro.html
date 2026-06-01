@@ -387,20 +387,16 @@ body {
 
     <div class="brand">Dario Cucchiara</div>
     <div class="motto">Silence. Run.<span class="tm">™</span></div>
-    <div class="language-switch">
-
-    <a href="libro-en.html" class="lang-link" aria-label="English Version">
-        🇬🇧 English
-    </a>
-
-    <a href="libro-es.html" class="lang-link" aria-label="Versión Española">
-        🇪🇸 Español
-    </a>
-
-</div>
-
+    
+    <select class="language-select" onchange="if(this.value) window.location.href=this.value;">
+        <option value="libro.html">Italiano</option>
+        <option value="libro-en.html">English</option>
+        <option value="libro-es.html">Español</option>
+          <option value="libro-fr.html" selected>Français</option
+    </select>
     <section class="hero">
         <div>
+            
             <h1>Silence<span class="red">.</span><br>Run<span class="red">.</span></h1>
 
             <div class="subtitle">
