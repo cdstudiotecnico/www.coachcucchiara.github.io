@@ -358,24 +358,17 @@ body {
 <body>
 
 <div class="container">
+    <div class="brand">Dario Cucchiara</div>
+    <div class="motto">Silence. Run.<span class="tm">™</span></div>
+    <div class="language-switch">
 
-<div class="brand">Dario Cucchiara</div>
-
-<div class="motto">
-Silence. Run.<span class="tm">™</span>
-</div>
-
-<!-- LANGUAGE SWITCH -->
-
-<div class="language-switch">
-
-<a href="https://www.coachcucchiara.it/libro.html" class="lang-link">
-🇮🇹 Italiano
-</a>
-
-<a href="https://www.coachcucchiara.it/libro-es.html" class="lang-link">
-🇪🇸 Español
-</a>
+    <select class="language-select" onchange="if(this.value) window.location.href=this.value;">
+        <option value="libro-en.html" selected>English</option>
+        <option value="libro-fr.html">Français</option>
+        <option value="libro.html">Italiano</option>
+        <option value="libro-es.html">Español</option>
+      
+    </select>
 
 </div>
 
