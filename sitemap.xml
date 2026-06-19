@@ -41,12 +41,69 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Libro -->
+  <!-- Libro-IT -->
   <url>
     <loc>https://www.coachcucchiara.it/libro.html</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+    <!-- Libro-EN -->
+  <url>
+    <loc>https://www.coachcucchiara.it/libro-en.html</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+      <!-- Libro-ES -->
+  <url>
+    <loc>https://www.coachcucchiara.it/libro-es.html</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+          <!-- Libro-FR -->
+  <url>
+    <loc>https://www.coachcucchiara.it/libro-fr.html</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+        <!-- Libro-DE -->
+  <url>
+    <loc>https://www.coachcucchiara.it/libro-de.html</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+        <!-- Libro-JA -->
+  <url>
+    <loc>https://www.coachcucchiara.it/libro-ja.html</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+          <!-- Gadget -->
+  <url>
+    <loc>https://www.coachcucchiara.it/gadget.html</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+            <!-- Gadget-EN -->
+  <url>
+    <loc>https://www.coachcucchiara.it/gadget-en.html</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+              <!-- Gadget-ES -->
+  <url>
+    <loc>https://www.coachcucchiara.it/gadget-es.html</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <!-- Privacy Policy -->
