@@ -85,8 +85,9 @@ html {
 body {
     margin: 0;
     background:
-        radial-gradient(circle at 18% 0%, rgba(0,150,255,0.12), transparent 28%),
-        radial-gradient(circle at 82% 10%, rgba(255,255,255,0.08), transparent 26%),
+        radial-gradient(circle at 18% 0%, rgba(0,150,255,0.16), transparent 30%),
+        radial-gradient(circle at 82% 8%, rgba(255,255,255,0.09), transparent 28%),
+        radial-gradient(circle at 50% 100%, rgba(0,150,255,0.08), transparent 34%),
         linear-gradient(180deg, #020202 0%, #070707 45%, #030303 100%);
     color: var(--text);
     font-family: 'Inter', sans-serif;
@@ -97,7 +98,7 @@ a {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1240px;
     margin: auto;
     padding: 54px 22px 82px;
 }
@@ -142,7 +143,7 @@ a {
 
 .hero {
     position: relative;
-    min-height: 720px;
+    min-height: 760px;
     border: 1px solid var(--line);
     overflow: hidden;
     display: grid;
@@ -150,6 +151,7 @@ a {
     background:
         linear-gradient(90deg, rgba(0,0,0,0.98) 0%, rgba(0,0,0,0.86) 42%, rgba(0,0,0,0.30) 100%),
         url("images/gadget-portachiavi-cover.jpeg") center/cover no-repeat;
+    box-shadow: 0 0 70px rgba(0,150,255,0.10);
 }
 
 .hero::before {
@@ -157,8 +159,9 @@ a {
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(circle at 18% 45%, rgba(0,150,255,0.18), transparent 28%),
-        linear-gradient(180deg, transparent 55%, rgba(0,0,0,0.92) 100%);
+        radial-gradient(circle at 18% 45%, rgba(0,150,255,0.22), transparent 29%),
+        radial-gradient(circle at 72% 50%, rgba(0,150,255,0.12), transparent 30%),
+        linear-gradient(180deg, transparent 55%, rgba(0,0,0,0.94) 100%);
     pointer-events: none;
 }
 
@@ -169,8 +172,8 @@ a {
     right: 48px;
     bottom: 42px;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(0,150,255,0.9), transparent);
-    box-shadow: 0 0 22px rgba(0,150,255,0.75);
+    background: linear-gradient(90deg, transparent, rgba(0,150,255,0.95), transparent);
+    box-shadow: 0 0 28px rgba(0,150,255,0.85);
 }
 
 .hero-copy {
@@ -191,7 +194,7 @@ a {
 
 .hero h1 {
     margin: 0;
-    font-size: clamp(58px, 7.4vw, 104px);
+    font-size: clamp(58px, 7.4vw, 108px);
     line-height: 0.88;
     text-transform: uppercase;
     letter-spacing: -4px;
@@ -204,15 +207,15 @@ a {
 
 .hero-lead {
     margin-top: 30px;
-    max-width: 540px;
-    font-size: clamp(22px, 2.3vw, 30px);
+    max-width: 560px;
+    font-size: clamp(22px, 2.3vw, 31px);
     line-height: 1.35;
-    font-weight: 700;
+    font-weight: 800;
 }
 
 .hero-text {
     margin-top: 26px;
-    max-width: 560px;
+    max-width: 580px;
     color: var(--soft);
     font-size: 17px;
     line-height: 1.9;
@@ -264,13 +267,13 @@ a {
     z-index: 2;
     align-self: end;
     justify-self: end;
-    width: min(500px, 88%);
+    width: min(540px, 88%);
     margin: 0 48px 78px 0;
     padding: 16px;
     background: rgba(5,5,5,0.72);
     border: 1px solid rgba(0,150,255,0.36);
     backdrop-filter: blur(8px);
-    box-shadow: 0 0 60px rgba(0,150,255,0.14);
+    box-shadow: 0 0 70px rgba(0,150,255,0.18);
 }
 
 .hero-card img {
@@ -290,15 +293,15 @@ a {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1px;
-    margin: 32px 0 86px;
+    margin: 32px 0 92px;
     border: 1px solid var(--line);
     background: var(--line);
 }
 
 .strip-item {
-    min-height: 128px;
+    min-height: 132px;
     background:
-        linear-gradient(135deg, rgba(255,255,255,0.035), rgba(255,255,255,0.01)),
+        linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01)),
         #080808;
     display: flex;
     flex-direction: column;
@@ -326,7 +329,7 @@ a {
 }
 
 .section {
-    margin-bottom: 92px;
+    margin-bottom: 96px;
 }
 
 .section-head {
@@ -334,7 +337,7 @@ a {
     grid-template-columns: 0.85fr 1.15fr;
     gap: 36px;
     align-items: end;
-    margin-bottom: 38px;
+    margin-bottom: 42px;
 }
 
 .section-kicker {
@@ -349,7 +352,7 @@ a {
 .section h2 {
     font-family: 'Cormorant Garamond', serif;
     margin: 0;
-    font-size: clamp(46px, 6vw, 76px);
+    font-size: clamp(48px, 6vw, 82px);
     line-height: 0.98;
 }
 
@@ -357,7 +360,7 @@ a {
     color: var(--soft);
     line-height: 1.9;
     font-size: 17px;
-    max-width: 650px;
+    max-width: 700px;
 }
 
 .product-block {
@@ -372,6 +375,7 @@ a {
     padding: 12px;
     background: #080808;
     min-height: 100%;
+    box-shadow: 0 0 45px rgba(0,150,255,0.08);
 }
 
 .product-photo img {
@@ -384,14 +388,14 @@ a {
 .product-info {
     border: 1px solid var(--line);
     background:
-        radial-gradient(circle at 100% 0%, rgba(0,150,255,0.10), transparent 34%),
-        linear-gradient(135deg, rgba(255,255,255,0.045), rgba(255,255,255,0.012));
+        radial-gradient(circle at 100% 0%, rgba(0,150,255,0.12), transparent 34%),
+        linear-gradient(135deg, rgba(255,255,255,0.052), rgba(255,255,255,0.012));
     padding: 42px;
 }
 
 .product-info h3 {
     margin: 0 0 22px;
-    font-size: clamp(34px, 4vw, 49px);
+    font-size: clamp(34px, 4vw, 51px);
     line-height: 1.05;
     letter-spacing: -1px;
 }
@@ -432,6 +436,42 @@ a {
     line-height: 1.8;
 }
 
+.product-gallery {
+    display: grid;
+    grid-template-columns: 0.82fr 1.18fr;
+    gap: 28px;
+    margin-bottom: 44px;
+}
+
+.product-gallery-card {
+    position: relative;
+    border: 1px solid rgba(0,150,255,0.30);
+    background:
+        radial-gradient(circle at 100% 0%, rgba(0,150,255,0.10), transparent 34%),
+        linear-gradient(145deg, rgba(255,255,255,0.045), rgba(255,255,255,0.012)),
+        #080808;
+    padding: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 55px rgba(0,150,255,0.10);
+}
+
+.product-gallery-card.big {
+    grid-row: span 2;
+}
+
+.product-gallery-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.product-gallery-caption {
+    padding: 18px 6px 4px;
+    color: var(--soft);
+    line-height: 1.7;
+    font-size: 15px;
+}
+
 .available-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -443,7 +483,7 @@ a {
     min-height: 360px;
     border: 1px solid rgba(0,150,255,0.30);
     background:
-        radial-gradient(circle at 100% 0%, rgba(0,150,255,0.12), transparent 34%),
+        radial-gradient(circle at 100% 0%, rgba(0,150,255,0.13), transparent 34%),
         linear-gradient(145deg, rgba(255,255,255,0.06), rgba(255,255,255,0.012)),
         #080808;
     padding: 36px;
@@ -499,35 +539,6 @@ a {
     letter-spacing: 1px;
 }
 
-.product-gallery {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 26px;
-    margin-bottom: 42px;
-}
-
-.product-gallery-card {
-    border: 1px solid rgba(0,150,255,0.30);
-    background:
-        radial-gradient(circle at 100% 0%, rgba(0,150,255,0.10), transparent 34%),
-        linear-gradient(145deg, rgba(255,255,255,0.045), rgba(255,255,255,0.012)),
-        #080808;
-    padding: 12px;
-}
-
-.product-gallery-card img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.product-gallery-caption {
-    padding: 18px 6px 4px;
-    color: var(--soft);
-    line-height: 1.7;
-    font-size: 15px;
-}
-
 .launch-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -536,39 +547,41 @@ a {
 
 .future-card {
     position: relative;
-    min-height: 360px;
-    border: 1px solid rgba(0,150,255,0.28);
+    min-height: 640px;
+    border: 1px solid rgba(0,150,255,0.30);
     background:
-        linear-gradient(145deg, rgba(255,255,255,0.055), rgba(255,255,255,0.012)),
+        radial-gradient(circle at 22% 50%, rgba(0,150,255,0.13), transparent 34%),
+        linear-gradient(145deg, rgba(255,255,255,0.065), rgba(255,255,255,0.012)),
         #080808;
-    padding: 38px;
+    padding: 46px;
     overflow: hidden;
     display: grid;
-    grid-template-columns: 0.95fr 1.05fr;
-    gap: 32px;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 44px;
     align-items: center;
+    box-shadow: 0 0 70px rgba(0,150,255,0.10);
 }
 
 .future-card::before {
     content: "";
     position: absolute;
-    inset: auto -80px -100px auto;
-    width: 245px;
-    height: 245px;
+    inset: auto -110px -130px auto;
+    width: 330px;
+    height: 330px;
     border-radius: 50%;
     border: 1px solid rgba(0,150,255,0.24);
-    box-shadow: 0 0 55px rgba(0,150,255,0.11);
+    box-shadow: 0 0 70px rgba(0,150,255,0.13);
 }
 
 .future-image {
     position: relative;
     z-index: 2;
-    border: 1px solid rgba(0,150,255,0.28);
+    border: 1px solid rgba(0,150,255,0.32);
     background:
-        radial-gradient(circle at 50% 50%, rgba(0,150,255,0.12), transparent 55%),
+        radial-gradient(circle at 50% 50%, rgba(0,150,255,0.16), transparent 55%),
         #050505;
-    padding: 12px;
-    min-height: 290px;
+    padding: 14px;
+    min-height: 560px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -576,8 +589,8 @@ a {
 
 .future-image img {
     width: 100%;
-    height: 100%;
-    max-height: 330px;
+    height: auto;
+    max-height: none;
     object-fit: contain;
     display: block;
 }
@@ -599,14 +612,15 @@ a {
 
 .future-card h3 {
     margin: 0 0 18px;
-    font-size: 38px;
-    letter-spacing: -1px;
+    font-size: clamp(40px, 5vw, 66px);
+    line-height: 0.98;
+    letter-spacing: -2px;
 }
 
 .future-card p {
     color: var(--soft);
     line-height: 1.9;
-    font-size: 16px;
+    font-size: 17px;
     max-width: 560px;
     margin: 0;
 }
@@ -619,17 +633,18 @@ a {
 }
 
 .final {
-    padding: 66px 38px;
+    padding: 74px 42px;
     text-align: center;
-    border: 1px solid var(--line);
+    border: 1px solid rgba(0,150,255,0.28);
     background:
-        radial-gradient(circle at 50% 0%, rgba(0,150,255,0.16), transparent 42%),
-        linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+        radial-gradient(circle at 50% 0%, rgba(0,150,255,0.22), transparent 42%),
+        linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.012));
+    box-shadow: 0 0 70px rgba(0,150,255,0.12);
 }
 
 .final h2 {
     margin: 0;
-    font-size: clamp(38px, 5vw, 66px);
+    font-size: clamp(40px, 5vw, 70px);
     line-height: 1.05;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -637,7 +652,7 @@ a {
 }
 
 .final p {
-    max-width: 760px;
+    max-width: 800px;
     margin: 24px auto 0;
     color: var(--soft);
     line-height: 1.9;
@@ -649,6 +664,14 @@ a {
     color: var(--muted);
     letter-spacing: 2px;
     font-size: 14px;
+}
+
+.final-cta {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
 }
 
 .tm {
@@ -683,8 +706,12 @@ a {
         grid-template-columns: 1fr;
     }
 
+    .future-card {
+        min-height: auto;
+    }
+
     .future-image {
-        min-height: 240px;
+        min-height: auto;
     }
 }
 
@@ -726,7 +753,7 @@ a {
     }
 
     .final {
-        padding: 46px 22px;
+        padding: 48px 22px;
     }
 }
 </style>
@@ -783,7 +810,7 @@ a {
     </div>
 
     <div class="hero-actions">
-        <a class="btn" href="#gadget-disponibili">Scopri i gadget</a>
+        <a class="btn" href="#gadget-disponibili">Scopri la linea</a>
         <a class="btn ghost" href="#in-arrivo">In arrivo</a>
     </div>
 </div>
@@ -873,9 +900,7 @@ a {
         del proprio percorso personale.
     </div>
 
-    <div class="hero-actions">
-        <a class="btn" href="mailto:coach.cucchiara@hotmail.com?subject=Richiesta%20gadget%20Silence%20Run">Richiedi informazioni</a>
-    </div>
+
 </div>
 
 </div>
@@ -901,14 +926,14 @@ a {
 <div class="product-gallery-card">
     <img src="images/braccialepenna1.png" alt="Braccialetto nero e penna in legno Silence Run">
     <div class="product-gallery-caption">
-        Braccialetto nero e penna in legno incisa <strong>Silence. Run.</strong>
+        Penna in legno incisa e braccialetto nero <strong>Silence. Run.</strong>.
     </div>
 </div>
 
-<div class="product-gallery-card">
+<div class="product-gallery-card big">
     <img src="images/braccialepenna2.png" alt="Penna in legno e braccialetto nero Silence Run">
     <div class="product-gallery-caption">
-        Due oggetti essenziali, concreti e già disponibili nella linea <strong>Silence. Run.</strong>
+        Due oggetti essenziali, concreti e già disponibili nella linea <strong>Silence. Run.</strong>.
     </div>
 </div>
 
@@ -930,8 +955,8 @@ a {
     <span class="available-tag">Disponibile</span>
     <h3>Braccialetto nero</h3>
     <p>
-        Un braccialetto nero, sportivo e minimale, con scritta <strong>Silence. Run.</strong>.
-        Pensato per essere discreto, pulito e riconoscibile, da indossare nella vita quotidiana,
+        Un braccialetto nero, sportivo e minimale, con scritta <strong>Silence. Run.</strong>
+        Pensato per essere discreto, minimal e riconoscibile, da indossare nella vita quotidiana,
         prima e dopo l’allenamento.
     </p>
     <div class="available-detail">Essenziale. Nero. Silence. Run.</div>
@@ -941,11 +966,11 @@ a {
     <span class="available-tag">Disponibile</span>
     <h3>Penna in legno</h3>
     <p>
-        Una penna in legno con incisione <strong>Silence. Run.</strong>.
+        Una penna in legno con incisione <strong>Silence. Run.</strong>
         Un oggetto naturale e concreto, per scrivere obiettivi, appunti, allenamenti,
         idee e nuove direzioni.
     </p>
-    <div class="available-detail">Legno inciso. Stile pulito. Presenza quotidiana.</div>
+    <div class="available-detail">Legno inciso. Stile distintivo. Presenza quotidiana.</div>
 </div>
 
 </div>
@@ -962,7 +987,7 @@ a {
 
     <div class="section-intro">
         La linea continua con un nuovo prodotto pensato per completare lo stile
-        <strong>Silence. Run.</strong>: pulito, sportivo, essenziale.
+        <strong>Silence. Run.</strong>: elegante, sportivo, essenziale.
     </div>
 </div>
 
@@ -977,11 +1002,11 @@ a {
         <span class="future-tag">In arrivo</span>
         <h3>Cappellino Silence. Run.</h3>
         <p>
-            Il cappellino <strong>Silence. Run.</strong> sarà il prossimo prodotto della linea:
-            un accessorio semplice, sportivo e riconoscibile, pensato per allenamenti,
-            eventi, stand e vita quotidiana.
+            Il prossimo prodotto della linea sarà il cappellino <strong>Silence. Run.</strong>:
+            nero, pulito, sportivo, riconoscibile. Un accessorio pensato per allenamenti,
+            eventi, stand, giornate all’aperto e vita quotidiana.
         </p>
-        <div class="future-detail">Sportivo. Pulito. Silence. Run.</div>
+        <div class="future-detail">Nero. Essenziale. Silence. Run.</div>
     </div>
 </div>
 
@@ -989,7 +1014,7 @@ a {
 
 </section>
 
-<section class="final">
+<section class="final" id="richiedi-info">
     <h2>
         Listen.<br>
         Choose.
@@ -999,7 +1024,13 @@ a {
     <p>
         I gadget <strong>Silence. Run.</strong> nascono per portare fuori dalla corsa
         ciò che la corsa insegna: disciplina, identità, semplicità e continuità.
+        Per informazioni su portachiavi, braccialetto, penna in legno e cappellino,
+        puoi inviare una richiesta unica da qui.
     </p>
+
+    <div class="final-cta">
+        <a class="btn" href="mailto:coach.cucchiara@hotmail.com?subject=Richiesta%20gadget%20Silence%20Run">Richiedi informazioni sui gadget</a>
+    </div>
 
     <div class="final-contact">
         Instagram: coach_cucchiara
