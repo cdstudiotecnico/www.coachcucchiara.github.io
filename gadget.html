@@ -24,7 +24,7 @@ gtag('config', 'AW-17959546156');
 
 <title>Gadget Silence. Run. | Dario Cucchiara</title>
 
-<meta name="description" content="Gadget ufficiali Silence. Run. di Dario Cucchiara. Portachiavi 3D disponibile, braccialetti neri e penne in legno incise presto disponibili. Oggetti essenziali per chi vive la corsa con disciplina e presenza.">
+<meta name="description" content="Gadget ufficiali Silence. Run. di Dario Cucchiara. Portachiavi 3D, braccialetto nero e penna in legno incisa disponibili. Cappellino Silence. Run. presto disponibile. Oggetti essenziali per chi vive la corsa con disciplina e presenza.">
 
 <meta name="robots" content="index, follow">
 
@@ -40,7 +40,7 @@ gtag('config', 'AW-17959546156');
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Coach Cucchiara">
 <meta property="og:title" content="Gadget Silence. Run. | Dario Cucchiara">
-<meta property="og:description" content="Gadget ufficiali Silence. Run. Portachiavi 3D disponibile, braccialetti neri e penne in legno incise presto disponibili.">
+<meta property="og:description" content="Gadget ufficiali Silence. Run. Portachiavi 3D, braccialetto nero e penna in legno incisa disponibili. Cappellino presto disponibile.">
 <meta property="og:url" content="https://www.coachcucchiara.it/gadget.html">
 
 <meta property="og:image" content="https://www.coachcucchiara.it/images/cover-portachiavi.jpeg">
@@ -54,7 +54,7 @@ gtag('config', 'AW-17959546156');
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Gadget Silence. Run. | Dario Cucchiara">
-<meta name="twitter:description" content="Portachiavi 3D Silence. Run. disponibile. Braccialetti neri e penne in legno incise presto disponibili.">
+<meta name="twitter:description" content="Portachiavi 3D, braccialetto nero, penna in legno incisa e cappellino Silence. Run.">
 <meta name="twitter:image" content="https://www.coachcucchiara.it/images/cover-portachiavi.jpeg">
 <meta name="twitter:image:alt" content="Gadget ufficiali Silence. Run. - Portachiavi 3D">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -432,21 +432,121 @@ a {
     line-height: 1.8;
 }
 
-.launch-grid {
+.available-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+}
+
+.available-card {
+    position: relative;
+    min-height: 360px;
+    border: 1px solid rgba(0,150,255,0.30);
+    background:
+        radial-gradient(circle at 100% 0%, rgba(0,150,255,0.12), transparent 34%),
+        linear-gradient(145deg, rgba(255,255,255,0.06), rgba(255,255,255,0.012)),
+        #080808;
+    padding: 36px;
+    overflow: hidden;
+}
+
+.available-card::after {
+    content: "";
+    position: absolute;
+    right: -95px;
+    bottom: -95px;
+    width: 235px;
+    height: 235px;
+    border-radius: 50%;
+    border: 1px solid rgba(0,150,255,0.22);
+    box-shadow: 0 0 55px rgba(0,150,255,0.10);
+}
+
+.available-tag {
+    display: inline-block;
+    color: var(--blue);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 900;
+    margin-bottom: 22px;
+}
+
+.available-card h3 {
+    position: relative;
+    z-index: 2;
+    margin: 0 0 18px;
+    font-size: 34px;
+    letter-spacing: -1px;
+    line-height: 1.1;
+}
+
+.available-card p {
+    position: relative;
+    z-index: 2;
+    color: var(--soft);
+    line-height: 1.9;
+    font-size: 16px;
+    margin: 0;
+}
+
+.available-detail {
+    position: relative;
+    z-index: 2;
+    margin-top: 30px;
+    color: var(--white);
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.product-gallery {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 26px;
+    margin-bottom: 42px;
+}
+
+.product-gallery-card {
+    border: 1px solid rgba(0,150,255,0.30);
+    background:
+        radial-gradient(circle at 100% 0%, rgba(0,150,255,0.10), transparent 34%),
+        linear-gradient(145deg, rgba(255,255,255,0.045), rgba(255,255,255,0.012)),
+        #080808;
+    padding: 12px;
+}
+
+.product-gallery-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.product-gallery-caption {
+    padding: 18px 6px 4px;
+    color: var(--soft);
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.launch-grid {
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 26px;
 }
 
 .future-card {
     position: relative;
-    min-height: 310px;
+    min-height: 360px;
     border: 1px solid rgba(0,150,255,0.28);
     background:
         linear-gradient(145deg, rgba(255,255,255,0.055), rgba(255,255,255,0.012)),
         #080808;
     padding: 38px;
     overflow: hidden;
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 32px;
+    align-items: center;
 }
 
 .future-card::before {
@@ -458,6 +558,33 @@ a {
     border-radius: 50%;
     border: 1px solid rgba(0,150,255,0.24);
     box-shadow: 0 0 55px rgba(0,150,255,0.11);
+}
+
+.future-image {
+    position: relative;
+    z-index: 2;
+    border: 1px solid rgba(0,150,255,0.28);
+    background:
+        radial-gradient(circle at 50% 50%, rgba(0,150,255,0.12), transparent 55%),
+        #050505;
+    padding: 12px;
+    min-height: 290px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.future-image img {
+    width: 100%;
+    height: 100%;
+    max-height: 330px;
+    object-fit: contain;
+    display: block;
+}
+
+.future-copy {
+    position: relative;
+    z-index: 2;
 }
 
 .future-tag {
@@ -480,7 +607,7 @@ a {
     color: var(--soft);
     line-height: 1.9;
     font-size: 16px;
-    max-width: 520px;
+    max-width: 560px;
     margin: 0;
 }
 
@@ -550,8 +677,14 @@ a {
 
     .section-head,
     .product-block,
-    .launch-grid {
+    .available-grid,
+    .product-gallery,
+    .future-card {
         grid-template-columns: 1fr;
+    }
+
+    .future-image {
+        min-height: 240px;
     }
 }
 
@@ -583,6 +716,7 @@ a {
     }
 
     .product-info,
+    .available-card,
     .future-card {
         padding: 30px 24px;
     }
@@ -602,9 +736,9 @@ a {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   "name": "Gadget Silence. Run.",
-  "description": "Gadget ufficiali Silence. Run. di Dario Cucchiara: portachiavi 3D disponibile, braccialetti neri e penne in legno incise presto disponibili.",
+  "description": "Gadget ufficiali Silence. Run. di Dario Cucchiara: portachiavi 3D, braccialetto nero e penna in legno incisa disponibili. Cappellino Silence. Run. presto disponibile.",
   "url": "https://www.coachcucchiara.it/gadget.html",
-  "image": "https://www.coachcucchiara.it/images/gadget-portachiavi-cover.jpeg",
+  "image": "https://www.coachcucchiara.it/images/cover-portachiavi.jpeg",
   "author": {
     "@type": "Person",
     "name": "Dario Cucchiara"
@@ -649,7 +783,7 @@ a {
     </div>
 
     <div class="hero-actions">
-        <a class="btn" href="#portachiavi">Scopri il portachiavi</a>
+        <a class="btn" href="#gadget-disponibili">Scopri i gadget</a>
         <a class="btn ghost" href="#in-arrivo">In arrivo</a>
     </div>
 </div>
@@ -657,8 +791,8 @@ a {
 <div class="hero-card">
     <img src="images/cover-portachiavi.jpeg" alt="Portachiavi 3D Silence Run">
     <div class="hero-card-caption">
-        Il primo gadget disponibile è il portachiavi 3D <strong>Silence. Run.</strong>,
-        creato per accompagnarti ogni giorno con uno stile essenziale e deciso.
+        I gadget <strong>Silence. Run.</strong> nascono per accompagnarti ogni giorno:
+        portachiavi 3D, braccialetto nero e penna in legno incisa sono già disponibili.
     </div>
 </div>
 
@@ -702,7 +836,7 @@ a {
 
     <div class="section-intro">
         Il primo oggetto della linea nasce dalla collaborazione con LayerX3DPrint:
-        un portachiavi leggero, resistente e curato nei dettagli, realizzato con tecnologia 3D
+        un portachiavi leggero, curato nei dettagli, realizzato con tecnologia 3D
         e pensato per chi vuole portare con sé il proprio modo di vivere la corsa.
     </div>
 </div>
@@ -740,8 +874,78 @@ a {
     </div>
 
     <div class="hero-actions">
-        <a class="btn" href="mailto:coach.cucchiara@hotmail.com?subject=Richiesta%20portachiavi%203D%20Silence%20Run">Richiedi informazioni</a>
+        <a class="btn" href="mailto:coach.cucchiara@hotmail.com?subject=Richiesta%20gadget%20Silence%20Run">Richiedi informazioni</a>
     </div>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="gadget-disponibili">
+
+<div class="section-head">
+    <div>
+        <div class="section-kicker">Già disponibili</div>
+        <h2>La linea Silence. Run.</h2>
+    </div>
+
+    <div class="section-intro">
+        Oltre al portachiavi 3D sono già disponibili anche il braccialetto nero e la penna in legno incisa.
+        Tre oggetti diversi, con la stessa identità: essenzialità, presenza e appartenenza.
+    </div>
+</div>
+
+<div class="product-gallery">
+
+<div class="product-gallery-card">
+    <img src="images/braccialepenna1.png" alt="Braccialetto nero e penna in legno Silence Run">
+    <div class="product-gallery-caption">
+        Braccialetto nero e penna in legno incisa <strong>Silence. Run.</strong>.
+    </div>
+</div>
+
+<div class="product-gallery-card">
+    <img src="images/braccialepenna2.png" alt="Penna in legno e braccialetto nero Silence Run">
+    <div class="product-gallery-caption">
+        Due oggetti essenziali, concreti e già disponibili nella linea <strong>Silence. Run.</strong>.
+    </div>
+</div>
+
+</div>
+
+<div class="available-grid">
+
+<div class="available-card">
+    <span class="available-tag">Disponibile</span>
+    <h3>Portachiavi 3D</h3>
+    <p>
+        Il primo gadget della linea. Leggero, pratico, riconoscibile.
+        Un piccolo simbolo da portare ogni giorno sulle chiavi, nello zaino o nella borsa sportiva.
+    </p>
+    <div class="available-detail">Silence. Run. sempre con te.</div>
+</div>
+
+<div class="available-card">
+    <span class="available-tag">Disponibile</span>
+    <h3>Braccialetto nero</h3>
+    <p>
+        Un braccialetto nero, sportivo e minimale, con scritta <strong>Silence. Run.</strong>.
+        Pensato per essere discreto, pulito e riconoscibile, da indossare nella vita quotidiana,
+        prima e dopo l’allenamento.
+    </p>
+    <div class="available-detail">Essenziale. Nero. Silence. Run.</div>
+</div>
+
+<div class="available-card">
+    <span class="available-tag">Disponibile</span>
+    <h3>Penna in legno</h3>
+    <p>
+        Una penna in legno con incisione <strong>Silence. Run.</strong>.
+        Un oggetto naturale e concreto, per scrivere obiettivi, appunti, allenamenti,
+        idee e nuove direzioni.
+    </p>
+    <div class="available-detail">Legno inciso. Stile pulito. Presenza quotidiana.</div>
 </div>
 
 </div>
@@ -752,38 +956,33 @@ a {
 
 <div class="section-head">
     <div>
-        <div class="section-kicker">Presto disponibili</div>
-        <h2>La linea continua</h2>
+        <div class="section-kicker">Presto disponibile</div>
+        <h2>Il prossimo arrivo</h2>
     </div>
 
     <div class="section-intro">
-        Dopo il portachiavi sono in arrivo nuovi oggetti essenziali, coerenti con l’identità
-        <strong>Silence. Run.</strong>: semplici, utili, riconoscibili.
+        La linea continua con un nuovo prodotto pensato per completare lo stile
+        <strong>Silence. Run.</strong>: pulito, sportivo, essenziale.
     </div>
 </div>
 
 <div class="launch-grid">
 
 <div class="future-card">
-    <span class="future-tag">In arrivo</span>
-    <h3>Braccialetto</h3>
-    <p>
-        Un braccialetto nero, sportivo e minimale, con scritta <strong>Silence. Run.</strong>.
-        Pensato per essere discreto, pulito e riconoscibile, da indossare nella vita quotidiana,
-        prima e dopo l’allenamento.
-    </p>
-    <div class="future-detail">Essenziale. Nero. Silence. Run.</div>
-</div>
+    <div class="future-image">
+        <img src="images/cappellino.png" alt="Cappellino Silence Run">
+    </div>
 
-<div class="future-card">
-    <span class="future-tag">In arrivo</span>
-    <h3>Penna in legno</h3>
-    <p>
-        Un oggetto naturale e concreto, per scrivere obiettivi, appunti, allenamenti,
-        idee e nuove direzioni.
-        Una penna in legno con incisione <strong>Silence. Run.</strong>
-    </p>
-    <div class="future-detail">Legno inciso. Stile pulito. Presenza quotidiana.</div>
+    <div class="future-copy">
+        <span class="future-tag">In arrivo</span>
+        <h3>Cappellino Silence. Run.</h3>
+        <p>
+            Il cappellino <strong>Silence. Run.</strong> sarà il prossimo prodotto della linea:
+            un accessorio semplice, sportivo e riconoscibile, pensato per allenamenti,
+            eventi, stand e vita quotidiana.
+        </p>
+        <div class="future-detail">Sportivo. Pulito. Silence. Run.</div>
+    </div>
 </div>
 
 </div>
