@@ -775,7 +775,7 @@ button:disabled {
 <section class="hero">
 
 <div class="hero-copy">
-    <div class="eyebrow">Richiesta informazioni</div>
+    <div class="eyebrow">Richiedi la tua Maglia</div>
 
     <h1>
         La maglia<br>
@@ -787,27 +787,27 @@ button:disabled {
     </div>
 
     <div class="hero-text">
-        Compila il modulo per richiedere informazioni sulla maglia <strong>Silence. Run.</strong>,
-        Marchio d’Impresa fondato nel 2026. Acquista un pacchetto di Runnimg Coach di almeno tre mesi e ricevi
-        subito la maglia in omaggio per condividere il messaggio e lo stile del progetto.
+        Compila il modulo per richiedere la tua maglia <strong>Silence. Run.</strong>,
+        solo se hai acquistato un pacchetto Runnimg Coach di almeno tre mesi e ricevila
+        subito in omaggio per condividere il messaggio e lo stile del progetto.
     </div>
 
         <div class="hero-text">
         <strong>NOTA BENE</strong>:
-        La maglia Silence. Run. è disponibile soltanto come omaggio e collegata all'acquisto di un pacchetto Running Coach di almeno 3 mesi.
+        La maglia Silence. Run. è disponibile soltanto come omaggio agli atleti del Team e collegata all'acquisto di un pacchetto Running Coach di almeno 3 mesi.
     </div>
 
     <div class="hero-actions">
-        <a class="btn" href="#modulo">Compila il modulo</a>
         <a class="btn ghost" href="#gallery">Guarda la gallery</a>
     </div>
 </div>
 
 <div class="form-card" id="modulo">
-    <h2>Richiedi informazioni</h2>
+    <h2>Richiedi la tua Maglia</h2>
     <p>
-        Inserisci i dati richiesti. Dopo l’invio sarai ricontattato per dettagli,
-        disponibilità, misura e modalità di consegna.
+        Inserisci i dati richiesti solo se hai acquistato un pacchetto Running Coach di almeno 3 mesi.
+        Dopo l’invio sarai ricontattato per la conferma della spedizione tramite Poste Italiane.
+        La spedizone è inclusa nell'omaggio della maglia.
     </p>
 
     <form id="orderForm" action="https://formspree.io/f/mojnwygb" method="POST">
@@ -826,7 +826,7 @@ button:disabled {
             </div>
 
             <div class="field full">
-                <input type="text" name="residenza" placeholder="Indirizzo Residenza, Via e Numero Civico" required>
+                <input type="text" name="residenza" placeholder="Indirizzo Spedizione, Via e Numero Civico" required>
             </div>
 
             <div class="field">
@@ -857,12 +857,24 @@ button:disabled {
             </div>
 
             <div class="field">
-                <input type="number" name="quantita" placeholder="Quantità Maglie" min="1" required>
+                <input type="number" name="quantita" placeholder="Quantità Maglie" min="1" max="1" required>
             </div>
 
             <div class="field full">
                 <textarea name="altro" placeholder="Altro, note o richieste particolari"></textarea>
             </div>
+
+            <div class="field full">
+    <select name="pacchetto_running_coach" id="pacchettoRunningCoach" required>
+        <option value="">Hai acquistato un pacchetto Running Coach di almeno 3 mesi?</option>
+        <option value="SI">Sì</option>
+        <option value="NO">No</option>
+    </select>
+
+    <div class="message error" id="teamErrorMessage" style="display:none; color:#c62828; margin-top:10px;">
+        Mi dispiace, ma se non hai acquistato un percorso Running Coach di almeno 3 mesi, non puoi avere la maglia in omaggio come segno di appartenenza al Team.
+    </div>
+</div>
 
             <label class="privacy">
                 <input type="checkbox" name="consenso_contatto" value="Accetto di essere ricontattato" required>
@@ -1105,5 +1117,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
 
+<script>
+document.getElementById("orderForm").addEventListener("submit", function(event) {
+    const scelta = document.getElementById("pacchettoRunningCoach").value;
+    const errore = document.getElementById("teamErrorMessage");
+
+    if (scelta === "NO") {
+        event.preventDefault();
+        errore.style.display = "block";
+    } else {
+        errore.style.display = "none";
+    }
+});
+
+document.getElementById("pacchettoRunningCoach").addEventListener("change", function() {
+    const errore = document.getElementById("teamErrorMessage");
+
+    if (this.value === "NO") {
+        errore.style.display = "block";
+    } else {
+        errore.style.display = "none";
+    }
+});
+</script>
+    
 </body>
 </html>
