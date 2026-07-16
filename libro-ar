@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PX8LLZXB');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Google tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17959546156"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-17959546156');
+</script>
+
+<meta charset="UTF-8">
+<title>كتاب Silence. Run. | Dario Cucchiara</title>
+
+<meta name="description" content="كتاب Silence. Run. من تأليف Dario Cucchiara. رحلة عبر الجري والانضباط والإصغاء والتوازن والحضور. استمع. اختر. تحوّل.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.coachcucchiara.it/libro-ar.html">
+<meta name="author" content="Dario Cucchiara">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="XWvQLXlmPOY7MpVMwBngJzHyngzvEPQYOLMkXZvKKes"/>
+
+<!-- Open Graph -->
+<meta property="og:title" content="كتاب Silence. Run.">
+<meta property="og:description" content="الكتاب الأول لـ Dario Cucchiara. رحلة في عالم الجري والانضباط والصمت والحضور.">
+<meta property="og:image" content="https://www.coachcucchiara.it/images/copertina-ar.png">
+<meta property="og:image:secure_url" content="https://www.coachcucchiara.it/images/copertina-ar.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://www.coachcucchiara.it/libro-ar.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Coach Cucchiara">
+<meta property="og:locale" content="ar_AR">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="كتاب Silence. Run.">
+<meta name="twitter:description" content="استمع. اختر. تحوّل.">
+<meta name="twitter:image" content="https://www.coachcucchiara.it/images/copertina-ar.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Naskh+Arabic:wght@500;600;700&family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+html {
+    direction: rtl;
+}
+
+body {
+    margin: 0;
+    background: #f6f6f6;
+    color: #111;
+    font-family: 'Noto Sans Arabic', sans-serif;
+    direction: rtl;
+    text-align: right;
+}
+
+.container {
+    max-width: 980px;
+    margin: auto;
+    padding: 70px 22px 90px;
+}
+
+.brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 34px;
+    margin-bottom: 4px;
+    direction: ltr;
+    unicode-bidi: isolate;
+}
+
+.motto {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    letter-spacing: 4px;
+    color: #777;
+    margin-bottom: 60px;
+    direction: ltr;
+    unicode-bidi: isolate;
+}
+
+.language-switch {
+    margin-bottom: 55px;
+}
+
+.language-select {
+    width: 100%;
+    max-width: 320px;
+    padding: 14px 18px;
+    background: #fff;
+    color: #111;
+    border: 1px solid rgba(0,0,0,0.18);
+    font-family: 'Noto Sans Arabic', sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    outline: none;
+    transition: 0.25s ease;
+    direction: rtl;
+    text-align: right;
+}
+
+.language-select:hover,
+.language-select:focus {
+    border-color: #c62828;
+}
+
+.lang-link {
+    text-decoration: none;
+    color: #111;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+    padding-bottom: 4px;
+    transition: 0.25s ease;
+}
+
+.lang-link:hover,
+.lang-link.active {
+    color: #c62828;
+    border-color: #c62828;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 0.85fr;
+    gap: 45px;
+    align-items: center;
+    margin-bottom: 70px;
+}
+
+.hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 74px;
+    line-height: 0.95;
+    margin: 0 0 25px;
+    font-weight: 700;
+    direction: ltr;
+    unicode-bidi: isolate;
+    text-align: right;
+}
+
+.red {
+    color: #c62828;
+}
+
+.subtitle {
+    font-size: 18px;
+    line-height: 1.9;
+    color: #333;
+    max-width: 520px;
+}
+
+.claim {
+    margin-top: 28px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.hero-image {
+    text-align: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 390px;
+    height: auto;
+}
+
+.banner {
+    margin: 20px 0 70px;
+    text-align: center;
+}
+
+.banner img {
+    width: 100%;
+    max-width: 980px;
+    height: auto;
+}
+
+.content {
+    font-size: 17px;
+    line-height: 2;
+    color: #333;
+}
+
+.content p {
+    margin-bottom: 24px;
+}
+
+.content strong {
+    color: #111;
+}
+
+.quote {
+    margin: 65px 0;
+    padding: 45px 30px;
+    border-right: 2px solid #c62828;
+    background: #fff;
+    font-family: 'Noto Naskh Arabic', serif;
+    font-size: 31px;
+    line-height: 1.55;
+    color: #111;
+}
+
+.sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    margin: 60px 0;
+}
+
+.card {
+    background: #fff;
+    padding: 30px;
+    border: 1px solid #e3e3e3;
+}
+
+.card h2 {
+    font-family: 'Noto Naskh Arabic', serif;
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.cta {
+    margin-top: 75px;
+    padding: 70px 28px;
+    background: #050505;
+    color: #fff;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.cta h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 58px;
+    margin: 0;
+    font-weight: 700;
+    line-height: 1;
+    direction: ltr;
+    unicode-bidi: isolate;
+}
+
+.cta-text {
+    margin-top: 28px;
+    color: #d7d7d7;
+    font-size: 20px;
+    line-height: 1.9;
+}
+
+.language-boxes {
+    display: grid;
+    gap: 22px;
+    margin-top: 55px;
+}
+
+.language-card {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 28px 24px;
+    transition: 0.3s ease;
+}
+
+.language-card:hover {
+    border-color: rgba(198,40,40,0.45);
+    transform: translateY(-2px);
+}
+
+.language-title {
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 18px;
+    color: #ffffff;
+}
+
+.amazon-button {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 18px 24px;
+    border: 1px solid #c62828;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.amazon-button:hover {
+    background: #c62828;
+}
+
+.final-claim {
+    margin-top: 55px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,0.72);
+}
+
+.back-home {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.back-home a {
+    text-decoration: none;
+    color: #111;
+    border-bottom: 1px solid #111;
+    padding-bottom: 4px;
+}
+
+.tm {
+    font-size: 12px;
+}
+
+.ltr {
+    direction: ltr;
+    unicode-bidi: isolate;
+    display: inline-block;
+}
+
+@media (max-width: 850px) {
+    .cta {
+        padding: 60px 22px;
+    }
+
+    .cta h2 {
+        font-size: 52px;
+    }
+
+    .cta-text {
+        font-size: 18px;
+        line-height: 1.8;
+    }
+
+    .language-title {
+        font-size: 14px;
+    }
+
+    .amazon-button {
+        padding: 17px 18px;
+        font-size: 13px;
+    }
+
+    .final-claim {
+        line-height: 1.8;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: right;
+    }
+
+    .hero h1 {
+        font-size: 56px;
+    }
+
+    .sections {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 520px) {
+    .container {
+        padding: 55px 20px 75px;
+    }
+
+    .hero h1 {
+        font-size: 46px;
+    }
+
+    .quote {
+        font-size: 25px;
+        padding: 35px 24px;
+    }
+
+    .cta h2 {
+        font-size: 34px;
+    }
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "Silence. Run.",
+  "author": {
+    "@type": "Person",
+    "name": "Dario Cucchiara"
+  },
+  "inLanguage": "ar",
+  "bookFormat": "https://schema.org/EBook",
+  "description": "Silence. Run. كتاب عن الجري والانضباط والإصغاء والتوازن والحضور.",
+  "url": "https://www.coachcucchiara.it/libro-ar.html",
+  "image": "https://www.coachcucchiara.it/images/copertina-ar.png",
+  "offers": {
+    "@type": "Offer",
+    "url": "https://a.co/d/01ZWdQLc",
+    "availability": "https://schema.org/InStock"
+  }
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="container">
+    <div class="brand">Dario Cucchiara</div>
+    <div class="motto">Silence. Run.<span class="tm">™</span></div>
+
+    <div class="language-switch">
+        <select class="language-select" onchange="if(this.value) window.location.href=this.value;" aria-label="اختيار اللغة">
+            <option value="libro-ar.html" selected>العربية</option>
+            <option value="libro.html">Italiano</option>
+            <option value="libro-en.html">English</option>
+            <option value="libro-es.html">Español</option>
+            <option value="libro-fr.html">Français</option>
+            <option value="libro-de.html">Deutsch</option>
+            <option value="libro-ja.html">日本語</option>
+        </select>
+    </div>
+
+    <section class="hero">
+        <div>
+            <h1>
+                <span class="ltr">Silence<span class="red">.</span></span><br>
+                <span class="ltr">Run<span class="red">.</span></span>
+            </h1>
+
+            <div class="subtitle">
+                <strong>كتابي الأول.</strong><br>
+                رحلة في عالم الجري والانضباط والصمت والحضور.
+            </div>
+
+            <div class="claim">
+                استمع. اختر. <span class="red">تحوّل.</span>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="../images/libro-cover-ar.png" alt="غلاف النسخة العربية من كتاب Silence. Run. للمؤلف Dario Cucchiara">
+        </div>
+    </section>
+
+    <div class="banner">
+        <img src="../images/copertina-ar.png" alt="الصورة الترويجية للنسخة العربية من كتاب Silence. Run. للمؤلف Dario Cucchiara">
+    </div>
+
+    <section class="content">
+
+        <p>
+            <strong><span class="ltr">Silence. Run.</span></strong> ليس مجرد كتاب عن الجري.
+            إنه دعوة إلى التوقف قليلًا، والتنفس، والعودة إلى الإصغاء لما يهم حقًا.
+        </p>
+
+        <p>
+            في عالم مليء بالضجيج والسرعة والتوقعات والمشتتات، يصبح الجري أكثر بكثير من مجرد أداء رياضي؛
+            فهو يتحول إلى مساحة داخلية، وإلى مكان هادئ نستعيد فيه صفاء الذهن والانضباط والتوازن والحضور.
+        </p>
+
+        <p>
+            من خلال تجارب شخصية وتأملات عميقة وسنوات عاشها بين الرياضة والتعليم والحياة الواقعية والتدريب،
+            يصحب Dario Cucchiara، الرياضي ومدرب الجري المعتمد لدى الاتحاد الإيطالي لألعاب القوى، القارئ في رحلة مكثفة إلى المعنى الأكثر أصالة للجري.
+        </p>
+
+        <p>
+            صفحة بعد صفحة، يقدم <strong><span class="ltr">Silence. Run.</span></strong> رؤية مختلفة للرياضة؛ رؤية أكثر إنسانية ووعيًا وصدقًا.
+            لا يُوصَف الجري بوصفه تعبًا أو إيقاعًا أو نتيجة فحسب، بل باعتباره وسيلة لمعرفة الذات، وإدارة الوقت،
+            واحترام الجسد، وحماية العقل، وبناء نسخة أقوى وأكثر حضورًا من أنفسنا خطوة بعد خطوة.
+        </p>
+
+        <div class="quote">
+            الهدف الحقيقي ليس أن تجري بسرعة أكبر فحسب.<br>
+            بل أن تتعلم كيف تعيش بعمق أكبر.
+        </div>
+
+        <p>
+            يجمع هذا الكتاب بين منهج التدريب القائم على معدل ضربات القلب، والانضباط الذي يُعاش من دون هوس،
+            وقيمة التعافي، وأهمية الأسرة، والعلاقة بالوقت، والفيزياء، والتعليم،
+            والاستدامة النفسية، والبحث المستمر عن التوازن.
+        </p>
+
+        <div class="sections">
+
+            <div class="card">
+                <h2>ليس دليلًا إرشاديًا.</h2>
+                <p>
+                    وليس سيرة ذاتية عادية. إنه كتاب لمن يركض، ولمن يدرّب، ولمن يعلّم ويربّي،
+                    ولمن يعمل، ولمن يسقط ثم ينهض من جديد.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>إنه مسار.</h2>
+                <p>
+                    دعوة إلى كل من يشعر بأن الحياة لا يمكن أن تُعاش دائمًا على عجل،
+                    من دون أن نصغي إليها حقًا.
+                </p>
+            </div>
+
+        </div>
+
+        <p>
+            بأسلوب مباشر وعاطفي وتأملي، يخاطب <strong><span class="ltr">Silence. Run.</span></strong> العدّائين والرياضيين والمدربين والطلاب،
+            والآباء والأمهات، وكل من يرغب في إعادة اكتشاف قيمة البناء البطيء، والحضور،
+            والصمت، والانضباط اليومي.
+        </p>
+
+    </section>
+
+    <section class="cta">
+
+        <h2>Silence<span class="red">.</span> Run<span class="red">.</span></h2>
+
+        <p class="cta-text">
+            الكتاب متاح الآن للشراء على Amazon.<br>
+            النسخة العربية متوفرة <strong>حصريًا بصيغة كتاب Kindle الإلكتروني</strong>.
+        </p>
+
+        <div class="language-boxes">
+
+            <!-- ARABO - PRIMO ELEMENTO -->
+            <div class="language-card">
+                <div class="language-title">
+                    🇸🇦 النسخة العربية — كتاب Kindle الإلكتروني فقط
+                </div>
+                <a class="amazon-button"
+                   href="https://a.co/d/01ZWdQLc"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                   اشترِ النسخة العربية على Amazon
+                </a>
+            </div>
+
+            <!-- ITALIANO -->
+            <div class="language-card">
+                <div class="language-title">
+                    🇮🇹 EDIZIONE ITALIANA
+                </div>
+                <a class="amazon-button"
+                   href="https://amzn.eu/d/02pIwWH4"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                   ACQUISTA SU AMAZON
+                </a>
+            </div>
+
+            <!-- INGLESE -->
+            <div class="language-card">
+                <div class="language-title">
+                    🇬🇧 ENGLISH EDITION
+                </div>
+                <a class="amazon-button"
+                   href="https://www.amazon.it/dp/B0H2ZLCN6V"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                   BUY ON AMAZON
+                </a>
+            </div>
+
+            <!-- SPAGNOLO -->
+            <div class="language-card">
+                <div class="language-title">
+                    🇪🇸 EDICIÓN ESPAÑOLA
+                </div>
+                <a class="amazon-button"
+                   href="https://amzn.eu/d/09TnGiT8"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                   COMPRAR EN AMAZON
+                </a>
+            </div>
+
+            <!-- FRANCESE -->
+            <div class="language-card">
+                <div class="language-title">
+                    🇫🇷 ÉDITION FRANÇAISE
+                </div>
+                <a class="amazon-button"
+                   href="https://amzn.eu/d/04qQXngB"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                   ACHETER SUR AMAZON
+                </a>
+            </div>
+
+            <!-- TEDESCO -->
+            <div class="language-card">
+                <div class="language-title">
+                    🇩🇪 DEUTSCHE AUSGABE
+                </div>
+                <a class="amazon-button"
+                   href="https://amzn.eu/d/0awLdyGh"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                   AUF AMAZON KAUFEN
+                </a>
+            </div>
+
+            <!-- GIAPPONESE -->
+            <div class="language-card">
+                <div class="language-title">
+                    🇯🇵 日本語版
+                </div>
+                <a class="amazon-button"
+                   href="https://amzn.asia/d/09shMZxA"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                   AMAZONで購入
+                </a>
+            </div>
+
+        </div>
+
+        <div class="final-claim">
+            استمع. اختر. <span class="red">تحوّل.</span>
+        </div>
+    </section>
+
+    <div class="back-home">
+        <a href="../index.html">العودة إلى الصفحة الرئيسية ←</a>
+    </div>
+
+</div>
+
+<script>
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
+
+window.addEventListener('load', function() {
+    window.scrollTo(0, 0);
+});
+</script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PX8LLZXB"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+</body>
+</html>
