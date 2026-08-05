@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Buoni Regalo Silence. Run. | Coach Dario Cucchiara</title>
+  <meta name="description" content="Regala un percorso di coaching running personalizzato Silence. Run. Scegli durata e formula, con attivazione libera e maglia ufficiale in omaggio dai 3 mesi.">
+  <meta name="theme-color" content="#0b1e3b">
+  <link rel="canonical" href="https://www.coachcucchiara.it/buoni-regalo.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Buoni Regalo Silence. Run.">
+  <meta property="og:description" content="Il tuo obiettivo. Il tuo percorso. Regala coaching running personalizzato.">
+  <meta property="og:url" content="https://www.coachcucchiara.it/buoni-regalo.html">
+  <meta property="og:image" content="https://www.coachcucchiara.it/assets/anteprima.png">
+  <style>
+    :root {
+      --navy: #0b1e3b;
+      --navy-2: #102a52;
+      --blue: #0f7cff;
+      --blue-soft: #eaf4ff;
+      --ice: #f6faff;
+      --text: #152238;
+      --muted: #5d6b7f;
+      --line: #d9e6f5;
+      --white: #ffffff;
+      --shadow: 0 18px 50px rgba(20, 53, 94, .12);
+      --radius: 22px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--white);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+
+    .wrap { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      background: rgba(255,255,255,.94);
+      border-bottom: 1px solid rgba(217,230,245,.9);
+      backdrop-filter: blur(14px);
+    }
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .brand {
+      font-family: "Arial Narrow", "Roboto Condensed", sans-serif;
+      font-size: clamp(1.55rem, 2.4vw, 2.15rem);
+      letter-spacing: .045em;
+      font-weight: 800;
+      color: var(--navy);
+      white-space: nowrap;
+    }
+    .brand span { color: var(--blue); }
+    .nav-links { display: flex; align-items: center; gap: 26px; font-size: .95rem; font-weight: 700; }
+    .nav-links a:hover { color: var(--blue); }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 0 24px;
+      border-radius: 999px;
+      background: var(--blue);
+      color: white;
+      font-weight: 800;
+      box-shadow: 0 10px 25px rgba(15,124,255,.24);
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+    .button:hover { transform: translateY(-2px); box-shadow: 0 14px 32px rgba(15,124,255,.32); }
+    .button.secondary { background: white; color: var(--navy); border: 1px solid var(--line); box-shadow: none; }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 78px 0 72px;
+      background:
+        radial-gradient(circle at 90% 15%, rgba(15,124,255,.12), transparent 32%),
+        linear-gradient(180deg, #fff 0%, var(--ice) 100%);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 520px;
+      height: 520px;
+      border: 1px solid rgba(15,124,255,.12);
+      border-radius: 50%;
+      right: -260px;
+      bottom: -260px;
+      box-shadow: 0 0 0 55px rgba(15,124,255,.035), 0 0 0 110px rgba(15,124,255,.025);
+    }
+    .hero-grid { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr .95fr; gap: 64px; align-items: center; }
+    .eyebrow { color: var(--blue); font-weight: 900; letter-spacing: .16em; text-transform: uppercase; font-size: .82rem; }
+    h1, h2, h3 { margin-top: 0; color: var(--navy); line-height: 1.08; }
+    h1 {
+      margin-bottom: 24px;
+      font-family: "Arial Narrow", "Roboto Condensed", sans-serif;
+      font-size: clamp(3.2rem, 7vw, 6.6rem);
+      letter-spacing: -.035em;
+      text-transform: uppercase;
+    }
+    h1 span { color: var(--blue); }
+    .lead { max-width: 640px; font-size: clamp(1.08rem, 1.6vw, 1.3rem); color: var(--muted); }
+    .hero-actions { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 14px; }
+    .hero-card { padding: 14px; background: white; border: 1px solid var(--line); border-radius: 28px; box-shadow: var(--shadow); transform: rotate(1deg); }
+    .hero-card img { border-radius: 19px; }
+
+    section { padding: 88px 0; }
+    .section-head { max-width: 760px; margin-bottom: 42px; }
+    .section-head h2 { font-size: clamp(2.25rem, 4.5vw, 4.2rem); margin-bottom: 16px; }
+    .section-head p { color: var(--muted); font-size: 1.1rem; }
+
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .step, .plan, .feature {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: white;
+      padding: 30px;
+      box-shadow: 0 12px 36px rgba(20,53,94,.06);
+    }
+    .num { width: 48px; height: 48px; display: grid; place-items: center; background: var(--blue-soft); color: var(--blue); border-radius: 14px; font-weight: 900; margin-bottom: 20px; }
+    .step h3, .plan h3, .feature h3 { font-size: 1.35rem; margin-bottom: 10px; }
+    .step p, .plan p, .feature p { margin-bottom: 0; color: var(--muted); }
+
+    .plans-section { background: var(--ice); }
+    .plans { display: grid; grid-template-columns: repeat(2, 1fr); gap: 26px; }
+    .plan { position: relative; padding: 38px; overflow: hidden; }
+    .plan.highlight { border-color: rgba(15,124,255,.42); box-shadow: 0 18px 48px rgba(15,124,255,.12); }
+    .badge { display: inline-block; margin-bottom: 18px; padding: 7px 11px; border-radius: 999px; background: var(--blue-soft); color: var(--blue); font-weight: 900; font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; }
+    .plan ul { padding: 0; margin: 24px 0 0; list-style: none; display: grid; gap: 13px; }
+    .plan li { position: relative; padding-left: 28px; }
+    .plan li::before { content: "✓"; position: absolute; left: 0; color: var(--blue); font-weight: 900; }
+
+    .gift-band {
+      background: var(--navy);
+      color: white;
+      padding: 72px 0;
+    }
+    .gift-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 54px; align-items: center; }
+    .gift-band h2 { color: white; font-size: clamp(2.2rem, 4vw, 4rem); }
+    .gift-band p { color: #c9d7ea; font-size: 1.1rem; }
+    .gift-band strong { color: white; }
+    .shirt-preview { background: white; padding: 18px; border-radius: 22px; box-shadow: 0 20px 60px rgba(0,0,0,.22); }
+
+    .gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+    .gallery figure { margin: 0; border: 1px solid var(--line); border-radius: 22px; padding: 12px; background: white; box-shadow: 0 12px 36px rgba(20,53,94,.07); }
+    .gallery img { border-radius: 14px; }
+    .gallery figcaption { padding: 14px 8px 4px; color: var(--muted); font-size: .92rem; }
+
+    .cta {
+      margin: 0 auto 88px;
+      padding: 54px;
+      border-radius: 30px;
+      background: linear-gradient(135deg, var(--blue-soft), #fff);
+      border: 1px solid var(--line);
+      text-align: center;
+    }
+    .cta h2 { font-size: clamp(2.1rem, 4vw, 3.7rem); margin-bottom: 16px; }
+    .cta p { max-width: 760px; margin: 0 auto 28px; color: var(--muted); font-size: 1.1rem; }
+
+    footer { padding: 38px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: .92rem; }
+    .footer-row { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+
+    .whatsapp-float {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 40;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #25d366;
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 900;
+      box-shadow: 0 14px 34px rgba(37,211,102,.34);
+    }
+
+    @media (max-width: 920px) {
+      .nav-links { display: none; }
+      .hero-grid, .gift-grid, .plans, .gallery { grid-template-columns: 1fr; }
+      .hero { padding-top: 54px; }
+      .hero-card { max-width: 720px; }
+      .steps { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 620px) {
+      .wrap { width: min(100% - 26px, var(--max)); }
+      .nav { min-height: 68px; }
+      .button.header-cta { padding: 0 16px; min-height: 44px; font-size: .88rem; }
+      section { padding: 66px 0; }
+      .hero-actions { flex-direction: column; }
+      .button { width: 100%; }
+      .step, .plan, .feature { padding: 24px; }
+      .cta { padding: 36px 22px; margin-bottom: 64px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="/">SILENCE. <span>RUN.</span></a>
+      <nav class="nav-links" aria-label="Navigazione principale">
+        <a href="/">Home</a>
+        <a href="/#metodo">Metodo</a>
+        <a href="/#libro">Il Libro</a>
+        <a href="/#contatti">Contatti</a>
+      </nav>
+      <a class="button header-cta" href="https://wa.me/393751136597?text=Ciao%20Coach%20Dario%2C%20vorrei%20ricevere%20informazioni%20sui%20Buoni%20Regalo%20Silence.%20Run." target="_blank" rel="noopener">Scrivimi su WhatsApp</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Buoni Regalo Silence. Run.</div>
+          <h1>Il tuo <span>obiettivo.</span><br>Il tuo percorso.</h1>
+          <p class="lead">Regala un percorso di coaching online completamente personalizzato, costruito sul livello, sui tempi e sugli obiettivi dell’atleta.</p>
+          <div class="hero-actions">
+            <a class="button" href="https://wa.me/393751136597?text=Ciao%20Coach%20Dario%2C%20vorrei%20avviare%20la%20procedura%20per%20un%20Buono%20Regalo%20Silence.%20Run." target="_blank" rel="noopener">Avvia la procedura</a>
+            <a class="button secondary" href="#come-funziona">Scopri come funziona</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <img src="assets/anteprima.png" alt="Anteprima del Buono Regalo Silence. Run.">
+        </div>
+      </div>
+    </section>
+
+    <section id="come-funziona">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Come funziona</div>
+          <h2>Un regalo personale, attivato quando l’atleta è pronto.</h2>
+          <p>Il buono viene preparato su misura e consegnato come depliant personalizzato. La durata acquistata non decorre dal giorno del pagamento.</p>
+        </div>
+        <div class="steps">
+          <article class="step">
+            <div class="num">01</div>
+            <h3>Scegli il percorso</h3>
+            <p>Indica la formula e il numero di mesi che desideri regalare.</p>
+          </article>
+          <article class="step">
+            <div class="num">02</div>
+            <h3>Personalizziamo il buono</h3>
+            <p>Inseriamo il nome dell’atleta, il nome di chi regala, il percorso e la durata scelta.</p>
+          </article>
+          <article class="step">
+            <div class="num">03</div>
+            <h3>L’atleta decide quando iniziare</h3>
+            <p>Il conteggio parte dalla data concordata con il Coach, dopo l’invio del form compilato.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="plans-section">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Percorsi disponibili</div>
+          <h2>Scegli il regalo più adatto.</h2>
+          <p>Ogni percorso viene adattato nel tempo attraverso l’analisi delle sedute, i dati inviati e il confronto costante.</p>
+        </div>
+        <div class="plans">
+          <article class="plan">
+            <span class="badge">Solo corsa</span>
+            <h3>Running Coach</h3>
+            <p>Un percorso tecnico e progressivo dedicato alla corsa.</p>
+            <ul>
+              <li>Programmazione personalizzata degli allenamenti</li>
+              <li>Analisi delle sedute e dei dati</li>
+              <li>Feedback tecnico tramite WhatsApp</li>
+              <li>Adattamento progressivo del lavoro</li>
+            </ul>
+          </article>
+          <article class="plan highlight">
+            <span class="badge">Percorso completo</span>
+            <h3>Running Coach + Performance Fuel</h3>
+            <p>Il coaching running con un supporto più ampio alle abitudini che accompagnano l’attività sportiva.</p>
+            <ul>
+              <li>Tutto ciò che è compreso nel Running Coach</li>
+              <li>Buone abitudini alimentari</li>
+              <li>Idratazione e integrazione sportiva</li>
+              <li>Recupero e organizzazione delle abitudini quotidiane</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="gift-band">
+      <div class="wrap gift-grid">
+        <div>
+          <div class="eyebrow">Un regalo ancora più completo</div>
+          <h2>Con i pacchetti da almeno 3 mesi, la maglia ufficiale è in omaggio.</h2>
+          <p>Il buono può essere consegnato insieme alla maglia ufficiale Silence. Run., creando un pacco regalo completo, personale e immediatamente riconoscibile.</p>
+          <p><strong>La maglia non viene conteggiata separatamente:</strong> è inclusa come omaggio nei pacchetti regalo di almeno tre mesi.</p>
+        </div>
+        <div class="shirt-preview">
+          <img src="assets/anteprima.png" alt="Buono regalo e maglia ufficiale Silence. Run.">
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Il depliant personalizzato</div>
+          <h2>Un buono da consegnare e conservare.</h2>
+          <p>Il depliant riporta il percorso scelto, la durata acquistata e i nomi di chi offre e riceve il regalo.</p>
+        </div>
+        <div class="gallery">
+          <figure>
+            <img src="assets/depliant-esterno.png" alt="Parte esterna del depliant Buono Regalo Silence. Run.">
+            <figcaption>Parte esterna del depliant.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/depliant-interno.png" alt="Parte interna del depliant Buono Regalo Silence. Run.">
+            <figcaption>Parte interna con le caratteristiche dei percorsi e la maglia in omaggio.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <section class="cta" id="contatti">
+        <div class="eyebrow">Informazioni e attivazione</div>
+        <h2>Parliamone direttamente su WhatsApp.</h2>
+        <p>Scrivi al Coach Dario Cucchiara per scegliere il percorso, definire la durata, comunicare i dati da inserire nel buono e avviare la procedura. A seguito dell’acquisto verrà emessa regolare fattura.</p>
+        <a class="button" href="https://wa.me/393751136597?text=Ciao%20Coach%20Dario%2C%20vorrei%20informazioni%20e%20desidero%20avviare%20la%20procedura%20per%20un%20Buono%20Regalo%20Silence.%20Run." target="_blank" rel="noopener">Contatta il Coach</a>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <div>© 2026 Dario Cucchiara · Silence. Run. è marchio depositato.</div>
+      <div>Coach Cucchiara · Istruttore Certificato FIDAL</div>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/393751136597?text=Ciao%20Coach%20Dario%2C%20vorrei%20informazioni%20sui%20Buoni%20Regalo%20Silence.%20Run." target="_blank" rel="noopener" aria-label="Contatta il Coach su WhatsApp">W</a>
+</body>
+</html>
