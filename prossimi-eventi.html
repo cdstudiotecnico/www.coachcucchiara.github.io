@@ -1,7 +1,8 @@
+Copia tutto il codice seguente nel file prossimi-eventi.html. Le tre immagini devono essere caricate nella cartella /images/.
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
-
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -9,7 +10,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-PX8LLZXB');</script>
 <!-- End Google Tag Manager -->
-
 <!-- Google tag -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17959546156"></script>
 <script>
@@ -18,517 +18,1393 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'AW-17959546156');
 </script>
-
 <meta charset="UTF-8">
-<title>Prossimi Eventi | Dario Cucchiara – Silence. Run.</title>
-
-<meta name="description" content="Scopri i prossimi eventi, appuntamenti, gare, presentazioni e iniziative di Dario Cucchiara e Silence. Run. Pagina in continuo aggiornamento.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://www.coachcucchiara.it/prossimi-eventi.html">
-<meta name="author" content="Dario Cucchiara">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#07131c">
+<title>Prossimi eventi Silence. Run.</title>
+<meta name="description" content="Scopri i prossimi eventi, le corse di gruppo e le presentazioni di Dario Cucchiara e Silence. Run.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Dario Cucchiara">
 <meta name="google-site-verification" content="XWvQLXlmPOY7MpVMwBngJzHyngzvEPQYOLMkXZvKKes">
-
+<link rel="canonical" href="https://www.coachcucchiara.it/prossimi-eventi.html">
+<link rel="preload" as="image" href="/images/mare1.png" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <!-- Open Graph -->
-<meta property="og:title" content="Prossimi Eventi | Coach Dario Cucchiara">
-<meta property="og:description" content="Tutti i prossimi appuntamenti Coach Dario Cucchiara Silence. Run. Pagina in continuo aggiornamento.">
-<meta property="og:image" content="https://www.coachcucchiara.it/images/chiringuito.jpg">
-<meta property="og:image:secure_url" content="https://www.coachcucchiara.it/images/chiringuito.PNG">
-<meta property="og:image:type" content="image/jpeg">
-<meta property="og:url" content="https://www.coachcucchiara.it/prossimi-eventi.html">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
 <meta property="og:site_name" content="Coach Cucchiara">
-
+<meta property="og:title" content="Prossimi eventi | Dario Cucchiara – Silence. Run.">
+<meta property="og:description" content="Mare, bosco e parole. Scopri tutti i prossimi appuntamenti Silence. Run.">
+<meta property="og:url" content="https://www.coachcucchiara.it/prossimi-eventi.html">
+<meta property="og:image" content="https://www.coachcucchiara.it/images/mare1.png">
+<meta property="og:image:secure_url" content="https://www.coachcucchiara.it/images/mare1.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1254">
+<meta property="og:image:height" content="1254">
+<meta property="og:image:alt" content="Prossimi eventi Silence. Run.">
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Prossimi Eventi | Dario Cucchiara">
-<meta name="twitter:description" content="Eventi, gare, presentazioni e iniziative Silence. Run. in continuo aggiornamento.">
-<meta name="twitter:image" content="https://www.coachcucchiara.it/images/chiringuito.PNG">
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
+<meta name="twitter:title" content="Prossimi eventi | Dario Cucchiara">
+<meta name="twitter:description" content="Scopri tutti i prossimi appuntamenti Silence. Run.">
+<meta name="twitter:image" content="https://www.coachcucchiara.it/images/mare1.png">
 <style>
+:root {
+  --ink: #111311;
+  --muted: #686b66;
+  --paper: #f7f4ed;
+  --paper-strong: #fffdf8;
+  --line: rgba(17, 19, 17, 0.14);
+  --night: #07131c;
+  --night-soft: #102431;
+  --gold: #f1a917;
+  --gold-dark: #bd7600;
+  --aqua: #14b9c7;
+  --serif: "Cormorant Garamond", Georgia, serif;
+  --sans: "Inter", Arial, sans-serif;
+}
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+  background: var(--paper);
 }
-
 body {
-    margin: 0;
-    background: #f6f6f6;
-    color: #111;
-    font-family: 'Inter', sans-serif;
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
-
-.container {
-    max-width: 1120px;
-    margin: auto;
-    padding: 70px 22px 90px;
+::selection {
+  background: var(--gold);
+  color: var(--night);
 }
-
+a {
+  color: inherit;
+}
+img {
+  max-width: 100%;
+}
+svg {
+  display: block;
+  width: 1.25em;
+  height: 1.25em;
+}
+.skip-link {
+  position: fixed;
+  z-index: 100;
+  top: 12px;
+  left: 12px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: var(--gold);
+  color: var(--night);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transform: translateY(-150%);
+  transition: transform 180ms ease;
+}
+.skip-link:focus {
+  transform: translateY(0);
+}
+:focus-visible {
+  outline: 3px solid var(--aqua);
+  outline-offset: 4px;
+}
+.site-header {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px max(24px, calc((100vw - 1280px) / 2));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--night);
+  color: #fff;
+}
 .brand {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 34px;
-    margin-bottom: 4px;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 18px;
+  text-decoration: none;
 }
-
-.motto {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 13px;
-    letter-spacing: 4px;
-    color: #777;
-    margin-bottom: 60px;
+.brand-name {
+  font-family: var(--serif);
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
 }
-
-.tm {
-    font-size: 12px;
+.brand-mark {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
 }
-
-.top-link {
-    margin-bottom: 55px;
+.brand-mark strong {
+  color: var(--gold);
 }
-
-.top-link a {
-    display: inline-block;
-    text-decoration: none;
-    color: #111;
-    font-size: 13px;
-    letter-spacing: 2px;
-    border-bottom: 1px solid rgba(0,0,0,0.18);
-    padding-bottom: 5px;
-    transition: 0.25s ease;
+.brand-mark sup {
+  margin-left: 2px;
+  font-size: 7px;
 }
-
-.top-link a:hover {
-    color: #c62828;
-    border-color: #c62828;
+.home-link,
+.back-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-decoration: none;
+  text-transform: uppercase;
 }
-
+.home-link svg {
+  color: var(--gold);
+  transition: transform 200ms ease;
+}
+.home-link:hover svg {
+  transform: translateX(5px);
+}
 .hero {
-    display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: 55px;
-    align-items: end;
-    margin-bottom: 80px;
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: minmax(0, 1.18fr) minmax(330px, 0.82fr);
+  gap: clamp(56px, 7vw, 112px);
+  min-height: 710px;
+  padding: clamp(82px, 10vw, 142px) max(24px, calc((100vw - 1280px) / 2));
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 89% 16%, rgba(241, 169, 23, 0.20), transparent 26%),
+    radial-gradient(circle at 10% 84%, rgba(20, 185, 199, 0.13), transparent 30%),
+    linear-gradient(125deg, #07131c 0%, #0a1b26 54%, #08141c 100%);
+  color: #fff;
 }
-
+.hero::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 58px 58px;
+  content: "";
+  mask-image: linear-gradient(to right, black, transparent 78%);
+}
+.hero-orbit {
+  position: absolute;
+  z-index: -1;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+}
+.orbit-one {
+  right: -210px;
+  bottom: -370px;
+  width: 760px;
+  height: 760px;
+}
+.orbit-two {
+  right: -70px;
+  bottom: -230px;
+  width: 480px;
+  height: 480px;
+  border-color: rgba(241, 169, 23, 0.16);
+}
+.hero-content {
+  align-self: center;
+  animation: rise 760ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 24px;
+  color: var(--gold-dark);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+.eyebrow > span {
+  width: 34px;
+  height: 1px;
+  background: currentColor;
+}
+.hero .eyebrow {
+  color: var(--gold);
+}
 .hero h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 78px;
-    line-height: 0.92;
-    margin: 0 0 28px;
-    font-weight: 700;
+  max-width: 760px;
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(64px, 7.3vw, 112px);
+  font-weight: 600;
+  letter-spacing: -0.055em;
+  line-height: 0.82;
 }
-
-.red {
-    color: #c62828;
+.hero h1 em {
+  color: var(--gold);
+  font-weight: 500;
 }
-
-.subtitle {
-    font-size: 18px;
-    line-height: 1.85;
-    color: #333;
-    max-width: 650px;
+.hero-copy {
+  max-width: 670px;
+  margin: 40px 0 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: clamp(17px, 1.55vw, 21px);
+  font-weight: 300;
+  line-height: 1.8;
 }
-
-.subtitle strong {
-    color: #111;
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 38px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid rgba(241, 169, 23, 0.55);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-decoration: none;
+  text-transform: uppercase;
 }
-
-.claim {
-    margin-top: 30px;
-    font-size: 14px;
-    letter-spacing: 6px;
-    font-weight: 600;
+.hero-cta svg {
+  color: var(--gold);
+  transition: transform 200ms ease;
 }
-
-.hero-note {
-    background: #fff;
-    border-left: 2px solid #c62828;
-    padding: 32px 30px;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 27px;
-    line-height: 1.35;
+.hero-cta:hover svg {
+  transform: translateX(6px);
 }
-
-.events-heading {
-    margin-bottom: 34px;
+.hero-dates {
+  align-self: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  animation: rise 760ms 140ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
-
-.events-heading h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 48px;
-    line-height: 1;
-    margin: 0 0 14px;
+.hero-dates a {
+  display: grid;
+  grid-template-columns: 95px 1fr;
+  gap: 24px;
+  align-items: center;
+  padding: 26px 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  text-decoration: none;
+  transition: padding 180ms ease, background 180ms ease;
 }
-
-.events-heading p {
-    margin: 0;
-    color: #555;
-    font-size: 16px;
-    line-height: 1.75;
+.hero-dates a:hover {
+  padding-right: 14px;
+  padding-left: 14px;
+  background: rgba(255, 255, 255, 0.04);
 }
-
-.events-grid {
+.hero-dates span {
+  color: var(--gold);
+  font-family: var(--serif);
+  font-size: 31px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+.hero-dates small {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 13px;
+  line-height: 1.45;
+}
+.events {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: clamp(90px, 10vw, 150px) 24px;
+}
+.section-heading {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  margin-bottom: 38px;
+}
+.section-heading .eyebrow {
+  grid-column: 1 / -1;
+}
+.section-heading h2,
+.contact h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(58px, 6vw, 86px);
+  font-weight: 600;
+  letter-spacing: -0.045em;
+  line-height: 0.9;
+}
+.section-heading h2 span,
+.contact h2 span,
+.event-content h3 span {
+  color: var(--gold-dark);
+}
+.section-heading > p:last-child {
+  max-width: 390px;
+  margin: 0 0 7px 40px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+.events-list {
+  border-top: 1px solid var(--line);
+}
+.event-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.03fr) minmax(0, 0.97fr);
+  gap: clamp(52px, 7vw, 112px);
+  align-items: center;
+  padding: clamp(64px, 7vw, 104px) 0;
+  border-bottom: 1px solid var(--line);
+  scroll-margin-top: 24px;
+}
+.event-row-reverse .poster-wrap {
+  order: 2;
+}
+.event-row-reverse .event-content {
+  order: 1;
+}
+.poster-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+  background: #09131a;
+  box-shadow: 0 28px 70px rgba(7, 19, 28, 0.16);
+}
+.poster-wrap > a {
+  position: absolute;
+  inset: 0;
+  display: block;
+  overflow: hidden;
+}
+.poster-mare {
+  aspect-ratio: 1 / 1;
+}
+.poster-bosco {
+  aspect-ratio: 4 / 5;
+}
+.poster-libro {
+  aspect-ratio: 3 / 4;
+}
+.poster-wrap img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition:
+    transform 700ms cubic-bezier(0.2, 0.7, 0.2, 1),
+    filter 300ms ease;
+}
+.poster-bosco img {
+  object-position: center 49%;
+}
+.poster-wrap a::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(4, 13, 19, 0.76), transparent 32%);
+  content: "";
+  opacity: 0.68;
+  transition: opacity 240ms ease;
+}
+.poster-wrap:hover img {
+  filter: saturate(1.06) contrast(1.02);
+  transform: scale(1.018);
+}
+.poster-wrap:hover a::after {
+  opacity: 0.9;
+}
+.poster-action {
+  position: absolute;
+  z-index: 1;
+  right: 24px;
+  bottom: 22px;
+  left: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+.poster-action svg {
+  color: var(--gold);
+}
+.event-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 46px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+.event-number {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 600;
+}
+.event-kind {
+  color: var(--gold-dark);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.event-content time {
+  display: block;
+  margin-bottom: 15px;
+  color: var(--gold-dark);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+.event-content h3 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(46px, 4.8vw, 72px);
+  font-weight: 600;
+  letter-spacing: -0.045em;
+  line-height: 0.94;
+}
+.event-summary {
+  margin: 27px 0 0;
+  color: #50534f;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.85;
+}
+.event-details {
+  margin: 35px 0 0;
+  border-top: 1px solid var(--line);
+}
+.event-details > div {
+  display: grid;
+  grid-template-columns: 124px 1fr;
+  gap: 20px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+.event-details dt {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.event-details dd {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.55;
+}
+.event-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 26px;
+  align-items: center;
+  margin-top: 32px;
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  min-height: 48px;
+  padding: 0 20px;
+  border: 1px solid transparent;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition:
+    transform 180ms ease,
+    background 180ms ease,
+    color 180ms ease;
+}
+.button:hover {
+  transform: translateY(-2px);
+}
+.button-primary {
+  background: var(--gold);
+  color: #111;
+}
+.button-primary:hover {
+  background: var(--night);
+  color: #fff;
+}
+.button-primary svg {
+  width: 16px;
+  height: 16px;
+}
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(17, 19, 17, 0.35);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.text-link svg {
+  color: var(--gold-dark);
+  transition: transform 180ms ease;
+}
+.text-link:hover svg {
+  transform: translateX(5px);
+}
+.manifesto {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto clamp(88px, 10vw, 150px);
+  padding: clamp(68px, 8vw, 112px);
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 88% 13%, rgba(241, 169, 23, 0.22), transparent 27%),
+    linear-gradient(125deg, var(--night), #0a202b);
+  color: #fff;
+}
+.manifesto::after {
+  position: absolute;
+  right: -120px;
+  bottom: -250px;
+  width: 520px;
+  height: 520px;
+  border: 1px solid rgba(241, 169, 23, 0.19);
+  border-radius: 50%;
+  content: "";
+}
+.manifesto-kicker {
+  margin: 0;
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+.manifesto blockquote {
+  position: relative;
+  z-index: 1;
+  max-width: 930px;
+  margin: 44px 0 65px;
+  font-family: var(--serif);
+  font-size: clamp(42px, 5.8vw, 78px);
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+}
+.manifesto-bottom {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 28px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+}
+.manifesto-bottom strong {
+  color: var(--gold);
+}
+.contact {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.75fr);
+  gap: clamp(60px, 9vw, 140px);
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px clamp(90px, 10vw, 150px);
+}
+.contact-copy {
+  align-self: end;
+}
+.contact-copy p {
+  margin: 0 0 30px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.8;
+}
+.button-dark {
+  min-height: 54px;
+  padding: 0 24px;
+  background: var(--night);
+  color: #fff;
+}
+.button-dark svg {
+  color: var(--gold);
+}
+.button-dark:hover {
+  background: var(--gold);
+  color: var(--night);
+}
+.button-dark:hover svg {
+  color: var(--night);
+}
+footer {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 30px;
+  align-items: center;
+  padding: 34px max(24px, calc((100vw - 1280px) / 2));
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--night);
+  color: #fff;
+}
+.footer-brand .brand-name {
+  font-size: 21px;
+}
+footer p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+}
+.back-top {
+  justify-self: end;
+  color: rgba(255, 255, 255, 0.75);
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 980px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 70px;
+    min-height: auto;
+  }
+  .hero-dates {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 34px;
-    align-items: start;
-}
-
-.event-card {
-    background: #fff;
-    border: 1px solid #e1e1e1;
-    padding: 22px;
-    transition: 0.3s ease;
-}
-
-.event-card:hover {
-    transform: translateY(-4px);
-    border-color: rgba(198,40,40,0.42);
-    box-shadow: 0 14px 38px rgba(0,0,0,0.07);
-}
-
-.poster-link {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-}
-
-.poster-frame {
-    position: relative;
-    width: 100%;
-    min-height: 520px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    background: #f0f0f0;
-    border: 1px solid #ececec;
-}
-
-.poster-frame img {
-    display: block;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-
-.poster-frame.missing::before {
-    content: '';
-    position: absolute;
-    width: 56px;
-    height: 2px;
-    background: #c62828;
-    top: 47%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.poster-frame.missing::after {
-    content: attr(data-placeholder);
-    position: absolute;
-    top: 54%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 82%;
-    text-align: center;
-    color: #555;
-    font-size: 14px;
-    letter-spacing: 1px;
-    line-height: 1.7;
-}
-
-.event-info {
-    padding: 25px 4px 6px;
-}
-
-.event-kicker {
-    color: #c62828;
-    font-size: 12px;
-    letter-spacing: 4px;
-    font-weight: 600;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-}
-
-.event-info h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 31px;
-    line-height: 1.1;
-    margin: 0 0 12px;
-}
-
-.event-info p {
-    margin: 0;
-    color: #555;
-    font-size: 14px;
-    line-height: 1.75;
-}
-
-.update-box {
-    margin-top: 75px;
-    padding: 65px 30px;
-    background: #050505;
-    color: #fff;
-    text-align: center;
-}
-
-.update-box h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 54px;
-    line-height: 1;
-    margin: 0;
-}
-
-.update-box p {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .hero-dates a {
+    grid-template-columns: 1fr;
+    align-content: start;
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  .hero-dates a:last-child {
+    border-right: 0;
+  }
+  .event-row {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+  .event-row-reverse .poster-wrap,
+  .event-row-reverse .event-content {
+    order: initial;
+  }
+  .poster-wrap {
+    width: min(100%, 720px);
+  }
+  .event-row-reverse .poster-wrap {
+    justify-self: end;
+  }
+  .event-content {
     max-width: 720px;
-    margin: 25px auto 0;
-    color: #d7d7d7;
-    font-size: 18px;
-    line-height: 1.85;
+  }
+  .event-row-reverse .event-content {
+    justify-self: end;
+  }
+  .contact {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
 }
-
-.final-claim {
-    margin-top: 42px;
-    font-size: 13px;
-    letter-spacing: 6px;
-    color: rgba(255,255,255,0.72);
+@media (max-width: 700px) {
+  .site-header {
+    padding: 19px 18px;
+  }
+  .brand {
+    display: grid;
+    gap: 3px;
+  }
+  .brand-name {
+    font-size: 21px;
+    line-height: 1;
+  }
+  .brand-mark {
+    font-size: 8px;
+  }
+  .home-link span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+  .hero {
+    gap: 54px;
+    padding: 74px 18px 80px;
+  }
+  .hero h1 {
+    font-size: clamp(52px, 16.5vw, 72px);
+    line-height: 0.88;
+  }
+  .hero-copy {
+    margin-top: 30px;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+  .hero-dates {
+    display: block;
+  }
+  .hero-dates a {
+    grid-template-columns: 88px 1fr;
+    gap: 18px;
+    border-right: 0;
+  }
+  .events {
+    padding: 82px 18px 90px;
+  }
+  .section-heading {
+    display: block;
+    margin-bottom: 24px;
+  }
+  .section-heading h2,
+  .contact h2 {
+    font-size: 54px;
+  }
+  .section-heading > p:last-child {
+    margin: 24px 0 0;
+  }
+  .event-row {
+    gap: 42px;
+    padding: 54px 0;
+  }
+  .event-topline {
+    margin-bottom: 35px;
+  }
+  .event-content h3 {
+    font-size: 47px;
+  }
+  .event-summary {
+    font-size: 15px;
+  }
+  .event-details > div {
+    grid-template-columns: 102px 1fr;
+    gap: 15px;
+  }
+  .event-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .button,
+  .text-link {
+    width: 100%;
+  }
+  .text-link {
+    justify-content: center;
+    padding: 13px 0;
+  }
+  .manifesto {
+    margin: 0 18px 88px;
+    padding: 58px 25px;
+  }
+  .manifesto blockquote {
+    margin: 35px 0 48px;
+    font-size: 42px;
+  }
+  .contact {
+    padding: 0 18px 90px;
+  }
+  footer {
+    grid-template-columns: 1fr auto;
+    padding: 28px 18px;
+  }
+  footer p {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    text-align: left;
+  }
 }
-
-.back-home {
-    margin-top: 60px;
-    text-align: center;
-    font-size: 13px;
-    letter-spacing: 2px;
-}
-
-.back-home a {
-    text-decoration: none;
-    color: #111;
-    border-bottom: 1px solid #111;
-    padding-bottom: 4px;
-    transition: 0.25s ease;
-}
-
-.back-home a:hover {
-    color: #c62828;
-    border-color: #c62828;
-}
-
-@media (max-width: 900px) {
-    .container {
-        max-width: 760px;
-    }
-
-    .hero {
-        grid-template-columns: 1fr;
-        align-items: start;
-    }
-
-    .hero h1 {
-        font-size: 62px;
-    }
-
-    .events-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .poster-frame {
-        min-height: 420px;
-    }
-}
-
-@media (max-width: 520px) {
-    .container {
-        padding: 55px 18px 75px;
-    }
-
-    .motto {
-        margin-bottom: 48px;
-    }
-
-    .top-link {
-        margin-bottom: 45px;
-    }
-
-    .hero {
-        gap: 36px;
-        margin-bottom: 60px;
-    }
-
-    .hero h1 {
-        font-size: 49px;
-    }
-
-    .subtitle {
-        font-size: 16px;
-    }
-
-    .claim {
-        letter-spacing: 4px;
-        line-height: 1.8;
-    }
-
-    .hero-note {
-        font-size: 24px;
-        padding: 28px 24px;
-    }
-
-    .events-heading h2 {
-        font-size: 40px;
-    }
-
-    .event-card {
-        padding: 15px;
-    }
-
-    .poster-frame {
-        min-height: 330px;
-    }
-
-    .event-info h3 {
-        font-size: 28px;
-    }
-
-    .update-box {
-        padding: 55px 22px;
-    }
-
-    .update-box h2 {
-        font-size: 39px;
-    }
-
-    .update-box p {
-        font-size: 16px;
-    }
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 </style>
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "Prossimi Eventi – Dario Cucchiara",
-  "description": "Pagina in continuo aggiornamento con i prossimi eventi, appuntamenti, gare, presentazioni e iniziative di Dario Cucchiara e Silence. Run.",
+  "@type": "ItemList",
+  "name": "Prossimi eventi Silence. Run.",
   "url": "https://www.coachcucchiara.it/prossimi-eventi.html",
-  "author": {
-    "@type": "Person",
-    "name": "Dario Cucchiara"
-  },
-  "image": "https://www.coachcucchiara.it/images/locandina1.jpg"
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "SportsEvent",
+        "name": "Corsa in spiaggia – Silence. Run.",
+        "startDate": "2026-08-16T19:00:00+02:00",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "image": "https://www.coachcucchiara.it/images/mare1.png",
+        "location": {
+          "@type": "Place",
+          "name": "Spiaggia libera accanto al Lido Copacabana",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Balestrate",
+            "addressRegion": "PA",
+            "addressCountry": "IT"
+          }
+        },
+        "organizer": {
+          "@type": "Person",
+          "name": "Dario Cucchiara",
+          "url": "https://www.coachcucchiara.it/"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "SportsEvent",
+        "name": "Corsa nel bosco Santa Venere – Silence. Run.",
+        "startDate": "2026-08-31T18:30:00+02:00",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "image": "https://www.coachcucchiara.it/images/bosco1.png",
+        "location": {
+          "@type": "Place",
+          "name": "Bosco Santa Venere",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Montelepre",
+            "addressRegion": "PA",
+            "addressCountry": "IT"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 38.096619,
+            "longitude": 13.045736
+          }
+        },
+        "organizer": {
+          "@type": "Person",
+          "name": "Dario Cucchiara",
+          "url": "https://www.coachcucchiara.it/"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "Event",
+        "name": "Presentazione del libro Silence. Run.",
+        "startDate": "2026-09-12T17:00:00+02:00",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "image": "https://www.coachcucchiara.it/images/presentazionelibro1.png",
+        "location": {
+          "@type": "Place",
+          "name": "Atrio del Palazzo dei Carmelitani",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Partinico",
+            "addressRegion": "PA",
+            "addressCountry": "IT"
+          }
+        },
+        "organizer": {
+          "@type": "Person",
+          "name": "Dario Cucchiara",
+          "url": "https://www.coachcucchiara.it/"
+        }
+      }
+    }
+  ]
 }
 </script>
-
 </head>
-
 <body>
-
 <!-- Google Tag Manager (noscript) -->
 <noscript>
-<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PX8LLZXB"
-height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  <iframe
+    src="https://www.googletagmanager.com/ns.html?id=GTM-PX8LLZXB"
+    height="0"
+    width="0"
+    style="display:none;visibility:hidden">
+  </iframe>
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
-
-<div class="container">
-
-    <div class="brand">Dario Cucchiara</div>
-    <div class="motto">Silence. Run.<span class="tm">™</span></div>
-
-    <div class="top-link">
-        <a href="../index.html">← RITORNA ALLA HOME</a>
+<a class="skip-link" href="#eventi">Vai agli eventi</a>
+<header class="site-header">
+  <a class="brand" href="/" aria-label="Dario Cucchiara, torna alla home">
+    <span class="brand-name">Dario Cucchiara</span>
+    <span class="brand-mark">
+      Silence. <strong>Run.</strong><sup>™</sup>
+    </span>
+  </a>
+  <a class="home-link" href="/">
+    <span>Home</span>
+    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+      <path
+        d="M5 12h14M13 6l6 6-6 6"
+        stroke="currentColor"
+        stroke-width="1.7"
+        stroke-linecap="round"
+        stroke-linejoin="round">
+      </path>
+    </svg>
+  </a>
+</header>
+<main>
+  <section class="hero" aria-labelledby="page-title">
+    <div class="hero-orbit orbit-one" aria-hidden="true"></div>
+    <div class="hero-orbit orbit-two" aria-hidden="true"></div>
+    <div class="hero-content">
+      <p class="eyebrow">
+        <span></span>
+        Agenda · Estate 2026
+      </p>
+      <h1 id="page-title">
+        Dove la corsa<br>
+        diventa <em>incontro.</em>
+      </h1>
+      <p class="hero-copy">
+        Tre appuntamenti, tre modi di condividere la stessa visione.
+        Il mare, il bosco e le parole di un libro che nasce dalla corsa.
+      </p>
+      <a class="hero-cta" href="#eventi">
+        Scopri gli appuntamenti
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M5 12h14M13 6l6 6-6 6"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+            stroke-linejoin="round">
+          </path>
+        </svg>
+      </a>
     </div>
-
-    <section class="hero">
-        <div>
-            <h1>Prossimi<br>Eventi<span class="red">.</span></h1>
-
-            <div class="subtitle">
-                <strong>Incontri, corse di gruppo, presentazioni, stand e nuove iniziative.</strong><br>
-                Qui troverai tutti i prossimi appuntamenti siglati Silence. Run.
+    <nav class="hero-dates" aria-label="Date dei prossimi eventi">
+      <a href="#mare">
+        <span>16 AGO</span>
+        <small>Corsa in spiaggia</small>
+      </a>
+      <a href="#bosco">
+        <span>31 AGO</span>
+        <small>Corsa nel bosco Santa Venere</small>
+      </a>
+      <a href="#libro">
+        <span>12 SET</span>
+        <small>Presentazione del libro Silence. Run.</small>
+      </a>
+    </nav>
+  </section>
+  <section class="events" id="eventi" aria-labelledby="events-title">
+    <header class="section-heading">
+      <p class="eyebrow">
+        <span></span>
+        Prossimi appuntamenti
+      </p>
+      <h2 id="events-title">
+        Segna le date<span>.</span>
+      </h2>
+      <p>
+        Ogni evento è un invito a esserci davvero, con il proprio passo.
+      </p>
+    </header>
+    <div class="events-list">
+      <!-- EVENTO 1 -->
+      <article class="event-row" id="mare">
+        <div class="poster-wrap poster-mare">
+          <a
+            href="/images/mare1.png"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Apri la locandina della Corsa in spiaggia">
+            <img
+              src="/images/mare1.png"
+              alt="Locandina della Corsa in spiaggia Silence. Run. del 16 agosto 2026 a Balestrate"
+              width="1254"
+              height="1254"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async">
+            <span class="poster-action">
+              Apri la locandina
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M5 12h14M13 6l6 6-6 6"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round">
+                </path>
+              </svg>
+            </span>
+          </a>
+        </div>
+        <div class="event-content">
+          <div class="event-topline">
+            <span class="event-number">01</span>
+            <span class="event-kind">Corsa di gruppo</span>
+          </div>
+          <time datetime="2026-08-16T19:00:00+02:00">
+            Domenica 16 agosto 2026
+          </time>
+          <h3>
+            Corsa in spiaggia<span>.</span>
+          </h3>
+          <p class="event-summary">
+            Una corsa al tramonto tra mare, energia e buona compagnia.
+            Un appuntamento per muoversi insieme e vivere l’estate
+            con lo spirito Silence. Run.
+          </p>
+          <dl class="event-details">
+            <div>
+              <dt>Ritrovo</dt>
+              <dd>Ore 19:00</dd>
             </div>
-
-            <div class="claim">
-                CORRI. INCONTRA. <span class="red">CONDIVIDI.</span>
+            <div>
+              <dt>Partenza</dt>
+              <dd>Ore 19:30</dd>
             </div>
+            <div>
+              <dt>Luogo</dt>
+              <dd>Spiaggia libera accanto al Lido Copacabana, Balestrate</dd>
+            </div>
+          </dl>
+          <div class="event-actions">
+            <a
+              class="button button-primary"
+              href="https://www.google.com/maps/search/?api=1&amp;query=Lido+Copacabana+Balestrate"
+              target="_blank"
+              rel="noopener noreferrer">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"
+                  stroke="currentColor"
+                  stroke-width="1.6">
+                </path>
+                <circle
+                  cx="12"
+                  cy="10"
+                  r="2.5"
+                  stroke="currentColor"
+                  stroke-width="1.6">
+                </circle>
+              </svg>
+              Apri la mappa
+            </a>
+            <a
+              class="text-link"
+              href="/images/mare1.png"
+              target="_blank"
+              rel="noopener noreferrer">
+              Locandina completa
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M5 12h14M13 6l6 6-6 6"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round">
+                </path>
+              </svg>
+            </a>
+          </div>
         </div>
-
-        <div class="hero-note">
-            Una pagina viva, aggiornata nel tempo con tutte le nuove locandine e gli appuntamenti in programma.
+      </article>
+      <!-- EVENTO 2 -->
+      <article class="event-row event-row-reverse" id="bosco">
+        <div class="poster-wrap poster-bosco">
+          <a
+            href="/images/bosco1.png"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Apri la locandina della Corsa nel bosco Santa Venere">
+            <img
+              src="/images/bosco1.png"
+              alt="Locandina della Corsa nel bosco Santa Venere del 31 agosto 2026 sopra Montelepre"
+              width="1179"
+              height="2096"
+              loading="lazy"
+              decoding="async">
+            <span class="poster-action">
+              Apri la locandina
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M5 12h14M13 6l6 6-6 6"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round">
+                </path>
+              </svg>
+            </span>
+          </a>
         </div>
-    </section>
-
-    <section aria-labelledby="eventi-title">
-        <div class="events-heading">
-            <h2 id="eventi-title">Gli eventi in programma<span class="red">.</span></h2>
-            <p>Clicca su una locandina per visualizzarla a grandezza intera.</p>
+        <div class="event-content">
+          <div class="event-topline">
+            <span class="event-number">02</span>
+            <span class="event-kind">Natura e condivisione</span>
+          </div>
+          <time datetime="2026-08-31T18:30:00+02:00">
+            Lunedì 31 agosto 2026
+          </time>
+          <h3>
+            Corsa nel bosco Santa Venere<span>.</span>
+          </h3>
+          <p class="event-summary">
+            Un giro ad anello di circa 5–6 km tra natura, storia e bellezza.
+            L’andatura sarà molto lenta, l’esperienza è aperta a tutti
+            e pensata per restare insieme.
+          </p>
+          <dl class="event-details">
+            <div>
+              <dt>Incontro</dt>
+              <dd>Ore 18:30</dd>
+            </div>
+            <div>
+              <dt>Partenza</dt>
+              <dd>Ore 19:00</dd>
+            </div>
+            <div>
+              <dt>Punto di ritrovo</dt>
+              <dd>Coordinate GPS 38.096619, 13.045736</dd>
+            </div>
+          </dl>
+          <div class="event-actions">
+            <a
+              class="button button-primary"
+              href="https://www.google.com/maps?q=38.096619,13.045736"
+              target="_blank"
+              rel="noopener noreferrer">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"
+                  stroke="currentColor"
+                  stroke-width="1.6">
+                </path>
+                <circle
+                  cx="12"
+                  cy="10"
+                  r="2.5"
+                  stroke="currentColor"
+                  stroke-width="1.6">
+                </circle>
+              </svg>
+              Apri la mappa
+            </a>
+            <a
+              class="text-link"
+              href="/images/bosco1.png"
+              target="_blank"
+              rel="noopener noreferrer">
+              Locandina completa
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M5 12h14M13 6l6 6-6 6"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round">
+                </path>
+              </svg>
+            </a>
+          </div>
         </div>
-
-        <div class="events-grid">
-
-            <!-- LOCANDINA 1 -->
-            <article class="event-card">
-                <a class="poster-link" href="../images/chiringuito.PNG" target="_blank" rel="noopener" aria-label="Apri la prima locandina a grandezza intera">
-                    <div class="poster-frame" data-placeholder="Inserisci il file chiringuito.PNG nella cartella images">
-                        <img src="../images/chiringuito.PNG"
-                             alt="Prima locandina dei prossimi eventi di Dario Cucchiara e Silence. Run."
-                             loading="eager"
-                             onerror="this.style.display='none'; this.parentElement.classList.add('missing');">
-                    </div>
-                </a>
-                <div class="event-info">
-                    <div class="event-kicker">Prossimo appuntamento</div>
-                    <h3>Giovedì 6 agosto El Chiringuito e Silence. Run. ti aspettano a Balestrate per una giornata dedicata allo sport, alla passione e alla buona energia.
-                        Dalle ore 9:00 sarà presente in spiaggia lo stand Silence. Run., con il coach Dario Cucchiara, per conoscere da vicino il progetto, il metodo di allenamento e la filosofia che unisce corsa, ascolto e crescita personale.
-                        Dalle ore 18:00 l’atmosfera si accenderà con DJ set, musica, cocktail e tutta l’energia dell’estate.
-                        Alle ore 19:00 ci incontreremo presso El Chiringuito e alle ore 19:30 partiremo insieme per una corsa al tramonto sul lungomare di Balestrate Ovest.
-                        La partecipazione alla corsa è gratuita, con consumazione gradita.
-                        Un’occasione per correre, condividere, divertirsi e vivere il mare in modo diverso
-                     <span class="red">.</span></h3>
-                    <p>Tutte le informazioni ufficiali sono riportate nella locandina.</p>
-                </div>
-            </article>
-
-            <!--
-            PER AGGIUNGERE UNA NUOVA LOCANDINA:
-            1. Duplica uno dei blocchi <article class="event-card">.
-            2. Cambia il nome del file, ad esempio locandina3.jpg.
-            3. Carica la nuova immagine nella cartella images.
-            -->
-
+      </article>
+      <!-- EVENTO 3 -->
+      <article class="event-row" id="libro">
+        <div class="poster-wrap poster-libro">
+          <a
+            href="/images/presentazionelibro1.png"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Apri la locandina della presentazione del libro Silence. Run.">
+            <img
+              src="/images/presentazionelibro1.png"
+              alt="Locandina della presentazione del libro Silence. Run. del 12 settembre 2026 a Partinico"
+              width="1055"
+              height="1491"
+              loading="lazy"
+              decoding="async">
+            <span class="poster-action">
+              Apri la locandina
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M5 12h14M13 6l6 6-6 6"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round">
+                </path>
+              </svg>
+            </span>
+          </a>
         </div>
-    </section>
-
-    <section class="update-box">
-        <h2>Resta aggiornato<span class="red">.</span></h2>
-        <p>
-            Questa pagina viene aggiornata continuamente. Torna a visitarla per scoprire i prossimi eventi,
-            le nuove iniziative e tutti gli appuntamenti del progetto Silence. Run.
-        </p>
-        <div class="final-claim">
-            ASCOLTA. SCEGLI. <span class="red">DIVENTA.</span>
+        <div class="event-content">
+          <div class="event-topline">
+            <span class="event-number">03</span>
+            <span class="event-kind">Incontro culturale</span>
+          </div>
+          <time datetime="2026-09-12T17:00:00+02:00">
+            Sabato 12 settembre 2026
+          </time>
+          <h3>
+            Presentazione del libro Silence. Run<span>.</span>
+          </h3>
+          <p class="event-summary">
+            Un incontro dedicato al libro, al significato della corsa
+            e alle scelte che trasformano il cammino di una vita,
+            con il patrocinio del Comune di Partinico.
+          </p>
+          <dl class="event-details">
+            <div>
+              <dt>Inizio</dt>
+              <dd>Ore 17:00</dd>
+            </div>
+            <div>
+              <dt>Luogo</dt>
+              <dd>Atrio del Palazzo dei Carmelitani, Partinico</dd>
+            </div>
+            <div>
+              <dt>Ospiti</dt>
+              <dd>Francesca Currieri e altri autorevoli relatori</dd>
+            </div>
+          </dl>
+          <div class="event-actions">
+            <a
+              class="button button-primary"
+              href="https://www.google.com/maps/search/?api=1&amp;query=Palazzo+dei+Carmelitani+Partinico"
+              target="_blank"
+              rel="noopener noreferrer">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"
+                  stroke="currentColor"
+                  stroke-width="1.6">
+                </path>
+                <circle
+                  cx="12"
+                  cy="10"
+                  r="2.5"
+                  stroke="currentColor"
+                  stroke-width="1.6">
+                </circle>
+              </svg>
+              Apri la mappa
+            </a>
+            <a
+              class="text-link"
+              href="/images/presentazionelibro1.png"
+              target="_blank"
+              rel="noopener noreferrer">
+              Locandina completa
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M5 12h14M13 6l6 6-6 6"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round">
+                </path>
+              </svg>
+            </a>
+          </div>
         </div>
-    </section>
-
-    <div class="back-home">
-        <a href="../index.html">← Ritorna alla Home</a>
+      </article>
     </div>
-
-</div>
-
+  </section>
+  <section class="manifesto" aria-label="Manifesto Silence. Run.">
+    <p class="manifesto-kicker">Silence. Run.</p>
+    <blockquote>
+      “La corsa non è fuga. È ascolto, scelta, diventare ciò che siamo
+      destinati ad essere.”
+    </blockquote>
+    <div class="manifesto-bottom">
+      <span>Ascolta.</span>
+      <span>Scegli.</span>
+      <strong>Diventa.</strong>
+    </div>
+  </section>
+  <section class="contact" aria-labelledby="contact-title">
+    <div>
+      <p class="eyebrow">
+        <span></span>
+        Partecipa
+      </p>
+      <h2 id="contact-title">
+        Ci vediamo lì<span>.</span>
+      </h2>
+    </div>
+    <div class="contact-copy">
+      <p>
+        Per informazioni sugli eventi e sulle attività Silence. Run.,
+        scrivi direttamente al coach Dario Cucchiara.
+      </p>
+      <a
+        class="button button-dark"
+        href="https://wa.me/393751136597"
+        target="_blank"
+        rel="noopener noreferrer">
+        Scrivi su WhatsApp
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M5 12h14M13 6l6 6-6 6"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+            stroke-linejoin="round">
+          </path>
+        </svg>
+      </a>
+    </div>
+  </section>
+</main>
+<footer>
+  <a class="brand footer-brand" href="/">
+    <span class="brand-name">Dario Cucchiara</span>
+    <span class="brand-mark">
+      Silence. <strong>Run.</strong><sup>™</sup>
+    </span>
+  </a>
+  <p>
+    © 2026 Dario Cucchiara · Tutti i diritti riservati
+  </p>
+  <a class="back-top" href="#page-title">
+    Torna su ↑
+  </a>
+</footer>
 <script>
-if ('scrollRestoration' in history) {
-    history.scrollRestoration = 'manual';
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
 }
-
-window.addEventListener('load', function() {
-    window.scrollTo(0, 0);
-});
 </script>
-
 </body>
 </html>
